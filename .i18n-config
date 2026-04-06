@@ -1,0 +1,44 @@
+{
+  "requirements": [
+    "The translation is used for Parrot Mate, and online Language education App, the translated text should be profession in  learning/edu industry",
+    "When there are template variables such as {{xxx}}, no need to translate the {{xx}} part",
+    "More user-friendly tone"
+  ],
+  "scanDirs": [
+    "apps/chat",
+    "apps/reader",
+    "apps/dashboard",
+    "apps/auth",
+    "packages/uikit",
+    "packages/components",
+    "packages/sdk",
+    "packages/account-sdk"
+  ],
+  "model": "gpt-5-mini-2025-08-07",
+  "extendedTranslationFiles": [
+    "packages/i18n/src/translation.extend.json"
+  ],
+  "external": [],
+  "translationDir": "packages/i18n/src/res",
+  "languages": [
+    "en",
+    "ar-SA",
+    "de-DE",
+    "el-GR",
+    "es-ES",
+    "fi-FI",
+    "fil-PH",
+    "fr-FR",
+    "hi-IN",
+    "ja-JP",
+    "ko-KR",
+    "pt-BR",
+    "pt-PT",
+    "ru-RU",
+    "ta-IN",
+    "uk-UA",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "ignores": []
+}

@@ -1,0 +1,15 @@
+import type { IconProps } from "../types/base"
+
+export const IconDownload = (props: IconProps) => (
+  <svg
+    {...props}
+    viewBox="0 0 1024 1024"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1024 896v128H0v-320h128v192h768v-192h128v192zM576 554.688L810.688 320 896 405.312l-384 384-384-384L213.312 320 448 554.688V0h128v554.688z"
+      p-id="5380"
+    ></path>
+  </svg>
+)

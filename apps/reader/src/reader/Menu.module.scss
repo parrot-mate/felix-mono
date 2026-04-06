@@ -1,0 +1,129 @@
+$fontSize : 1rem;
+.MenuIcon {
+    position: fixed;
+    top: .8rem;
+    left: .5rem;
+    fill: white;
+    width: 1.2rem;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.MenuIcon:active {
+    fill: rgb(134, 160, 134);
+}
+
+.Menu {
+    p {
+        line-height: 1.2rem;
+        margin: 0;
+    }
+    .Chapter {
+        margin-bottom: 10px;
+        color: #666;
+        padding-right: 1.7rem;
+    }
+
+    .Clear {
+        clear: both
+    }
+
+    ul {
+        padding-left: .5rem;
+    }
+
+    .Sections {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1.7rem;
+        flex-wrap: wrap;
+        .TodoLine {
+            margin-right: 1rem;
+        }
+        svg {
+            width: .7rem
+        }
+    }
+    .ChapterTitle {
+        font-weight: 600;
+    }
+
+    .Section {
+        // margin-bottom: .1rem;
+        font-size: .9rem;
+        margin-left: .3rem;
+        list-style: none;
+        color: #bbb;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu;
+
+        &.Active {
+            color: #2aaf73;
+            font-weight: bold;
+        }
+
+        &.Readed {
+            color: #666;
+            font-weight: bold;
+
+            &.Active {
+                color: #2aaf73;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Section_Piled {
+
+        margin-right: 1rem;
+        line-height: 1.2rem;
+        list-style: none;
+        display: inline-block;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu;
+    }
+
+}
+
+
+.TodoLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: $fontSize;
+    line-height: 1.4rem;
+    margin-bottom: 1rem;
+    .Icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.2rem;
+        margin-right: .5rem;
+        svg {
+            width: 1rem;
+        }
+    }
+
+    color: #aaa;
+    .Active {
+        color: #2aaf73 !important;
+    }
+
+
+    .Done {
+        color: #333;
+    }
+
+
+    .Title {
+        flex: 1
+    }
+
+
+}
+
+
+.TimelineElement {
+    &::before {
+        background-color: #2aaf73;
+    }
+}

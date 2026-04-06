@@ -1,0 +1,21 @@
+.IconButton { 
+    display: inline;
+    vertical-align: middle;
+
+    label {
+        color: #666;
+        margin-left: 1rem;
+        vertical-align: middle;
+    }
+
+    transition: all .3s ease;
+
+    svg {
+        fill: #666;
+        vertical-align: middle;
+    }
+
+    &:active {
+        transform: scale(1.1);
+    }
+}

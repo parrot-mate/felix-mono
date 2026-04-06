@@ -1,0 +1,41 @@
+graph ReadingSession {
+    rankdir = LR;
+    
+    // Main components
+    ReadingSession [label = "Reading Session";shape = rectangle;style = filled;fillcolor = darkblue;fontcolor = white;];
+    BookLoader [label = "Book Loader";shape = rectangle;style = filled;fillcolor = darkgreen;fontcolor = white;];
+    Paging [label = "Paging";shape = rectangle;style = filled;fillcolor = darkred;fontcolor = white;];
+    ReadingContext [label = "Reading Context";shape = rectangle;style = filled;fillcolor = darkgoldenrod;fontcolor = white;];
+    
+    // Book Loader connections
+    BookLoaderRemote [label = "Load from remote sources";shape = ellipse;style = filled;fillcolor = darkgreen;fontcolor = white;];
+    BookLoaderLocal [label = "Load from local sources";shape = ellipse;style = filled;fillcolor = darkgreen;fontcolor = white;];
+    BookLoader -- BookLoaderRemote;
+    BookLoader -- BookLoaderLocal;
+    
+    // Paging connections
+    PagingByWordCount [label = "By word count";shape = ellipse;style = filled;fillcolor = darkred;fontcolor = white;];
+    PagingByChapter [label = "By chapter";shape = ellipse;style = filled;fillcolor = darkred;fontcolor = white;];
+    PagingByScreenSize [label = "By screen size";shape = ellipse;style = filled;fillcolor = darkred;fontcolor = white;];
+    Paging -- PagingByWordCount;
+    Paging -- PagingByChapter;
+    Paging -- PagingByScreenSize;
+    
+    // Reading Context connections
+    ReadingContextDetails [label = "Book Contents";shape = ellipse;style = filled;fillcolor = darkgoldenrod;fontcolor = white;];
+    ReadingContext -- ReadingContextDetails;
+    
+    // Additional Reading Context components
+    ReadingHistory [label = "Reading History";shape = ellipse;style = filled;fillcolor = darkgoldenrod;fontcolor = white;];
+    PickupQuestionHistory [label = "Pick Up / Question History";shape = ellipse;style = filled;fillcolor = darkgoldenrod;fontcolor = white;];
+    TimeUsed [label = "Time Used";shape = ellipse;style = filled;fillcolor = darkgoldenrod;fontcolor = white;];
+    
+    ReadingContext -- ReadingHistory;
+    ReadingContext -- PickupQuestionHistory;
+    ReadingContext -- TimeUsed;
+    
+    // Main flow
+    ReadingSession -- BookLoader;
+    ReadingSession -- Paging;
+    ReadingSession -- ReadingContext;
+}

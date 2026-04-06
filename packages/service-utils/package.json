@@ -1,0 +1,27 @@
+{
+  "name": "@pmate/service-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "@types/lodash": "*",
+    "@types/react": "*",
+    "jotai": "catalog:",
+    "js-sha3": "*",
+    "lodash": "*",
+    "@pmate/meta": "workspace:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "idb": "^8.0.0",
+    "quick-lru": "^5.0.0",
+    "@pmate/meta": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+./build
+./scripts/v2ray start
+./scripts/diffusion start
+pnpm --filter @pchip/service run serve:gpt
+pnpm --filter @pchip/service run serve:imgen
+pm2 start "proxychains4 node apps/service/dist/proxy/openai.js" --name openaiproxy

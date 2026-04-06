@@ -1,0 +1,11 @@
+{
+  "name": "@pmate/meta",
+  "version": "1.1.1",
+  "description": "",
+  "scripts": {
+    "npm:publish": "npm publish --access public --registry https://registry.npmjs.org/"
+  },
+  "main": "./src/index.ts",
+  "peerDependencies": {},
+  "dependencies": {}
+}

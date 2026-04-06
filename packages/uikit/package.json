@@ -1,0 +1,55 @@
+{
+  "name": "@pmate/uikit",
+  "private": true,
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "browser-image-compression": "^2.0.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.9"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "tailwindcss": "catalog:",
+    "@pmate/i18n": "workspace:*",
+    "@pmate/lang": "workspace:*",
+    "@pmate/utils": "workspace:*",
+    "@pmate/theme": "workspace:*",
+    "@pmate/meta": "workspace:*",
+    "date-fns": "^3.6.0",
+    "jotai": "catalog:",
+    "react-hook-form": "*"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@storybook/addon-docs": "^9.0.17",
+    "@storybook/react-vite": "9.0.17",
+    "@tailwindcss/vite": "catalog:",
+    "@types/react": "^18.2.76",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react-swc": "^3.10.2",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-storybook": "9.0.17",
+    "globals": "^16.3.0",
+    "storybook": "^9.0.17",
+    "tailwindcss": "catalog:",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.35.1",
+    "vite": "catalog:",
+    "vite-plugin-svgr": "^4.3.0",
+    "@pmate/lang": "workspace:*",
+    "react-hook-form": "^7.52.0"
+  }
+}

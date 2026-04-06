@@ -1,0 +1,6 @@
+name = "shiny-recipe-53ff"
+type = "javascript" # Or "webpack" for older projects
+
+account_id = "44dfd1cdd660ce949022ebb89b5df395"
+workers_dev = true
+compatibility_date = "2025-01-04"

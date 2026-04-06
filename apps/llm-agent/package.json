@@ -1,0 +1,25 @@
+{
+  "name": "@pmate/llm-agent",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "start": "bun run src/index.ts",
+    "test:c2c": "vitest run src/testing/llm.c2c.test.ts",
+    "pm2:start": "pm2 start ecosystem.config.cjs --only llm-agent",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs --only llm-agent",
+    "pm2:logs": "pm2 logs llm-agent",
+    "serve": "npm run start"
+  },
+  "dependencies": {
+    "@google/genai": "^1.41.0",
+    "@pmate/agent-sdk": "workspace:*",
+    "@pmate/meta": "workspace:*",
+    "dotenv": "catalog:",
+    "openai": "^4.93.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/ws": "^8.18.1",
+    "vitest": "^4.0.17",
+    "ws": "^8.18.0"
+  }
+}

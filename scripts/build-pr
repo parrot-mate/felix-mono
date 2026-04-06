@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+BRANCH="$1"
+if [ -z "$BRANCH" ]; then
+  echo "Usage: build-pr <branch>" >&2
+  exit 1
+fi
+
+STATIC_PATH="/chat-pr-$BRANCH/" pnpm --filter @pmate/chat run build
+cd apps/chat
+pnpm --filter @pmate/chat run release:pr -- "$BRANCH"
+pnpm exec ts-node --project tsconfig.scripts.json scripts/upload-pr-chat.ts "$BRANCH"

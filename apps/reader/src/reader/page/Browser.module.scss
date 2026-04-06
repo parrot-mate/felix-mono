@@ -1,0 +1,54 @@
+.Browser {
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    padding-top: 5rem;
+
+
+    .InstallPrompt {
+
+        .Pop {
+            position: absolute;
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            top: 20%;
+            width: 80%;
+            height: 40%;
+            box-sizing: border-box;
+            background-color: white;
+            z-index: 3;
+        }
+
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+
+    }
+
+
+}
+.ManageBooks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.BrowserPage {
+    margin: 0 auto;
+    max-width: 1080px;
+    padding: 4rem 1rem;
+}
+

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="aidict-ignore" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no "
+    />
+    <link rel="icon" href="/reader/icon2.ico" type="image/x-icon" />
+    <title>鹦鹉同学 - Dashboard </title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        src:
+          url("/reader/fonts/Roboto-Regular.woff2") format("woff2"),
+          url("/reader/fonts/Roboto-Regular.woff") format("woff");
+      }
+
+      body,
+      #root {
+        box-sizing: border-box;
+        margin: 0;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+      }
+
+      #root {
+        padding: 0px 0px;
+      }
+
+      .react-pdf__Page__annotations {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/app.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "packageManager": "pnpm@10.6.5",
+  "engines": {
+    "node": ">=24"
+  },
+  "pnpm": {
+    "overrides": {
+      "@sinclair/typebox": "^0.34.15"
+    }
+  },
+  "dependencies": {
+    "@pmate/cli": "^0.3.11",
+    "dotenv": "catalog:"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "typescript": "5.9.2"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm -r --filter \"./packages/**\" --if-present build && changeset publish --access public"
+  }
+}

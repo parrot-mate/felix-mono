@@ -1,0 +1,52 @@
+name: Build PR Chat
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Prepare HEAD_REF_SLUG
+        run: |
+          HEAD_REF_SLUG=$(echo "${{ github.head_ref }}" | sed 's/\//-/g')
+          echo "HEAD_REF_SLUG=$HEAD_REF_SLUG" >> $GITHUB_ENV
+
+      - name: Build and upload
+        env:
+          OSS_REGION: ${{ secrets.OSS_REGION }}
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+        run: |
+          ./scripts/build-pr "${{ env.HEAD_REF_SLUG }}"
+
+      - name: Comment PR with build link
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            🚀 **Build completed!**
+
+            You can preview your changes here:
+            [https://book.skedo.cn/chat-pr-${{ env.HEAD_REF_SLUG }}/chat.html](https://book.skedo.cn/chat-pr-${{ env.HEAD_REF_SLUG }}/chat.html)

@@ -1,0 +1,19 @@
+{
+  "name": "@pmate/blockchain",
+  "version": "0.3.1",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "npm:publish": "npm publish --access public --registry https://registry.npmjs.org/",
+    "test": "vitest run",
+    "test:c2c-table": "vitest run src/testing/stdTable.c2c.test.ts"
+  },
+  "dependencies": {
+    "qs": "^6.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/qs": "^6.14.0",
+    "vitest": "^4.0.17"
+  }
+}

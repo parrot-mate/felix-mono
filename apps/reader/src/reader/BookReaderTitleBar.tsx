@@ -1,0 +1,61 @@
+import { getSafeInsets } from "@pmate/bridge"
+import { IconButton, IconLeft } from "@pmate/uikit"
+import clsx from "clsx"
+import { atom, useAtomValue } from "jotai"
+import React, { ReactNode } from "react"
+
+const safeInsetsNativeAtom = atom(async () => {
+  return getSafeInsets()
+})
+
+export const NavBackIconButton = () => {
+  return (
+    <IconButton
+      onClick={() => {
+        history.back()
+      }}
+      className="text-white"
+    >
+      <IconLeft />
+    </IconButton>
+  )
+}
+
+export const BookReaderTitleBar = ({
+  title,
+  left,
+  right,
+  className,
+  variant = "gradient",
+}: {
+  title: string | ReactNode
+  left?: React.ReactNode
+  right?: React.ReactNode
+  className?: string
+  variant?: "gradient" | "solid"
+}) => {
+  const safeInsets = useAtomValue(safeInsetsNativeAtom)
+  const showBack = typeof window !== "undefined" && window.history.length > 0
+  const variantClass =
+    variant === "gradient" ? "bg-gradient-parrot" : "bg-none bg-violet-500"
+  return (
+    <div
+      className={clsx(
+        "flex justify-between items-center pb-[13px] pl-[10px] pr-[10px]",
+        variantClass,
+        className
+      )}
+      style={{
+        paddingTop: safeInsets ? `${safeInsets.top + 10}px` : `13px`,
+      }}
+    >
+      {left ? left : <div className="w-8" />}
+      {typeof title === "string" ? (
+        <div className="text-white">{title}</div>
+      ) : (
+        title
+      )}
+      <div className="flex items-center">{right}</div>
+    </div>
+  )
+}

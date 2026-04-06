@@ -1,0 +1,49 @@
+
+.TitleBarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    padding:0.5rem;
+    background: rgba(255, 255, 255, 8);
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+    z-index: 15;
+    
+    .Settings {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        height: 2rem;
+    }
+
+    .Title {
+        text-align: center;
+        font-family: "Microsoft YaHei", "Helvetica";
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.8); 
+        line-height: 2rem;
+        font-size: .9rem;
+        transition: color 1s;
+    }
+
+    .Search {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        height: 20px;
+    }
+}
+
+.PDFTitle {
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+
+    .Page {
+        margin-left: 1rem;
+    }
+}

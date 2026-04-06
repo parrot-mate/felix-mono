@@ -1,0 +1,44 @@
+#!/bin/bash
+
+app="asr"
+# Define variables
+LOG_FILE="$HOME/logs/$app.log"
+PID_FILE="$HOME/logs/$app.pid"
+CONDA_BASE="$HOME/miniconda3"
+SCRIPT_PATH="$HOME/dev/gptdict/pyapps/pipeline/start_runner.py"
+
+case "$1" in
+  start)
+    if [ -f "$PID_FILE" ] && kill -0 $(cat "$PID_FILE") > /dev/null 2>&1; then
+      echo "Process is already running."
+      exit 1
+    fi
+    echo "Starting $app process..."
+
+    echo $CONDA_BASE
+    source "$CONDA_BASE/etc/profile.d/conda.sh"
+    conda activate f5-tts
+    nohup python3 "$SCRIPT_PATH" "@asr#1" > "$LOG_FILE" 2>&1 &
+    echo $! > "$PID_FILE"
+    echo "$app started with PID $(cat $PID_FILE)."
+    ;;
+
+  stop)
+    if [ -f "$PID_FILE" ]; then
+      echo "Stopping $app process..."
+      kill $(cat "$PID_FILE") && rm -f "$PID_FILE"
+      echo "$app stopped."
+    else
+      echo "No $app process running."
+    fi
+    ;;
+
+  log)
+    tail -f "$LOG_FILE"
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|log}"
+    exit 1
+    ;;
+esac

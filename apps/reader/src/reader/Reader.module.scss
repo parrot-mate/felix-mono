@@ -1,0 +1,39 @@
+#root {
+    background: #eee;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1.5em;
+}
+
+.Mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+}
+
+
+.TTS {
+    
+    padding:0 !important;
+    svg {
+        fill: #999 !important
+    }
+
+}
+
+
+

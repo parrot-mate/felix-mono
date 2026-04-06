@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400; /* Light weight */
+  src:
+    url("https://parrot-static.pmate.chat/fonts/Roboto-Regular.woff2")
+      format("woff2"),
+    url("https://parrot-static.pmate.chat/fonts/Roboto-Regular.woff")
+      format("woff");
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}

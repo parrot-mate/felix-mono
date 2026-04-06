@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.3/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "fixed": [],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": [
+    "@pchip/worker",
+    "@pm/static",
+    "@pmate/agent-ui",
+    "@pmate/agent-ui-api",
+    "@pmate/auth",
+    "@pmate/auth-api",
+    "@pmate/block-mgr-api",
+    "@pmate/chat",
+    "@pmate/chat-rest",
+    "@pmate/dashboard",
+    "@pmate/dev-docs",
+    "@pmate/llm-agent",
+    "@pmate/log-api",
+    "@pmate/proxy",
+    "@pmate/reader",
+    "@pmate/service",
+    "@pmate/todos",
+    "dbmgr-ui"
+  ]
+}

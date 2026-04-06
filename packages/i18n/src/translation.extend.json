@@ -1,0 +1,44 @@
+{
+  "English": {
+    "value": "English"
+  },
+  "Chinese": {
+    "value": "Chinese"
+  },
+  "Spanish": {
+    "value": "Spanish"
+  },
+  "Korean": {
+    "value": "Korean"
+  },
+  "French": {
+    "value": "French"
+  },
+  "Japanese": {
+    "value": "Japanese"
+  },
+  "German": {
+    "value": "German"
+  },
+  "Arabic": {
+    "value": "Arabic"
+  },
+  "Unknown error": {
+    "value": "Unknown error"
+  },
+  "DM_ACL_REJECT": {
+    "value": "You need wait others response to continue the direct message."
+  },
+  "GROUP_ACL_REJECT": {
+    "value": "You are not in this group yet, please wait for owner to approve your request."
+  },
+  "Profile Step: Nickname": {
+    "value": "Nickname"
+  },
+  "Profile Step: Learning Language": {
+    "value": "Learning Language"
+  },
+  "Profile Step: Mother Tongue": {
+    "value": "Mother Tongue"
+  }
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+git pull
+pnpm install
+turbo run build --filter=@pmate/service...

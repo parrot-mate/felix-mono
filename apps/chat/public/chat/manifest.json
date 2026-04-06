@@ -1,0 +1,16 @@
+{
+  "short_name": "鹦鹉同学",
+  "name": "鹦鹉同学",
+  "icons": [
+    {
+      "src": "https://parrot-static.pmate.chat/parrot-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/chat/chat.html",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}

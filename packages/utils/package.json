@@ -1,0 +1,29 @@
+{
+  "name": "@pmate/utils",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig-cjs.json",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "@pmate/lang": "workspace:*",
+    "@pmate/meta": "workspace:*"
+  },
+  "devDependencies": {
+    "@pmate/lang": "workspace:*",
+    "@types/pako": "^2.0.0",
+    "vitest": "^4.0.17"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^3.1.2",
+    "js-sha3": "^0.9.2",
+    "pako": "^2.1.0"
+  }
+}

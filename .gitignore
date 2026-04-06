@@ -1,0 +1,55 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+tmp
+tmp-upload
+
+node_modules
+bak
+dist
+distpop
+dist-ssr
+dist-dict
+dist-render
+dist-reader
+dist-bg
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.bun/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+*storybook.log
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+PKG-INFO
+
+
+.turbo
+# Playwright outputs
+apps/chat/test-results/
+
+# Local environment and generated caches
+.env
+.env.*
+!.env.example
+.vite/
+*.zip

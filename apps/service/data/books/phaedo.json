@@ -1,0 +1,1908 @@
+{
+  "name": "Phaedo",
+  "desc": "",
+  "author": "Plato",
+  "chapters": [
+    {
+      "title": "\n      PHAEDO\n    ",
+      "paragraphs": [
+        {
+          "content": "\n      PERSONS OF THE DIALOGUE:\n    "
+        },
+        {
+          "content": "\n      Phaedo, who is the narrator of the dialogue to Echecrates of Phlius.\n      Socrates, Apollodorus, Simmias, Cebes, Crito and an Attendant of the\n      Prison.\n    "
+        },
+        {
+          "content": "\n      SCENE: The Prison of Socrates.\n    "
+        },
+        {
+          "content": "\n      PLACE OF THE NARRATION: Phlius.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Were you yourself, Phaedo, in the prison with Socrates on the\n      day when he drank the poison?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Yes, Echecrates, I was.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: I should so like to hear about his death. What did he say in\n      his last hours? We were informed that he died by taking poison, but no one\n      knew anything more; for no Phliasian ever goes to Athens now, and it is a\n      long time since any stranger from Athens has found his way hither; so that\n      we had no clear account.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Did you not hear of the proceedings at the trial?\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Yes; some one told us about the trial, and we could not\n      understand why, having been condemned, he should have been put to death,\n      not at the time, but long afterwards. What was the reason of this?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: An accident, Echecrates: the stern of the ship which the Athenians\n      send to Delos happened to have been crowned on the day before he was\n      tried.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: What is this ship?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: It is the ship in which, according to Athenian tradition, Theseus\n      went to Crete when he took with him the fourteen youths, and was the\n      saviour of them and of himself. And they were said to have vowed to Apollo\n      at the time, that if they were saved they would send a yearly mission to\n      Delos. Now this custom still continues, and the whole period of the voyage\n      to and from Delos, beginning when the priest of Apollo crowns the stern of\n      the ship, is a holy season, during which the city is not allowed to be\n      polluted by public executions; and when the vessel is detained by contrary\n      winds, the time spent in going and returning is very considerable. As I\n      was saying, the ship was crowned on the day before the trial, and this was\n      the reason why Socrates lay in prison and was not put to death until long\n      after he was condemned.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: What was the manner of his death, Phaedo? What was said or\n      done? And which of his friends were with him? Or did the authorities\n      forbid them to be present—so that he had no friends near him when he\n      died?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: No; there were several of them with him.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: If you have nothing to do, I wish that you would tell me what\n      passed, as exactly as you can.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: I have nothing at all to do, and will try to gratify your wish. To\n      be reminded of Socrates is always the greatest delight to me, whether I\n      speak myself or hear another speak of him.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: You will have listeners who are of the same mind with you, and\n      I hope that you will be as exact as you can.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: I had a singular feeling at being in his company. For I could\n      hardly believe that I was present at the death of a friend, and therefore\n      I did not pity him, Echecrates; he died so fearlessly, and his words and\n      bearing were so noble and gracious, that to me he appeared blessed. I\n      thought that in going to the other world he could not be without a divine\n      call, and that he would be happy, if any man ever was, when he arrived\n      there, and therefore I did not pity him as might have seemed natural at\n      such an hour. But I had not the pleasure which I usually feel in\n      philosophical discourse (for philosophy was the theme of which we spoke).\n      I was pleased, but in the pleasure there was also a strange admixture of\n      pain; for I reflected that he was soon to die, and this double feeling was\n      shared by us all; we were laughing and weeping by turns, especially the\n      excitable Apollodorus—you know the sort of man?\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Yes.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: He was quite beside himself; and I and all of us were greatly\n      moved.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Who were present?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Of native Athenians there were, besides Apollodorus, Critobulus\n      and his father Crito, Hermogenes, Epigenes, Aeschines, Antisthenes;\n      likewise Ctesippus of the deme of Paeania, Menexenus, and some others;\n      Plato, if I am not mistaken, was ill.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Were there any strangers?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Yes, there were; Simmias the Theban, and Cebes, and Phaedondes;\n      Euclid and Terpison, who came from Megara.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: And was Aristippus there, and Cleombrotus?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: No, they were said to be in Aegina.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Any one else?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: I think that these were nearly all.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Well, and what did you talk about?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: I will begin at the beginning, and endeavour to repeat the entire\n      conversation. On the previous days we had been in the habit of assembling\n      early in the morning at the court in which the trial took place, and which\n      is not far from the prison. There we used to wait talking with one another\n      until the opening of the doors (for they were not opened very early); then\n      we went in and generally passed the day with Socrates. On the last morning\n      we assembled sooner than usual, having heard on the day before when we\n      quitted the prison in the evening that the sacred ship had come from\n      Delos, and so we arranged to meet very early at the accustomed place. On\n      our arrival the jailer who answered the door, instead of admitting us,\n      came out and told us to stay until he called us. 'For the Eleven,' he\n      said, 'are now with Socrates; they are taking off his chains, and giving\n      orders that he is to die to-day.' He soon returned and said that we might\n      come in. On entering we found Socrates just released from chains, and\n      Xanthippe, whom you know, sitting by him, and holding his child in her\n      arms. When she saw us she uttered a cry and said, as women will: 'O\n      Socrates, this is the last time that either you will converse with your\n      friends, or they with you.' Socrates turned to Crito and said: 'Crito, let\n      some one take her home.' Some of Crito's people accordingly led her away,\n      crying out and beating herself. And when she was gone, Socrates, sitting\n      up on the couch, bent and rubbed his leg, saying, as he was rubbing: How\n      singular is the thing called pleasure, and how curiously related to pain,\n      which might be thought to be the opposite of it; for they are never\n      present to a man at the same instant, and yet he who pursues either is\n      generally compelled to take the other; their bodies are two, but they are\n      joined by a single head. And I cannot help thinking that if Aesop had\n      remembered them, he would have made a fable about God trying to reconcile\n      their strife, and how, when he could not, he fastened their heads\n      together; and this is the reason why when one comes the other follows, as\n      I know by my own experience now, when after the pain in my leg which was\n      caused by the chain pleasure appears to succeed.\n    "
+        },
+        {
+          "content": "\n      Upon this Cebes said: I am glad, Socrates, that you have mentioned the\n      name of Aesop. For it reminds me of a question which has been asked by\n      many, and was asked of me only the day before yesterday by Evenus the poet—he\n      will be sure to ask it again, and therefore if you would like me to have\n      an answer ready for him, you may as well tell me what I should say to him:—he\n      wanted to know why you, who never before wrote a line of poetry, now that\n      you are in prison are turning Aesop's fables into verse, and also\n      composing that hymn in honour of Apollo.\n    "
+        },
+        {
+          "content": "\n      Tell him, Cebes, he replied, what is the truth—that I had no idea of\n      rivalling him or his poems; to do so, as I knew, would be no easy task.\n      But I wanted to see whether I could purge away a scruple which I felt\n      about the meaning of certain dreams. In the course of my life I have often\n      had intimations in dreams 'that I should compose music.' The same dream\n      came to me sometimes in one form, and sometimes in another, but always\n      saying the same or nearly the same words: 'Cultivate and make music,' said\n      the dream. And hitherto I had imagined that this was only intended to\n      exhort and encourage me in the study of philosophy, which has been the\n      pursuit of my life, and is the noblest and best of music. The dream was\n      bidding me do what I was already doing, in the same way that the\n      competitor in a race is bidden by the spectators to run when he is already\n      running. But I was not certain of this, for the dream might have meant\n      music in the popular sense of the word, and being under sentence of death,\n      and the festival giving me a respite, I thought that it would be safer for\n      me to satisfy the scruple, and, in obedience to the dream, to compose a\n      few verses before I departed. And first I made a hymn in honour of the god\n      of the festival, and then considering that a poet, if he is really to be a\n      poet, should not only put together words, but should invent stories, and\n      that I have no invention, I took some fables of Aesop, which I had ready\n      at hand and which I knew—they were the first I came upon—and\n      turned them into verse. Tell this to Evenus, Cebes, and bid him be of good\n      cheer; say that I would have him come after me if he be a wise man, and\n      not tarry; and that to-day I am likely to be going, for the Athenians say\n      that I must.\n    "
+        },
+        {
+          "content": "\n      Simmias said: What a message for such a man! having been a frequent\n      companion of his I should say that, as far as I know him, he will never\n      take your advice unless he is obliged.\n    "
+        },
+        {
+          "content": "\n      Why, said Socrates,—is not Evenus a philosopher?\n    "
+        },
+        {
+          "content": "\n      I think that he is, said Simmias.\n    "
+        },
+        {
+          "content": "\n      Then he, or any man who has the spirit of philosophy, will be willing to\n      die, but he will not take his own life, for that is held to be unlawful.\n    "
+        },
+        {
+          "content": "\n      Here he changed his position, and put his legs off the couch on to the\n      ground, and during the rest of the conversation he remained sitting.\n    "
+        },
+        {
+          "content": "\n      Why do you say, enquired Cebes, that a man ought not to take his own life,\n      but that the philosopher will be ready to follow the dying?\n    "
+        },
+        {
+          "content": "\n      Socrates replied: And have you, Cebes and Simmias, who are the disciples\n      of Philolaus, never heard him speak of this?\n    "
+        },
+        {
+          "content": "\n      Yes, but his language was obscure, Socrates.\n    "
+        },
+        {
+          "content": "\n      My words, too, are only an echo; but there is no reason why I should not\n      repeat what I have heard: and indeed, as I am going to another place, it\n      is very meet for me to be thinking and talking of the nature of the\n      pilgrimage which I am about to make. What can I do better in the interval\n      between this and the setting of the sun?\n    "
+        },
+        {
+          "content": "\n      Then tell me, Socrates, why is suicide held to be unlawful? as I have\n      certainly heard Philolaus, about whom you were just now asking, affirm\n      when he was staying with us at Thebes: and there are others who say the\n      same, although I have never understood what was meant by any of them.\n    "
+        },
+        {
+          "content": "\n      Do not lose heart, replied Socrates, and the day may come when you will\n      understand. I suppose that you wonder why, when other things which are\n      evil may be good at certain times and to certain persons, death is to be\n      the only exception, and why, when a man is better dead, he is not\n      permitted to be his own benefactor, but must wait for the hand of another.\n    "
+        },
+        {
+          "content": "\n      Very true, said Cebes, laughing gently and speaking in his native\n      Boeotian.\n    "
+        },
+        {
+          "content": "\n      I admit the appearance of inconsistency in what I am saying; but there may\n      not be any real inconsistency after all. There is a doctrine whispered in\n      secret that man is a prisoner who has no right to open the door and run\n      away; this is a great mystery which I do not quite understand. Yet I too\n      believe that the gods are our guardians, and that we are a possession of\n      theirs. Do you not agree?\n    "
+        },
+        {
+          "content": "\n      Yes, I quite agree, said Cebes.\n    "
+        },
+        {
+          "content": "\n      And if one of your own possessions, an ox or an ass, for example, took the\n      liberty of putting himself out of the way when you had given no intimation\n      of your wish that he should die, would you not be angry with him, and\n      would you not punish him if you could?\n    "
+        },
+        {
+          "content": "\n      Certainly, replied Cebes.\n    "
+        },
+        {
+          "content": "\n      Then, if we look at the matter thus, there may be reason in saying that a\n      man should wait, and not take his own life until God summons him, as he is\n      now summoning me.\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates, said Cebes, there seems to be truth in what you say. And\n      yet how can you reconcile this seemingly true belief that God is our\n      guardian and we his possessions, with the willingness to die which we were\n      just now attributing to the philosopher? That the wisest of men should be\n      willing to leave a service in which they are ruled by the gods who are the\n      best of rulers, is not reasonable; for surely no wise man thinks that when\n      set at liberty he can take better care of himself than the gods take of\n      him. A fool may perhaps think so—he may argue that he had better run\n      away from his master, not considering that his duty is to remain to the\n      end, and not to run away from the good, and that there would be no sense\n      in his running away. The wise man will want to be ever with him who is\n      better than himself. Now this, Socrates, is the reverse of what was just\n      now said; for upon this view the wise man should sorrow and the fool\n      rejoice at passing out of life.\n    "
+        },
+        {
+          "content": "\n      The earnestness of Cebes seemed to please Socrates. Here, said he, turning\n      to us, is a man who is always inquiring, and is not so easily convinced by\n      the first thing which he hears.\n    "
+        },
+        {
+          "content": "\n      And certainly, added Simmias, the objection which he is now making does\n      appear to me to have some force. For what can be the meaning of a truly\n      wise man wanting to fly away and lightly leave a master who is better than\n      himself? And I rather imagine that Cebes is referring to you; he thinks\n      that you are too ready to leave us, and too ready to leave the gods whom\n      you acknowledge to be our good masters.\n    "
+        },
+        {
+          "content": "\n      Yes, replied Socrates; there is reason in what you say. And so you think\n      that I ought to answer your indictment as if I were in a court?\n    "
+        },
+        {
+          "content": "\n      We should like you to do so, said Simmias.\n    "
+        },
+        {
+          "content": "\n      Then I must try to make a more successful defence before you than I did\n      when before the judges. For I am quite ready to admit, Simmias and Cebes,\n      that I ought to be grieved at death, if I were not persuaded in the first\n      place that I am going to other gods who are wise and good (of which I am\n      as certain as I can be of any such matters), and secondly (though I am not\n      so sure of this last) to men departed, better than those whom I leave\n      behind; and therefore I do not grieve as I might have done, for I have\n      good hope that there is yet something remaining for the dead, and as has\n      been said of old, some far better thing for the good than for the evil.\n    "
+        },
+        {
+          "content": "\n      But do you mean to take away your thoughts with you, Socrates? said\n      Simmias. Will you not impart them to us?—for they are a benefit in\n      which we too are entitled to share. Moreover, if you succeed in convincing\n      us, that will be an answer to the charge against yourself.\n    "
+        },
+        {
+          "content": "\n      I will do my best, replied Socrates. But you must first let me hear what\n      Crito wants; he has long been wishing to say something to me.\n    "
+        },
+        {
+          "content": "\n      Only this, Socrates, replied Crito:—the attendant who is to give you\n      the poison has been telling me, and he wants me to tell you, that you are\n      not to talk much, talking, he says, increases heat, and this is apt to\n      interfere with the action of the poison; persons who excite themselves are\n      sometimes obliged to take a second or even a third dose.\n    "
+        },
+        {
+          "content": "\n      Then, said Socrates, let him mind his business and be prepared to give the\n      poison twice or even thrice if necessary; that is all.\n    "
+        },
+        {
+          "content": "\n      I knew quite well what you would say, replied Crito; but I was obliged to\n      satisfy him.\n    "
+        },
+        {
+          "content": "\n      Never mind him, he said.\n    "
+        },
+        {
+          "content": "\n      And now, O my judges, I desire to prove to you that the real philosopher\n      has reason to be of good cheer when he is about to die, and that after\n      death he may hope to obtain the greatest good in the other world. And how\n      this may be, Simmias and Cebes, I will endeavour to explain. For I deem\n      that the true votary of philosophy is likely to be misunderstood by other\n      men; they do not perceive that he is always pursuing death and dying; and\n      if this be so, and he has had the desire of death all his life long, why\n      when his time comes should he repine at that which he has been always\n      pursuing and desiring?\n    "
+        },
+        {
+          "content": "\n      Simmias said laughingly: Though not in a laughing humour, you have made me\n      laugh, Socrates; for I cannot help thinking that the many when they hear\n      your words will say how truly you have described philosophers, and our\n      people at home will likewise say that the life which philosophers desire\n      is in reality death, and that they have found them out to be deserving of\n      the death which they desire.\n    "
+        },
+        {
+          "content": "\n      And they are right, Simmias, in thinking so, with the exception of the\n      words 'they have found them out'; for they have not found out either what\n      is the nature of that death which the true philosopher deserves, or how he\n      deserves or desires death. But enough of them:—let us discuss the\n      matter among ourselves: Do we believe that there is such a thing as death?\n    "
+        },
+        {
+          "content": "\n      To be sure, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      Is it not the separation of soul and body? And to be dead is the\n      completion of this; when the soul exists in herself, and is released from\n      the body and the body is released from the soul, what is this but death?\n    "
+        },
+        {
+          "content": "\n      Just so, he replied.\n    "
+        },
+        {
+          "content": "\n      There is another question, which will probably throw light on our present\n      inquiry if you and I can agree about it:—Ought the philosopher to\n      care about the pleasures—if they are to be called pleasures—of\n      eating and drinking?\n    "
+        },
+        {
+          "content": "\n      Certainly not, answered Simmias.\n    "
+        },
+        {
+          "content": "\n      And what about the pleasures of love—should he care for them?\n    "
+        },
+        {
+          "content": "\n      By no means.\n    "
+        },
+        {
+          "content": "\n      And will he think much of the other ways of indulging the body, for\n      example, the acquisition of costly raiment, or sandals, or other\n      adornments of the body? Instead of caring about them, does he not rather\n      despise anything more than nature needs? What do you say?\n    "
+        },
+        {
+          "content": "\n      I should say that the true philosopher would despise them.\n    "
+        },
+        {
+          "content": "\n      Would you not say that he is entirely concerned with the soul and not with\n      the body? He would like, as far as he can, to get away from the body and\n      to turn to the soul.\n    "
+        },
+        {
+          "content": "\n      Quite true.\n    "
+        },
+        {
+          "content": "\n      In matters of this sort philosophers, above all other men, may be observed\n      in every sort of way to dissever the soul from the communion of the body.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      Whereas, Simmias, the rest of the world are of opinion that to him who has\n      no sense of pleasure and no part in bodily pleasure, life is not worth\n      having; and that he who is indifferent about them is as good as dead.\n    "
+        },
+        {
+          "content": "\n      That is also true.\n    "
+        },
+        {
+          "content": "\n      What again shall we say of the actual acquirement of knowledge?—is\n      the body, if invited to share in the enquiry, a hinderer or a helper? I\n      mean to say, have sight and hearing any truth in them? Are they not, as\n      the poets are always telling us, inaccurate witnesses? and yet, if even\n      they are inaccurate and indistinct, what is to be said of the other\n      senses?—for you will allow that they are the best of them?\n    "
+        },
+        {
+          "content": "\n      Certainly, he replied.\n    "
+        },
+        {
+          "content": "\n      Then when does the soul attain truth?—for in attempting to consider\n      anything in company with the body she is obviously deceived.\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      Then must not true existence be revealed to her in thought, if at all?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And thought is best when the mind is gathered into herself and none of\n      these things trouble her—neither sounds nor sights nor pain nor any\n      pleasure,—when she takes leave of the body, and has as little as\n      possible to do with it, when she has no bodily sense or desire, but is\n      aspiring after true being?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      And in this the philosopher dishonours the body; his soul runs away from\n      his body and desires to be alone and by herself?\n    "
+        },
+        {
+          "content": "\n      That is true.\n    "
+        },
+        {
+          "content": "\n      Well, but there is another thing, Simmias: Is there or is there not an\n      absolute justice?\n    "
+        },
+        {
+          "content": "\n      Assuredly there is.\n    "
+        },
+        {
+          "content": "\n      And an absolute beauty and absolute good?\n    "
+        },
+        {
+          "content": "\n      Of course.\n    "
+        },
+        {
+          "content": "\n      But did you ever behold any of them with your eyes?\n    "
+        },
+        {
+          "content": "\n      Certainly not.\n    "
+        },
+        {
+          "content": "\n      Or did you ever reach them with any other bodily sense?—and I speak\n      not of these alone, but of absolute greatness, and health, and strength,\n      and of the essence or true nature of everything. Has the reality of them\n      ever been perceived by you through the bodily organs? or rather, is not\n      the nearest approach to the knowledge of their several natures made by him\n      who so orders his intellectual vision as to have the most exact conception\n      of the essence of each thing which he considers?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      And he attains to the purest knowledge of them who goes to each with the\n      mind alone, not introducing or intruding in the act of thought sight or\n      any other sense together with reason, but with the very light of the mind\n      in her own clearness searches into the very truth of each; he who has got\n      rid, as far as he can, of eyes and ears and, so to speak, of the whole\n      body, these being in his opinion distracting elements which when they\n      infect the soul hinder her from acquiring truth and knowledge—who,\n      if not he, is likely to attain the knowledge of true being?\n    "
+        },
+        {
+          "content": "\n      What you say has a wonderful truth in it, Socrates, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      And when real philosophers consider all these things, will they not be led\n      to make a reflection which they will express in words something like the\n      following? 'Have we not found,' they will say, 'a path of thought which\n      seems to bring us and our argument to the conclusion, that while we are in\n      the body, and while the soul is infected with the evils of the body, our\n      desire will not be satisfied? and our desire is of the truth. For the body\n      is a source of endless trouble to us by reason of the mere requirement of\n      food; and is liable also to diseases which overtake and impede us in the\n      search after true being: it fills us full of loves, and lusts, and fears,\n      and fancies of all kinds, and endless foolery, and in fact, as men say,\n      takes away from us the power of thinking at all. Whence come wars, and\n      fightings, and factions? whence but from the body and the lusts of the\n      body? wars are occasioned by the love of money, and money has to be\n      acquired for the sake and in the service of the body; and by reason of all\n      these impediments we have no time to give to philosophy; and, last and\n      worst of all, even if we are at leisure and betake ourselves to some\n      speculation, the body is always breaking in upon us, causing turmoil and\n      confusion in our enquiries, and so amazing us that we are prevented from\n      seeing the truth. It has been proved to us by experience that if we would\n      have pure knowledge of anything we must be quit of the body—the soul\n      in herself must behold things in themselves: and then we shall attain the\n      wisdom which we desire, and of which we say that we are lovers, not while\n      we live, but after death; for if while in company with the body, the soul\n      cannot have pure knowledge, one of two things follows—either\n      knowledge is not to be attained at all, or, if at all, after death. For\n      then, and not till then, the soul will be parted from the body and exist\n      in herself alone. In this present life, I reckon that we make the nearest\n      approach to knowledge when we have the least possible intercourse or\n      communion with the body, and are not surfeited with the bodily nature, but\n      keep ourselves pure until the hour when God himself is pleased to release\n      us. And thus having got rid of the foolishness of the body we shall be\n      pure and hold converse with the pure, and know of ourselves the clear\n      light everywhere, which is no other than the light of truth.' For the\n      impure are not permitted to approach the pure. These are the sort of\n      words, Simmias, which the true lovers of knowledge cannot help saying to\n      one another, and thinking. You would agree; would you not?\n    "
+        },
+        {
+          "content": "\n      Undoubtedly, Socrates.\n    "
+        },
+        {
+          "content": "\n      But, O my friend, if this is true, there is great reason to hope that,\n      going whither I go, when I have come to the end of my journey, I shall\n      attain that which has been the pursuit of my life. And therefore I go on\n      my way rejoicing, and not I only, but every other man who believes that\n      his mind has been made ready and that he is in a manner purified.\n    "
+        },
+        {
+          "content": "\n      Certainly, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      And what is purification but the separation of the soul from the body, as\n      I was saying before; the habit of the soul gathering and collecting\n      herself into herself from all sides out of the body; the dwelling in her\n      own place alone, as in another life, so also in this, as far as she can;—the\n      release of the soul from the chains of the body?\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      And this separation and release of the soul from the body is termed death?\n    "
+        },
+        {
+          "content": "\n      To be sure, he said.\n    "
+        },
+        {
+          "content": "\n      And the true philosophers, and they only, are ever seeking to release the\n      soul. Is not the separation and release of the soul from the body their\n      especial study?\n    "
+        },
+        {
+          "content": "\n      That is true.\n    "
+        },
+        {
+          "content": "\n      And, as I was saying at first, there would be a ridiculous contradiction\n      in men studying to live as nearly as they can in a state of death, and yet\n      repining when it comes upon them.\n    "
+        },
+        {
+          "content": "\n      Clearly.\n    "
+        },
+        {
+          "content": "\n      And the true philosophers, Simmias, are always occupied in the practice of\n      dying, wherefore also to them least of all men is death terrible. Look at\n      the matter thus:—if they have been in every way the enemies of the\n      body, and are wanting to be alone with the soul, when this desire of\n      theirs is granted, how inconsistent would they be if they trembled and\n      repined, instead of rejoicing at their departure to that place where, when\n      they arrive, they hope to gain that which in life they desired—and\n      this was wisdom—and at the same time to be rid of the company of\n      their enemy. Many a man has been willing to go to the world below animated\n      by the hope of seeing there an earthly love, or wife, or son, and\n      conversing with them. And will he who is a true lover of wisdom, and is\n      strongly persuaded in like manner that only in the world below he can\n      worthily enjoy her, still repine at death? Will he not depart with joy?\n      Surely he will, O my friend, if he be a true philosopher. For he will have\n      a firm conviction that there and there only, he can find wisdom in her\n      purity. And if this be true, he would be very absurd, as I was saying, if\n      he were afraid of death.\n    "
+        },
+        {
+          "content": "\n      He would, indeed, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      And when you see a man who is repining at the approach of death, is not\n      his reluctance a sufficient proof that he is not a lover of wisdom, but a\n      lover of the body, and probably at the same time a lover of either money\n      or power, or both?\n    "
+        },
+        {
+          "content": "\n      Quite so, he replied.\n    "
+        },
+        {
+          "content": "\n      And is not courage, Simmias, a quality which is specially characteristic\n      of the philosopher?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      There is temperance again, which even by the vulgar is supposed to consist\n      in the control and regulation of the passions, and in the sense of\n      superiority to them—is not temperance a virtue belonging to those\n      only who despise the body, and who pass their lives in philosophy?\n    "
+        },
+        {
+          "content": "\n      Most assuredly.\n    "
+        },
+        {
+          "content": "\n      For the courage and temperance of other men, if you will consider them,\n      are really a contradiction.\n    "
+        },
+        {
+          "content": "\n      How so?\n    "
+        },
+        {
+          "content": "\n      Well, he said, you are aware that death is regarded by men in general as a\n      great evil.\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      And do not courageous men face death because they are afraid of yet\n      greater evils?\n    "
+        },
+        {
+          "content": "\n      That is quite true.\n    "
+        },
+        {
+          "content": "\n      Then all but the philosophers are courageous only from fear, and because\n      they are afraid; and yet that a man should be courageous from fear, and\n      because he is a coward, is surely a strange thing.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And are not the temperate exactly in the same case? They are temperate\n      because they are intemperate—which might seem to be a contradiction,\n      but is nevertheless the sort of thing which happens with this foolish\n      temperance. For there are pleasures which they are afraid of losing; and\n      in their desire to keep them, they abstain from some pleasures, because\n      they are overcome by others; and although to be conquered by pleasure is\n      called by men intemperance, to them the conquest of pleasure consists in\n      being conquered by pleasure. And that is what I mean by saying that, in a\n      sense, they are made temperate through intemperance.\n    "
+        },
+        {
+          "content": "\n      Such appears to be the case.\n    "
+        },
+        {
+          "content": "\n      Yet the exchange of one fear or pleasure or pain for another fear or\n      pleasure or pain, and of the greater for the less, as if they were coins,\n      is not the exchange of virtue. O my blessed Simmias, is there not one true\n      coin for which all things ought to be exchanged?—and that is wisdom;\n      and only in exchange for this, and in company with this, is anything truly\n      bought or sold, whether courage or temperance or justice. And is not all\n      true virtue the companion of wisdom, no matter what fears or pleasures or\n      other similar goods or evils may or may not attend her? But the virtue\n      which is made up of these goods, when they are severed from wisdom and\n      exchanged with one another, is a shadow of virtue only, nor is there any\n      freedom or health or truth in her; but in the true exchange there is a\n      purging away of all these things, and temperance, and justice, and\n      courage, and wisdom herself are the purgation of them. The founders of the\n      mysteries would appear to have had a real meaning, and were not talking\n      nonsense when they intimated in a figure long ago that he who passes\n      unsanctified and uninitiated into the world below will lie in a slough,\n      but that he who arrives there after initiation and purification will dwell\n      with the gods. For 'many,' as they say in the mysteries, 'are the\n      thyrsus-bearers, but few are the mystics,'—meaning, as I interpret\n      the words, 'the true philosophers.' In the number of whom, during my whole\n      life, I have been seeking, according to my ability, to find a place;—whether\n      I have sought in a right way or not, and whether I have succeeded or not,\n      I shall truly know in a little while, if God will, when I myself arrive in\n      the other world—such is my belief. And therefore I maintain that I\n      am right, Simmias and Cebes, in not grieving or repining at parting from\n      you and my masters in this world, for I believe that I shall equally find\n      good masters and friends in another world. But most men do not believe\n      this saying; if then I succeed in convincing you by my defence better than\n      I did the Athenian judges, it will be well.\n    "
+        },
+        {
+          "content": "\n      Cebes answered: I agree, Socrates, in the greater part of what you say.\n      But in what concerns the soul, men are apt to be incredulous; they fear\n      that when she has left the body her place may be nowhere, and that on the\n      very day of death she may perish and come to an end—immediately on\n      her release from the body, issuing forth dispersed like smoke or air and\n      in her flight vanishing away into nothingness. If she could only be\n      collected into herself after she has obtained release from the evils of\n      which you are speaking, there would be good reason to hope, Socrates, that\n      what you say is true. But surely it requires a great deal of argument and\n      many proofs to show that when the man is dead his soul yet exists, and has\n      any force or intelligence.\n    "
+        },
+        {
+          "content": "\n      True, Cebes, said Socrates; and shall I suggest that we converse a little\n      of the probabilities of these things?\n    "
+        },
+        {
+          "content": "\n      I am sure, said Cebes, that I should greatly like to know your opinion\n      about them.\n    "
+        },
+        {
+          "content": "\n      I reckon, said Socrates, that no one who heard me now, not even if he were\n      one of my old enemies, the Comic poets, could accuse me of idle talking\n      about matters in which I have no concern:—If you please, then, we\n      will proceed with the inquiry.\n    "
+        },
+        {
+          "content": "\n      Suppose we consider the question whether the souls of men after death are\n      or are not in the world below. There comes into my mind an ancient\n      doctrine which affirms that they go from hence into the other world, and\n      returning hither, are born again from the dead. Now if it be true that the\n      living come from the dead, then our souls must exist in the other world,\n      for if not, how could they have been born again? And this would be\n      conclusive, if there were any real evidence that the living are only born\n      from the dead; but if this is not so, then other arguments will have to be\n      adduced.\n    "
+        },
+        {
+          "content": "\n      Very true, replied Cebes.\n    "
+        },
+        {
+          "content": "\n      Then let us consider the whole question, not in relation to man only, but\n      in relation to animals generally, and to plants, and to everything of\n      which there is generation, and the proof will be easier. Are not all\n      things which have opposites generated out of their opposites? I mean such\n      things as good and evil, just and unjust—and there are innumerable\n      other opposites which are generated out of opposites. And I want to show\n      that in all opposites there is of necessity a similar alternation; I mean\n      to say, for example, that anything which becomes greater must become\n      greater after being less.\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And that which becomes less must have been once greater and then have\n      become less.\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And the weaker is generated from the stronger, and the swifter from the\n      slower.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And the worse is from the better, and the more just is from the more\n      unjust.\n    "
+        },
+        {
+          "content": "\n      Of course.\n    "
+        },
+        {
+          "content": "\n      And is this true of all opposites? and are we convinced that all of them\n      are generated out of opposites?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And in this universal opposition of all things, are there not also two\n      intermediate processes which are ever going on, from one to the other\n      opposite, and back again; where there is a greater and a less there is\n      also an intermediate process of increase and diminution, and that which\n      grows is said to wax, and that which decays to wane?\n    "
+        },
+        {
+          "content": "\n      Yes, he said.\n    "
+        },
+        {
+          "content": "\n      And there are many other processes, such as division and composition,\n      cooling and heating, which equally involve a passage into and out of one\n      another. And this necessarily holds of all opposites, even though not\n      always expressed in words—they are really generated out of one\n      another, and there is a passing or process from one to the other of them?\n    "
+        },
+        {
+          "content": "\n      Very true, he replied.\n    "
+        },
+        {
+          "content": "\n      Well, and is there not an opposite of life, as sleep is the opposite of\n      waking?\n    "
+        },
+        {
+          "content": "\n      True, he said.\n    "
+        },
+        {
+          "content": "\n      And what is it?\n    "
+        },
+        {
+          "content": "\n      Death, he answered.\n    "
+        },
+        {
+          "content": "\n      And these, if they are opposites, are generated the one from the other,\n      and have there their two intermediate processes also?\n    "
+        },
+        {
+          "content": "\n      Of course.\n    "
+        },
+        {
+          "content": "\n      Now, said Socrates, I will analyze one of the two pairs of opposites which\n      I have mentioned to you, and also its intermediate processes, and you\n      shall analyze the other to me. One of them I term sleep, the other waking.\n      The state of sleep is opposed to the state of waking, and out of sleeping\n      waking is generated, and out of waking, sleeping; and the process of\n      generation is in the one case falling asleep, and in the other waking up.\n      Do you agree?\n    "
+        },
+        {
+          "content": "\n      I entirely agree.\n    "
+        },
+        {
+          "content": "\n      Then, suppose that you analyze life and death to me in the same manner. Is\n      not death opposed to life?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And they are generated one from the other?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      What is generated from the living?\n    "
+        },
+        {
+          "content": "\n      The dead.\n    "
+        },
+        {
+          "content": "\n      And what from the dead?\n    "
+        },
+        {
+          "content": "\n      I can only say in answer—the living.\n    "
+        },
+        {
+          "content": "\n      Then the living, whether things or persons, Cebes, are generated from the\n      dead?\n    "
+        },
+        {
+          "content": "\n      That is clear, he replied.\n    "
+        },
+        {
+          "content": "\n      Then the inference is that our souls exist in the world below?\n    "
+        },
+        {
+          "content": "\n      That is true.\n    "
+        },
+        {
+          "content": "\n      And one of the two processes or generations is visible—for surely\n      the act of dying is visible?\n    "
+        },
+        {
+          "content": "\n      Surely, he said.\n    "
+        },
+        {
+          "content": "\n      What then is to be the result? Shall we exclude the opposite process? And\n      shall we suppose nature to walk on one leg only? Must we not rather assign\n      to death some corresponding process of generation?\n    "
+        },
+        {
+          "content": "\n      Certainly, he replied.\n    "
+        },
+        {
+          "content": "\n      And what is that process?\n    "
+        },
+        {
+          "content": "\n      Return to life.\n    "
+        },
+        {
+          "content": "\n      And return to life, if there be such a thing, is the birth of the dead\n      into the world of the living?\n    "
+        },
+        {
+          "content": "\n      Quite true.\n    "
+        },
+        {
+          "content": "\n      Then here is a new way by which we arrive at the conclusion that the\n      living come from the dead, just as the dead come from the living; and\n      this, if true, affords a most certain proof that the souls of the dead\n      exist in some place out of which they come again.\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates, he said; the conclusion seems to flow necessarily out of\n      our previous admissions.\n    "
+        },
+        {
+          "content": "\n      And that these admissions were not unfair, Cebes, he said, may be shown, I\n      think, as follows: If generation were in a straight line only, and there\n      were no compensation or circle in nature, no turn or return of elements\n      into their opposites, then you know that all things would at last have the\n      same form and pass into the same state, and there would be no more\n      generation of them.\n    "
+        },
+        {
+          "content": "\n      What do you mean? he said.\n    "
+        },
+        {
+          "content": "\n      A simple thing enough, which I will illustrate by the case of sleep, he\n      replied. You know that if there were no alternation of sleeping and\n      waking, the tale of the sleeping Endymion would in the end have no\n      meaning, because all other things would be asleep, too, and he would not\n      be distinguishable from the rest. Or if there were composition only, and\n      no division of substances, then the chaos of Anaxagoras would come again.\n      And in like manner, my dear Cebes, if all things which partook of life\n      were to die, and after they were dead remained in the form of death, and\n      did not come to life again, all would at last die, and nothing would be\n      alive—what other result could there be? For if the living spring\n      from any other things, and they too die, must not all things at last be\n      swallowed up in death? (But compare Republic.)\n    "
+        },
+        {
+          "content": "\n      There is no escape, Socrates, said Cebes; and to me your argument seems to\n      be absolutely true.\n    "
+        },
+        {
+          "content": "\n      Yes, he said, Cebes, it is and must be so, in my opinion; and we have not\n      been deluded in making these admissions; but I am confident that there\n      truly is such a thing as living again, and that the living spring from the\n      dead, and that the souls of the dead are in existence, and that the good\n      souls have a better portion than the evil.\n    "
+        },
+        {
+          "content": "\n      Cebes added: Your favorite doctrine, Socrates, that knowledge is simply\n      recollection, if true, also necessarily implies a previous time in which\n      we have learned that which we now recollect. But this would be impossible\n      unless our soul had been in some place before existing in the form of man;\n      here then is another proof of the soul's immortality.\n    "
+        },
+        {
+          "content": "\n      But tell me, Cebes, said Simmias, interposing, what arguments are urged in\n      favour of this doctrine of recollection. I am not very sure at the moment\n      that I remember them.\n    "
+        },
+        {
+          "content": "\n      One excellent proof, said Cebes, is afforded by questions. If you put a\n      question to a person in a right way, he will give a true answer of\n      himself, but how could he do this unless there were knowledge and right\n      reason already in him? And this is most clearly shown when he is taken to\n      a diagram or to anything of that sort. (Compare Meno.)\n    "
+        },
+        {
+          "content": "\n      But if, said Socrates, you are still incredulous, Simmias, I would ask you\n      whether you may not agree with me when you look at the matter in another\n      way;—I mean, if you are still incredulous as to whether knowledge is\n      recollection.\n    "
+        },
+        {
+          "content": "\n      Incredulous, I am not, said Simmias; but I want to have this doctrine of\n      recollection brought to my own recollection, and, from what Cebes has\n      said, I am beginning to recollect and be convinced; but I should still\n      like to hear what you were going to say.\n    "
+        },
+        {
+          "content": "\n      This is what I would say, he replied:—We should agree, if I am not\n      mistaken, that what a man recollects he must have known at some previous\n      time.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And what is the nature of this knowledge or recollection? I mean to ask,\n      Whether a person who, having seen or heard or in any way perceived\n      anything, knows not only that, but has a conception of something else\n      which is the subject, not of the same but of some other kind of knowledge,\n      may not be fairly said to recollect that of which he has the conception?\n    "
+        },
+        {
+          "content": "\n      What do you mean?\n    "
+        },
+        {
+          "content": "\n      I mean what I may illustrate by the following instance:—The\n      knowledge of a lyre is not the same as the knowledge of a man?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And yet what is the feeling of lovers when they recognize a lyre, or a\n      garment, or anything else which the beloved has been in the habit of\n      using? Do not they, from knowing the lyre, form in the mind's eye an image\n      of the youth to whom the lyre belongs? And this is recollection. In like\n      manner any one who sees Simmias may remember Cebes; and there are endless\n      examples of the same thing.\n    "
+        },
+        {
+          "content": "\n      Endless, indeed, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      And recollection is most commonly a process of recovering that which has\n      been already forgotten through time and inattention.\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      Well; and may you not also from seeing the picture of a horse or a lyre\n      remember a man? and from the picture of Simmias, you may be led to\n      remember Cebes?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      Or you may also be led to the recollection of Simmias himself?\n    "
+        },
+        {
+          "content": "\n      Quite so.\n    "
+        },
+        {
+          "content": "\n      And in all these cases, the recollection may be derived from things either\n      like or unlike?\n    "
+        },
+        {
+          "content": "\n      It may be.\n    "
+        },
+        {
+          "content": "\n      And when the recollection is derived from like things, then another\n      consideration is sure to arise, which is—whether the likeness in any\n      degree falls short or not of that which is recollected?\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      And shall we proceed a step further, and affirm that there is such a thing\n      as equality, not of one piece of wood or stone with another, but that,\n      over and above this, there is absolute equality? Shall we say so?\n    "
+        },
+        {
+          "content": "\n      Say so, yes, replied Simmias, and swear to it, with all the confidence in\n      life.\n    "
+        },
+        {
+          "content": "\n      And do we know the nature of this absolute essence?\n    "
+        },
+        {
+          "content": "\n      To be sure, he said.\n    "
+        },
+        {
+          "content": "\n      And whence did we obtain our knowledge? Did we not see equalities of\n      material things, such as pieces of wood and stones, and gather from them\n      the idea of an equality which is different from them? For you will\n      acknowledge that there is a difference. Or look at the matter in another\n      way:—Do not the same pieces of wood or stone appear at one time\n      equal, and at another time unequal?\n    "
+        },
+        {
+          "content": "\n      That is certain.\n    "
+        },
+        {
+          "content": "\n      But are real equals ever unequal? or is the idea of equality the same as\n      of inequality?\n    "
+        },
+        {
+          "content": "\n      Impossible, Socrates.\n    "
+        },
+        {
+          "content": "\n      Then these (so-called) equals are not the same with the idea of equality?\n    "
+        },
+        {
+          "content": "\n      I should say, clearly not, Socrates.\n    "
+        },
+        {
+          "content": "\n      And yet from these equals, although differing from the idea of equality,\n      you conceived and attained that idea?\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      Which might be like, or might be unlike them?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      But that makes no difference; whenever from seeing one thing you conceived\n      another, whether like or unlike, there must surely have been an act of\n      recollection?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      But what would you say of equal portions of wood and stone, or other\n      material equals? and what is the impression produced by them? Are they\n      equals in the same sense in which absolute equality is equal? or do they\n      fall short of this perfect equality in a measure?\n    "
+        },
+        {
+          "content": "\n      Yes, he said, in a very great measure too.\n    "
+        },
+        {
+          "content": "\n      And must we not allow, that when I or any one, looking at any object,\n      observes that the thing which he sees aims at being some other thing, but\n      falls short of, and cannot be, that other thing, but is inferior, he who\n      makes this observation must have had a previous knowledge of that to which\n      the other, although similar, was inferior?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      And has not this been our own case in the matter of equals and of absolute\n      equality?\n    "
+        },
+        {
+          "content": "\n      Precisely.\n    "
+        },
+        {
+          "content": "\n      Then we must have known equality previously to the time when we first saw\n      the material equals, and reflected that all these apparent equals strive\n      to attain absolute equality, but fall short of it?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And we recognize also that this absolute equality has only been known, and\n      can only be known, through the medium of sight or touch, or of some other\n      of the senses, which are all alike in this respect?\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates, as far as the argument is concerned, one of them is the\n      same as the other.\n    "
+        },
+        {
+          "content": "\n      From the senses then is derived the knowledge that all sensible things aim\n      at an absolute equality of which they fall short?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      Then before we began to see or hear or perceive in any way, we must have\n      had a knowledge of absolute equality, or we could not have referred to\n      that standard the equals which are derived from the senses?—for to\n      that they all aspire, and of that they fall short.\n    "
+        },
+        {
+          "content": "\n      No other inference can be drawn from the previous statements.\n    "
+        },
+        {
+          "content": "\n      And did we not see and hear and have the use of our other senses as soon\n      as we were born?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      Then we must have acquired the knowledge of equality at some previous\n      time?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      That is to say, before we were born, I suppose?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And if we acquired this knowledge before we were born, and were born\n      having the use of it, then we also knew before we were born and at the\n      instant of birth not only the equal or the greater or the less, but all\n      other ideas; for we are not speaking only of equality, but of beauty,\n      goodness, justice, holiness, and of all which we stamp with the name of\n      essence in the dialectical process, both when we ask and when we answer\n      questions. Of all this we may certainly affirm that we acquired the\n      knowledge before birth?\n    "
+        },
+        {
+          "content": "\n      We may.\n    "
+        },
+        {
+          "content": "\n      But if, after having acquired, we have not forgotten what in each case we\n      acquired, then we must always have come into life having knowledge, and\n      shall always continue to know as long as life lasts—for knowing is\n      the acquiring and retaining knowledge and not forgetting. Is not\n      forgetting, Simmias, just the losing of knowledge?\n    "
+        },
+        {
+          "content": "\n      Quite true, Socrates.\n    "
+        },
+        {
+          "content": "\n      But if the knowledge which we acquired before birth was lost by us at\n      birth, and if afterwards by the use of the senses we recovered what we\n      previously knew, will not the process which we call learning be a\n      recovering of the knowledge which is natural to us, and may not this be\n      rightly termed recollection?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      So much is clear—that when we perceive something, either by the help\n      of sight, or hearing, or some other sense, from that perception we are\n      able to obtain a notion of some other thing like or unlike which is\n      associated with it but has been forgotten. Whence, as I was saying, one of\n      two alternatives follows:—either we had this knowledge at birth, and\n      continued to know through life; or, after birth, those who are said to\n      learn only remember, and learning is simply recollection.\n    "
+        },
+        {
+          "content": "\n      Yes, that is quite true, Socrates.\n    "
+        },
+        {
+          "content": "\n      And which alternative, Simmias, do you prefer? Had we the knowledge at our\n      birth, or did we recollect the things which we knew previously to our\n      birth?\n    "
+        },
+        {
+          "content": "\n      I cannot decide at the moment.\n    "
+        },
+        {
+          "content": "\n      At any rate you can decide whether he who has knowledge will or will not\n      be able to render an account of his knowledge? What do you say?\n    "
+        },
+        {
+          "content": "\n      Certainly, he will.\n    "
+        },
+        {
+          "content": "\n      But do you think that every man is able to give an account of these very\n      matters about which we are speaking?\n    "
+        },
+        {
+          "content": "\n      Would that they could, Socrates, but I rather fear that to-morrow, at this\n      time, there will no longer be any one alive who is able to give an account\n      of them such as ought to be given.\n    "
+        },
+        {
+          "content": "\n      Then you are not of opinion, Simmias, that all men know these things?\n    "
+        },
+        {
+          "content": "\n      Certainly not.\n    "
+        },
+        {
+          "content": "\n      They are in process of recollecting that which they learned before?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      But when did our souls acquire this knowledge?—not since we were\n      born as men?\n    "
+        },
+        {
+          "content": "\n      Certainly not.\n    "
+        },
+        {
+          "content": "\n      And therefore, previously?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      Then, Simmias, our souls must also have existed without bodies before they\n      were in the form of man, and must have had intelligence.\n    "
+        },
+        {
+          "content": "\n      Unless indeed you suppose, Socrates, that these notions are given us at\n      the very moment of birth; for this is the only time which remains.\n    "
+        },
+        {
+          "content": "\n      Yes, my friend, but if so, when do we lose them? for they are not in us\n      when we are born—that is admitted. Do we lose them at the moment of\n      receiving them, or if not at what other time?\n    "
+        },
+        {
+          "content": "\n      No, Socrates, I perceive that I was unconsciously talking nonsense.\n    "
+        },
+        {
+          "content": "\n      Then may we not say, Simmias, that if, as we are always repeating, there\n      is an absolute beauty, and goodness, and an absolute essence of all\n      things; and if to this, which is now discovered to have existed in our\n      former state, we refer all our sensations, and with this compare them,\n      finding these ideas to be pre-existent and our inborn possession—then\n      our souls must have had a prior existence, but if not, there would be no\n      force in the argument? There is the same proof that these ideas must have\n      existed before we were born, as that our souls existed before we were\n      born; and if not the ideas, then not the souls.\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates; I am convinced that there is precisely the same necessity\n      for the one as for the other; and the argument retreats successfully to\n      the position that the existence of the soul before birth cannot be\n      separated from the existence of the essence of which you speak. For there\n      is nothing which to my mind is so patent as that beauty, goodness, and the\n      other notions of which you were just now speaking, have a most real and\n      absolute existence; and I am satisfied with the proof.\n    "
+        },
+        {
+          "content": "\n      Well, but is Cebes equally satisfied? for I must convince him too.\n    "
+        },
+        {
+          "content": "\n      I think, said Simmias, that Cebes is satisfied: although he is the most\n      incredulous of mortals, yet I believe that he is sufficiently convinced of\n      the existence of the soul before birth. But that after death the soul will\n      continue to exist is not yet proven even to my own satisfaction. I cannot\n      get rid of the feeling of the many to which Cebes was referring—the\n      feeling that when the man dies the soul will be dispersed, and that this\n      may be the extinction of her. For admitting that she may have been born\n      elsewhere, and framed out of other elements, and was in existence before\n      entering the human body, why after having entered in and gone out again\n      may she not herself be destroyed and come to an end?\n    "
+        },
+        {
+          "content": "\n      Very true, Simmias, said Cebes; about half of what was required has been\n      proven; to wit, that our souls existed before we were born:—that the\n      soul will exist after death as well as before birth is the other half of\n      which the proof is still wanting, and has to be supplied; when that is\n      given the demonstration will be complete.\n    "
+        },
+        {
+          "content": "\n      But that proof, Simmias and Cebes, has been already given, said Socrates,\n      if you put the two arguments together—I mean this and the former\n      one, in which we admitted that everything living is born of the dead. For\n      if the soul exists before birth, and in coming to life and being born can\n      be born only from death and dying, must she not after death continue to\n      exist, since she has to be born again?—Surely the proof which you\n      desire has been already furnished. Still I suspect that you and Simmias\n      would be glad to probe the argument further. Like children, you are\n      haunted with a fear that when the soul leaves the body, the wind may\n      really blow her away and scatter her; especially if a man should happen to\n      die in a great storm and not when the sky is calm.\n    "
+        },
+        {
+          "content": "\n      Cebes answered with a smile: Then, Socrates, you must argue us out of our\n      fears—and yet, strictly speaking, they are not our fears, but there\n      is a child within us to whom death is a sort of hobgoblin; him too we must\n      persuade not to be afraid when he is alone in the dark.\n    "
+        },
+        {
+          "content": "\n      Socrates said: Let the voice of the charmer be applied daily until you\n      have charmed away the fear.\n    "
+        },
+        {
+          "content": "\n      And where shall we find a good charmer of our fears, Socrates, when you\n      are gone?\n    "
+        },
+        {
+          "content": "\n      Hellas, he replied, is a large place, Cebes, and has many good men, and\n      there are barbarous races not a few: seek for him among them all, far and\n      wide, sparing neither pains nor money; for there is no better way of\n      spending your money. And you must seek among yourselves too; for you will\n      not find others better able to make the search.\n    "
+        },
+        {
+          "content": "\n      The search, replied Cebes, shall certainly be made. And now, if you\n      please, let us return to the point of the argument at which we digressed.\n    "
+        },
+        {
+          "content": "\n      By all means, replied Socrates; what else should I please?\n    "
+        },
+        {
+          "content": "\n      Very good.\n    "
+        },
+        {
+          "content": "\n      Must we not, said Socrates, ask ourselves what that is which, as we\n      imagine, is liable to be scattered, and about which we fear? and what\n      again is that about which we have no fear? And then we may proceed further\n      to enquire whether that which suffers dispersion is or is not of the\n      nature of soul—our hopes and fears as to our own souls will turn\n      upon the answers to these questions.\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      Now the compound or composite may be supposed to be naturally capable, as\n      of being compounded, so also of being dissolved; but that which is\n      uncompounded, and that only, must be, if anything is, indissoluble.\n    "
+        },
+        {
+          "content": "\n      Yes; I should imagine so, said Cebes.\n    "
+        },
+        {
+          "content": "\n      And the uncompounded may be assumed to be the same and unchanging, whereas\n      the compound is always changing and never the same.\n    "
+        },
+        {
+          "content": "\n      I agree, he said.\n    "
+        },
+        {
+          "content": "\n      Then now let us return to the previous discussion. Is that idea or\n      essence, which in the dialectical process we define as essence or true\n      existence—whether essence of equality, beauty, or anything else—are\n      these essences, I say, liable at times to some degree of change? or are\n      they each of them always what they are, having the same simple\n      self-existent and unchanging forms, not admitting of variation at all, or\n      in any way, or at any time?\n    "
+        },
+        {
+          "content": "\n      They must be always the same, Socrates, replied Cebes.\n    "
+        },
+        {
+          "content": "\n      And what would you say of the many beautiful—whether men or horses\n      or garments or any other things which are named by the same names and may\n      be called equal or beautiful,—are they all unchanging and the same\n      always, or quite the reverse? May they not rather be described as almost\n      always changing and hardly ever the same, either with themselves or with\n      one another?\n    "
+        },
+        {
+          "content": "\n      The latter, replied Cebes; they are always in a state of change.\n    "
+        },
+        {
+          "content": "\n      And these you can touch and see and perceive with the senses, but the\n      unchanging things you can only perceive with the mind—they are\n      invisible and are not seen?\n    "
+        },
+        {
+          "content": "\n      That is very true, he said.\n    "
+        },
+        {
+          "content": "\n      Well, then, added Socrates, let us suppose that there are two sorts of\n      existences—one seen, the other unseen.\n    "
+        },
+        {
+          "content": "\n      Let us suppose them.\n    "
+        },
+        {
+          "content": "\n      The seen is the changing, and the unseen is the unchanging?\n    "
+        },
+        {
+          "content": "\n      That may be also supposed.\n    "
+        },
+        {
+          "content": "\n      And, further, is not one part of us body, another part soul?\n    "
+        },
+        {
+          "content": "\n      To be sure.\n    "
+        },
+        {
+          "content": "\n      And to which class is the body more alike and akin?\n    "
+        },
+        {
+          "content": "\n      Clearly to the seen—no one can doubt that.\n    "
+        },
+        {
+          "content": "\n      And is the soul seen or not seen?\n    "
+        },
+        {
+          "content": "\n      Not by man, Socrates.\n    "
+        },
+        {
+          "content": "\n      And what we mean by 'seen' and 'not seen' is that which is or is not\n      visible to the eye of man?\n    "
+        },
+        {
+          "content": "\n      Yes, to the eye of man.\n    "
+        },
+        {
+          "content": "\n      And is the soul seen or not seen?\n    "
+        },
+        {
+          "content": "\n      Not seen.\n    "
+        },
+        {
+          "content": "\n      Unseen then?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      Then the soul is more like to the unseen, and the body to the seen?\n    "
+        },
+        {
+          "content": "\n      That follows necessarily, Socrates.\n    "
+        },
+        {
+          "content": "\n      And were we not saying long ago that the soul when using the body as an\n      instrument of perception, that is to say, when using the sense of sight or\n      hearing or some other sense (for the meaning of perceiving through the\n      body is perceiving through the senses)—were we not saying that the\n      soul too is then dragged by the body into the region of the changeable,\n      and wanders and is confused; the world spins round her, and she is like a\n      drunkard, when she touches change?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      But when returning into herself she reflects, then she passes into the\n      other world, the region of purity, and eternity, and immortality, and\n      unchangeableness, which are her kindred, and with them she ever lives,\n      when she is by herself and is not let or hindered; then she ceases from\n      her erring ways, and being in communion with the unchanging is unchanging.\n      And this state of the soul is called wisdom?\n    "
+        },
+        {
+          "content": "\n      That is well and truly said, Socrates, he replied.\n    "
+        },
+        {
+          "content": "\n      And to which class is the soul more nearly alike and akin, as far as may\n      be inferred from this argument, as well as from the preceding one?\n    "
+        },
+        {
+          "content": "\n      I think, Socrates, that, in the opinion of every one who follows the\n      argument, the soul will be infinitely more like the unchangeable—even\n      the most stupid person will not deny that.\n    "
+        },
+        {
+          "content": "\n      And the body is more like the changing?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      Yet once more consider the matter in another light: When the soul and the\n      body are united, then nature orders the soul to rule and govern, and the\n      body to obey and serve. Now which of these two functions is akin to the\n      divine? and which to the mortal? Does not the divine appear to you to be\n      that which naturally orders and rules, and the mortal to be that which is\n      subject and servant?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And which does the soul resemble?\n    "
+        },
+        {
+          "content": "\n      The soul resembles the divine, and the body the mortal—there can be\n      no doubt of that, Socrates.\n    "
+        },
+        {
+          "content": "\n      Then reflect, Cebes: of all which has been said is not this the\n      conclusion?—that the soul is in the very likeness of the divine, and\n      immortal, and intellectual, and uniform, and indissoluble, and\n      unchangeable; and that the body is in the very likeness of the human, and\n      mortal, and unintellectual, and multiform, and dissoluble, and changeable.\n      Can this, my dear Cebes, be denied?\n    "
+        },
+        {
+          "content": "\n      It cannot.\n    "
+        },
+        {
+          "content": "\n      But if it be true, then is not the body liable to speedy dissolution? and\n      is not the soul almost or altogether indissoluble?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      And do you further observe, that after a man is dead, the body, or visible\n      part of him, which is lying in the visible world, and is called a corpse,\n      and would naturally be dissolved and decomposed and dissipated, is not\n      dissolved or decomposed at once, but may remain for a for some time, nay\n      even for a long time, if the constitution be sound at the time of death,\n      and the season of the year favourable? For the body when shrunk and\n      embalmed, as the manner is in Egypt, may remain almost entire through\n      infinite ages; and even in decay, there are still some portions, such as\n      the bones and ligaments, which are practically indestructible:—Do\n      you agree?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And is it likely that the soul, which is invisible, in passing to the\n      place of the true Hades, which like her is invisible, and pure, and noble,\n      and on her way to the good and wise God, whither, if God will, my soul is\n      also soon to go,—that the soul, I repeat, if this be her nature and\n      origin, will be blown away and destroyed immediately on quitting the body,\n      as the many say? That can never be, my dear Simmias and Cebes. The truth\n      rather is, that the soul which is pure at departing and draws after her no\n      bodily taint, having never voluntarily during life had connection with the\n      body, which she is ever avoiding, herself gathered into herself;—and\n      making such abstraction her perpetual study—which means that she has\n      been a true disciple of philosophy; and therefore has in fact been always\n      engaged in the practice of dying? For is not philosophy the practice of\n      death?—\n    "
+        },
+        {
+          "content": "\n      Certainly—\n    "
+        },
+        {
+          "content": "\n      That soul, I say, herself invisible, departs to the invisible world—to\n      the divine and immortal and rational: thither arriving, she is secure of\n      bliss and is released from the error and folly of men, their fears and\n      wild passions and all other human ills, and for ever dwells, as they say\n      of the initiated, in company with the gods (compare Apol.). Is not this\n      true, Cebes?\n    "
+        },
+        {
+          "content": "\n      Yes, said Cebes, beyond a doubt.\n    "
+        },
+        {
+          "content": "\n      But the soul which has been polluted, and is impure at the time of her\n      departure, and is the companion and servant of the body always, and is in\n      love with and fascinated by the body and by the desires and pleasures of\n      the body, until she is led to believe that the truth only exists in a\n      bodily form, which a man may touch and see and taste, and use for the\n      purposes of his lusts,—the soul, I mean, accustomed to hate and fear\n      and avoid the intellectual principle, which to the bodily eye is dark and\n      invisible, and can be attained only by philosophy;—do you suppose\n      that such a soul will depart pure and unalloyed?\n    "
+        },
+        {
+          "content": "\n      Impossible, he replied.\n    "
+        },
+        {
+          "content": "\n      She is held fast by the corporeal, which the continual association and\n      constant care of the body have wrought into her nature.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And this corporeal element, my friend, is heavy and weighty and earthy,\n      and is that element of sight by which a soul is depressed and dragged down\n      again into the visible world, because she is afraid of the invisible and\n      of the world below—prowling about tombs and sepulchres, near which,\n      as they tell us, are seen certain ghostly apparitions of souls which have\n      not departed pure, but are cloyed with sight and therefore visible.\n    "
+        },
+        {
+          "content": "\n      (Compare Milton, Comus:—\n    "
+        },
+        {
+          "content": "\n      That is very likely, Socrates.\n    "
+        },
+        {
+          "content": "\n      Yes, that is very likely, Cebes; and these must be the souls, not of the\n      good, but of the evil, which are compelled to wander about such places in\n      payment of the penalty of their former evil way of life; and they continue\n      to wander until through the craving after the corporeal which never leaves\n      them, they are imprisoned finally in another body. And they may be\n      supposed to find their prisons in the same natures which they have had in\n      their former lives.\n    "
+        },
+        {
+          "content": "\n      What natures do you mean, Socrates?\n    "
+        },
+        {
+          "content": "\n      What I mean is that men who have followed after gluttony, and wantonness,\n      and drunkenness, and have had no thought of avoiding them, would pass into\n      asses and animals of that sort. What do you think?\n    "
+        },
+        {
+          "content": "\n      I think such an opinion to be exceedingly probable.\n    "
+        },
+        {
+          "content": "\n      And those who have chosen the portion of injustice, and tyranny, and\n      violence, will pass into wolves, or into hawks and kites;—whither\n      else can we suppose them to go?\n    "
+        },
+        {
+          "content": "\n      Yes, said Cebes; with such natures, beyond question.\n    "
+        },
+        {
+          "content": "\n      And there is no difficulty, he said, in assigning to all of them places\n      answering to their several natures and propensities?\n    "
+        },
+        {
+          "content": "\n      There is not, he said.\n    "
+        },
+        {
+          "content": "\n      Some are happier than others; and the happiest both in themselves and in\n      the place to which they go are those who have practised the civil and\n      social virtues which are called temperance and justice, and are acquired\n      by habit and attention without philosophy and mind. (Compare Republic.)\n    "
+        },
+        {
+          "content": "\n      Why are they the happiest?\n    "
+        },
+        {
+          "content": "\n      Because they may be expected to pass into some gentle and social kind\n      which is like their own, such as bees or wasps or ants, or back again into\n      the form of man, and just and moderate men may be supposed to spring from\n      them.\n    "
+        },
+        {
+          "content": "\n      Very likely.\n    "
+        },
+        {
+          "content": "\n      No one who has not studied philosophy and who is not entirely pure at the\n      time of his departure is allowed to enter the company of the Gods, but the\n      lover of knowledge only. And this is the reason, Simmias and Cebes, why\n      the true votaries of philosophy abstain from all fleshly lusts, and hold\n      out against them and refuse to give themselves up to them,—not\n      because they fear poverty or the ruin of their families, like the lovers\n      of money, and the world in general; nor like the lovers of power and\n      honour, because they dread the dishonour or disgrace of evil deeds.\n    "
+        },
+        {
+          "content": "\n      No, Socrates, that would not become them, said Cebes.\n    "
+        },
+        {
+          "content": "\n      No indeed, he replied; and therefore they who have any care of their own\n      souls, and do not merely live moulding and fashioning the body, say\n      farewell to all this; they will not walk in the ways of the blind: and\n      when philosophy offers them purification and release from evil, they feel\n      that they ought not to resist her influence, and whither she leads they\n      turn and follow.\n    "
+        },
+        {
+          "content": "\n      What do you mean, Socrates?\n    "
+        },
+        {
+          "content": "\n      I will tell you, he said. The lovers of knowledge are conscious that the\n      soul was simply fastened and glued to the body—until philosophy\n      received her, she could only view real existence through the bars of a\n      prison, not in and through herself; she was wallowing in the mire of every\n      sort of ignorance; and by reason of lust had become the principal\n      accomplice in her own captivity. This was her original state; and then, as\n      I was saying, and as the lovers of knowledge are well aware, philosophy,\n      seeing how terrible was her confinement, of which she was to herself the\n      cause, received and gently comforted her and sought to release her,\n      pointing out that the eye and the ear and the other senses are full of\n      deception, and persuading her to retire from them, and abstain from all\n      but the necessary use of them, and be gathered up and collected into\n      herself, bidding her trust in herself and her own pure apprehension of\n      pure existence, and to mistrust whatever comes to her through other\n      channels and is subject to variation; for such things are visible and\n      tangible, but what she sees in her own nature is intelligible and\n      invisible. And the soul of the true philosopher thinks that she ought not\n      to resist this deliverance, and therefore abstains from pleasures and\n      desires and pains and fears, as far as she is able; reflecting that when a\n      man has great joys or sorrows or fears or desires, he suffers from them,\n      not merely the sort of evil which might be anticipated—as for\n      example, the loss of his health or property which he has sacrificed to his\n      lusts—but an evil greater far, which is the greatest and worst of\n      all evils, and one of which he never thinks.\n    "
+        },
+        {
+          "content": "\n      What is it, Socrates? said Cebes.\n    "
+        },
+        {
+          "content": "\n      The evil is that when the feeling of pleasure or pain is most intense,\n      every soul of man imagines the objects of this intense feeling to be then\n      plainest and truest: but this is not so, they are really the things of\n      sight.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And is not this the state in which the soul is most enthralled by the\n      body?\n    "
+        },
+        {
+          "content": "\n      How so?\n    "
+        },
+        {
+          "content": "\n      Why, because each pleasure and pain is a sort of nail which nails and\n      rivets the soul to the body, until she becomes like the body, and believes\n      that to be true which the body affirms to be true; and from agreeing with\n      the body and having the same delights she is obliged to have the same\n      habits and haunts, and is not likely ever to be pure at her departure to\n      the world below, but is always infected by the body; and so she sinks into\n      another body and there germinates and grows, and has therefore no part in\n      the communion of the divine and pure and simple.\n    "
+        },
+        {
+          "content": "\n      Most true, Socrates, answered Cebes.\n    "
+        },
+        {
+          "content": "\n      And this, Cebes, is the reason why the true lovers of knowledge are\n      temperate and brave; and not for the reason which the world gives.\n    "
+        },
+        {
+          "content": "\n      Certainly not.\n    "
+        },
+        {
+          "content": "\n      Certainly not! The soul of a philosopher will reason in quite another way;\n      she will not ask philosophy to release her in order that when released she\n      may deliver herself up again to the thraldom of pleasures and pains, doing\n      a work only to be undone again, weaving instead of unweaving her\n      Penelope's web. But she will calm passion, and follow reason, and dwell in\n      the contemplation of her, beholding the true and divine (which is not\n      matter of opinion), and thence deriving nourishment. Thus she seeks to\n      live while she lives, and after death she hopes to go to her own kindred\n      and to that which is like her, and to be freed from human ills. Never\n      fear, Simmias and Cebes, that a soul which has been thus nurtured and has\n      had these pursuits, will at her departure from the body be scattered and\n      blown away by the winds and be nowhere and nothing.\n    "
+        },
+        {
+          "content": "\n      When Socrates had done speaking, for a considerable time there was\n      silence; he himself appeared to be meditating, as most of us were, on what\n      had been said; only Cebes and Simmias spoke a few words to one another.\n      And Socrates observing them asked what they thought of the argument, and\n      whether there was anything wanting? For, said he, there are many points\n      still open to suspicion and attack, if any one were disposed to sift the\n      matter thoroughly. Should you be considering some other matter I say no\n      more, but if you are still in doubt do not hesitate to say exactly what\n      you think, and let us have anything better which you can suggest; and if\n      you think that I can be of any use, allow me to help you.\n    "
+        },
+        {
+          "content": "\n      Simmias said: I must confess, Socrates, that doubts did arise in our\n      minds, and each of us was urging and inciting the other to put the\n      question which we wanted to have answered and which neither of us liked to\n      ask, fearing that our importunity might be troublesome under present at\n      such a time.\n    "
+        },
+        {
+          "content": "\n      Socrates replied with a smile: O Simmias, what are you saying? I am not\n      very likely to persuade other men that I do not regard my present\n      situation as a misfortune, if I cannot even persuade you that I am no\n      worse off now than at any other time in my life. Will you not allow that I\n      have as much of the spirit of prophecy in me as the swans? For they, when\n      they perceive that they must die, having sung all their life long, do then\n      sing more lustily than ever, rejoicing in the thought that they are about\n      to go away to the god whose ministers they are. But men, because they are\n      themselves afraid of death, slanderously affirm of the swans that they\n      sing a lament at the last, not considering that no bird sings when cold,\n      or hungry, or in pain, not even the nightingale, nor the swallow, nor yet\n      the hoopoe; which are said indeed to tune a lay of sorrow, although I do\n      not believe this to be true of them any more than of the swans. But\n      because they are sacred to Apollo, they have the gift of prophecy, and\n      anticipate the good things of another world, wherefore they sing and\n      rejoice in that day more than they ever did before. And I too, believing\n      myself to be the consecrated servant of the same God, and the\n      fellow-servant of the swans, and thinking that I have received from my\n      master gifts of prophecy which are not inferior to theirs, would not go\n      out of life less merrily than the swans. Never mind then, if this be your\n      only objection, but speak and ask anything which you like, while the\n      eleven magistrates of Athens allow.\n    "
+        },
+        {
+          "content": "\n      Very good, Socrates, said Simmias; then I will tell you my difficulty, and\n      Cebes will tell you his. I feel myself, (and I daresay that you have the\n      same feeling), how hard or rather impossible is the attainment of any\n      certainty about questions such as these in the present life. And yet I\n      should deem him a coward who did not prove what is said about them to the\n      uttermost, or whose heart failed him before he had examined them on every\n      side. For he should persevere until he has achieved one of two things:\n      either he should discover, or be taught the truth about them; or, if this\n      be impossible, I would have him take the best and most irrefragable of\n      human theories, and let this be the raft upon which he sails through life—not\n      without risk, as I admit, if he cannot find some word of God which will\n      more surely and safely carry him. And now, as you bid me, I will venture\n      to question you, and then I shall not have to reproach myself hereafter\n      with not having said at the time what I think. For when I consider the\n      matter, either alone or with Cebes, the argument does certainly appear to\n      me, Socrates, to be not sufficient.\n    "
+        },
+        {
+          "content": "\n      Socrates answered: I dare say, my friend, that you may be right, but I\n      should like to know in what respect the argument is insufficient.\n    "
+        },
+        {
+          "content": "\n      In this respect, replied Simmias:—Suppose a person to use the same\n      argument about harmony and the lyre—might he not say that harmony is\n      a thing invisible, incorporeal, perfect, divine, existing in the lyre\n      which is harmonized, but that the lyre and the strings are matter and\n      material, composite, earthy, and akin to mortality? And when some one\n      breaks the lyre, or cuts and rends the strings, then he who takes this\n      view would argue as you do, and on the same analogy, that the harmony\n      survives and has not perished—you cannot imagine, he would say, that\n      the lyre without the strings, and the broken strings themselves which are\n      mortal remain, and yet that the harmony, which is of heavenly and immortal\n      nature and kindred, has perished—perished before the mortal. The\n      harmony must still be somewhere, and the wood and strings will decay\n      before anything can happen to that. The thought, Socrates, must have\n      occurred to your own mind that such is our conception of the soul; and\n      that when the body is in a manner strung and held together by the elements\n      of hot and cold, wet and dry, then the soul is the harmony or due\n      proportionate admixture of them. But if so, whenever the strings of the\n      body are unduly loosened or overstrained through disease or other injury,\n      then the soul, though most divine, like other harmonies of music or of\n      works of art, of course perishes at once, although the material remains of\n      the body may last for a considerable time, until they are either decayed\n      or burnt. And if any one maintains that the soul, being the harmony of the\n      elements of the body, is first to perish in that which is called death,\n      how shall we answer him?\n    "
+        },
+        {
+          "content": "\n      Socrates looked fixedly at us as his manner was, and said with a smile:\n      Simmias has reason on his side; and why does not some one of you who is\n      better able than myself answer him? for there is force in his attack upon\n      me. But perhaps, before we answer him, we had better also hear what Cebes\n      has to say that we may gain time for reflection, and when they have both\n      spoken, we may either assent to them, if there is truth in what they say,\n      or if not, we will maintain our position. Please to tell me then, Cebes,\n      he said, what was the difficulty which troubled you?\n    "
+        },
+        {
+          "content": "\n      Cebes said: I will tell you. My feeling is that the argument is where it\n      was, and open to the same objections which were urged before; for I am\n      ready to admit that the existence of the soul before entering into the\n      bodily form has been very ingeniously, and, if I may say so, quite\n      sufficiently proven; but the existence of the soul after death is still,\n      in my judgment, unproven. Now my objection is not the same as that of\n      Simmias; for I am not disposed to deny that the soul is stronger and more\n      lasting than the body, being of opinion that in all such respects the soul\n      very far excels the body. Well, then, says the argument to me, why do you\n      remain unconvinced?—When you see that the weaker continues in\n      existence after the man is dead, will you not admit that the more lasting\n      must also survive during the same period of time? Now I will ask you to\n      consider whether the objection, which, like Simmias, I will express in a\n      figure, is of any weight. The analogy which I will adduce is that of an\n      old weaver, who dies, and after his death somebody says:—He is not\n      dead, he must be alive;—see, there is the coat which he himself wove\n      and wore, and which remains whole and undecayed. And then he proceeds to\n      ask of some one who is incredulous, whether a man lasts longer, or the\n      coat which is in use and wear; and when he is answered that a man lasts\n      far longer, thinks that he has thus certainly demonstrated the survival of\n      the man, who is the more lasting, because the less lasting remains. But\n      that, Simmias, as I would beg you to remark, is a mistake; any one can see\n      that he who talks thus is talking nonsense. For the truth is, that the\n      weaver aforesaid, having woven and worn many such coats, outlived several\n      of them, and was outlived by the last; but a man is not therefore proved\n      to be slighter and weaker than a coat. Now the relation of the body to the\n      soul may be expressed in a similar figure; and any one may very fairly say\n      in like manner that the soul is lasting, and the body weak and shortlived\n      in comparison. He may argue in like manner that every soul wears out many\n      bodies, especially if a man live many years. While he is alive the body\n      deliquesces and decays, and the soul always weaves another garment and\n      repairs the waste. But of course, whenever the soul perishes, she must\n      have on her last garment, and this will survive her; and then at length,\n      when the soul is dead, the body will show its native weakness, and quickly\n      decompose and pass away. I would therefore rather not rely on the argument\n      from superior strength to prove the continued existence of the soul after\n      death. For granting even more than you affirm to be possible, and\n      acknowledging not only that the soul existed before birth, but also that\n      the souls of some exist, and will continue to exist after death, and will\n      be born and die again and again, and that there is a natural strength in\n      the soul which will hold out and be born many times—nevertheless, we\n      may be still inclined to think that she will weary in the labours of\n      successive births, and may at last succumb in one of her deaths and\n      utterly perish; and this death and dissolution of the body which brings\n      destruction to the soul may be unknown to any of us, for no one of us can\n      have had any experience of it: and if so, then I maintain that he who is\n      confident about death has but a foolish confidence, unless he is able to\n      prove that the soul is altogether immortal and imperishable. But if he\n      cannot prove the soul's immortality, he who is about to die will always\n      have reason to fear that when the body is disunited, the soul also may\n      utterly perish.\n    "
+        },
+        {
+          "content": "\n      All of us, as we afterwards remarked to one another, had an unpleasant\n      feeling at hearing what they said. When we had been so firmly convinced\n      before, now to have our faith shaken seemed to introduce a confusion and\n      uncertainty, not only into the previous argument, but into any future one;\n      either we were incapable of forming a judgment, or there were no grounds\n      of belief.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: There I feel with you—by heaven I do, Phaedo, and when\n      you were speaking, I was beginning to ask myself the same question: What\n      argument can I ever trust again? For what could be more convincing than\n      the argument of Socrates, which has now fallen into discredit? That the\n      soul is a harmony is a doctrine which has always had a wonderful\n      attraction for me, and, when mentioned, came back to me at once, as my own\n      original conviction. And now I must begin again and find another argument\n      which will assure me that when the man is dead the soul survives. Tell me,\n      I implore you, how did Socrates proceed? Did he appear to share the\n      unpleasant feeling which you mention? or did he calmly meet the attack?\n      And did he answer forcibly or feebly? Narrate what passed as exactly as\n      you can.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Often, Echecrates, I have wondered at Socrates, but never more\n      than on that occasion. That he should be able to answer was nothing, but\n      what astonished me was, first, the gentle and pleasant and approving\n      manner in which he received the words of the young men, and then his quick\n      sense of the wound which had been inflicted by the argument, and the\n      readiness with which he healed it. He might be compared to a general\n      rallying his defeated and broken army, urging them to accompany him and\n      return to the field of argument.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: What followed?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: You shall hear, for I was close to him on his right hand, seated\n      on a sort of stool, and he on a couch which was a good deal higher. He\n      stroked my head, and pressed the hair upon my neck—he had a way of\n      playing with my hair; and then he said: To-morrow, Phaedo, I suppose that\n      these fair locks of yours will be severed.\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates, I suppose that they will, I replied.\n    "
+        },
+        {
+          "content": "\n      Not so, if you will take my advice.\n    "
+        },
+        {
+          "content": "\n      What shall I do with them? I said.\n    "
+        },
+        {
+          "content": "\n      To-day, he replied, and not to-morrow, if this argument dies and we cannot\n      bring it to life again, you and I will both shave our locks; and if I were\n      you, and the argument got away from me, and I could not hold my ground\n      against Simmias and Cebes, I would myself take an oath, like the Argives,\n      not to wear hair any more until I had renewed the conflict and defeated\n      them.\n    "
+        },
+        {
+          "content": "\n      Yes, I said, but Heracles himself is said not to be a match for two.\n    "
+        },
+        {
+          "content": "\n      Summon me then, he said, and I will be your Iolaus until the sun goes\n      down.\n    "
+        },
+        {
+          "content": "\n      I summon you rather, I rejoined, not as Heracles summoning Iolaus, but as\n      Iolaus might summon Heracles.\n    "
+        },
+        {
+          "content": "\n      That will do as well, he said. But first let us take care that we avoid a\n      danger.\n    "
+        },
+        {
+          "content": "\n      Of what nature? I said.\n    "
+        },
+        {
+          "content": "\n      Lest we become misologists, he replied, no worse thing can happen to a man\n      than this. For as there are misanthropists or haters of men, there are\n      also misologists or haters of ideas, and both spring from the same cause,\n      which is ignorance of the world. Misanthropy arises out of the too great\n      confidence of inexperience;—you trust a man and think him altogether\n      true and sound and faithful, and then in a little while he turns out to be\n      false and knavish; and then another and another, and when this has\n      happened several times to a man, especially when it happens among those\n      whom he deems to be his own most trusted and familiar friends, and he has\n      often quarreled with them, he at last hates all men, and believes that no\n      one has any good in him at all. You must have observed this trait of\n      character?\n    "
+        },
+        {
+          "content": "\n      I have.\n    "
+        },
+        {
+          "content": "\n      And is not the feeling discreditable? Is it not obvious that such an one\n      having to deal with other men, was clearly without any experience of human\n      nature; for experience would have taught him the true state of the case,\n      that few are the good and few the evil, and that the great majority are in\n      the interval between them.\n    "
+        },
+        {
+          "content": "\n      What do you mean? I said.\n    "
+        },
+        {
+          "content": "\n      I mean, he replied, as you might say of the very large and very small,\n      that nothing is more uncommon than a very large or very small man; and\n      this applies generally to all extremes, whether of great and small, or\n      swift and slow, or fair and foul, or black and white: and whether the\n      instances you select be men or dogs or anything else, few are the\n      extremes, but many are in the mean between them. Did you never observe\n      this?\n    "
+        },
+        {
+          "content": "\n      Yes, I said, I have.\n    "
+        },
+        {
+          "content": "\n      And do you not imagine, he said, that if there were a competition in evil,\n      the worst would be found to be very few?\n    "
+        },
+        {
+          "content": "\n      Yes, that is very likely, I said.\n    "
+        },
+        {
+          "content": "\n      Yes, that is very likely, he replied; although in this respect arguments\n      are unlike men—there I was led on by you to say more than I had\n      intended; but the point of comparison was, that when a simple man who has\n      no skill in dialectics believes an argument to be true which he afterwards\n      imagines to be false, whether really false or not, and then another and\n      another, he has no longer any faith left, and great disputers, as you\n      know, come to think at last that they have grown to be the wisest of\n      mankind; for they alone perceive the utter unsoundness and instability of\n      all arguments, or indeed, of all things, which, like the currents in the\n      Euripus, are going up and down in never-ceasing ebb and flow.\n    "
+        },
+        {
+          "content": "\n      That is quite true, I said.\n    "
+        },
+        {
+          "content": "\n      Yes, Phaedo, he replied, and how melancholy, if there be such a thing as\n      truth or certainty or possibility of knowledge—that a man should\n      have lighted upon some argument or other which at first seemed true and\n      then turned out to be false, and instead of blaming himself and his own\n      want of wit, because he is annoyed, should at last be too glad to transfer\n      the blame from himself to arguments in general: and for ever afterwards\n      should hate and revile them, and lose truth and the knowledge of\n      realities.\n    "
+        },
+        {
+          "content": "\n      Yes, indeed, I said; that is very melancholy.\n    "
+        },
+        {
+          "content": "\n      Let us then, in the first place, he said, be careful of allowing or of\n      admitting into our souls the notion that there is no health or soundness\n      in any arguments at all. Rather say that we have not yet attained to\n      soundness in ourselves, and that we must struggle manfully and do our best\n      to gain health of mind—you and all other men having regard to the\n      whole of your future life, and I myself in the prospect of death. For at\n      this moment I am sensible that I have not the temper of a philosopher;\n      like the vulgar, I am only a partisan. Now the partisan, when he is\n      engaged in a dispute, cares nothing about the rights of the question, but\n      is anxious only to convince his hearers of his own assertions. And the\n      difference between him and me at the present moment is merely this—that\n      whereas he seeks to convince his hearers that what he says is true, I am\n      rather seeking to convince myself; to convince my hearers is a secondary\n      matter with me. And do but see how much I gain by the argument. For if\n      what I say is true, then I do well to be persuaded of the truth, but if\n      there be nothing after death, still, during the short time that remains, I\n      shall not distress my friends with lamentations, and my ignorance will not\n      last, but will die with me, and therefore no harm will be done. This is\n      the state of mind, Simmias and Cebes, in which I approach the argument.\n      And I would ask you to be thinking of the truth and not of Socrates: agree\n      with me, if I seem to you to be speaking the truth; or if not, withstand\n      me might and main, that I may not deceive you as well as myself in my\n      enthusiasm, and like the bee, leave my sting in you before I die.\n    "
+        },
+        {
+          "content": "\n      And now let us proceed, he said. And first of all let me be sure that I\n      have in my mind what you were saying. Simmias, if I remember rightly, has\n      fears and misgivings whether the soul, although a fairer and diviner thing\n      than the body, being as she is in the form of harmony, may not perish\n      first. On the other hand, Cebes appeared to grant that the soul was more\n      lasting than the body, but he said that no one could know whether the\n      soul, after having worn out many bodies, might not perish herself and\n      leave her last body behind her; and that this is death, which is the\n      destruction not of the body but of the soul, for in the body the work of\n      destruction is ever going on. Are not these, Simmias and Cebes, the points\n      which we have to consider?\n    "
+        },
+        {
+          "content": "\n      They both agreed to this statement of them.\n    "
+        },
+        {
+          "content": "\n      He proceeded: And did you deny the force of the whole preceding argument,\n      or of a part only?\n    "
+        },
+        {
+          "content": "\n      Of a part only, they replied.\n    "
+        },
+        {
+          "content": "\n      And what did you think, he said, of that part of the argument in which we\n      said that knowledge was recollection, and hence inferred that the soul\n      must have previously existed somewhere else before she was enclosed in the\n      body?\n    "
+        },
+        {
+          "content": "\n      Cebes said that he had been wonderfully impressed by that part of the\n      argument, and that his conviction remained absolutely unshaken. Simmias\n      agreed, and added that he himself could hardly imagine the possibility of\n      his ever thinking differently.\n    "
+        },
+        {
+          "content": "\n      But, rejoined Socrates, you will have to think differently, my Theban\n      friend, if you still maintain that harmony is a compound, and that the\n      soul is a harmony which is made out of strings set in the frame of the\n      body; for you will surely never allow yourself to say that a harmony is\n      prior to the elements which compose it.\n    "
+        },
+        {
+          "content": "\n      Never, Socrates.\n    "
+        },
+        {
+          "content": "\n      But do you not see that this is what you imply when you say that the soul\n      existed before she took the form and body of man, and was made up of\n      elements which as yet had no existence? For harmony is not like the soul,\n      as you suppose; but first the lyre, and the strings, and the sounds exist\n      in a state of discord, and then harmony is made last of all, and perishes\n      first. And how can such a notion of the soul as this agree with the other?\n    "
+        },
+        {
+          "content": "\n      Not at all, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      And yet, he said, there surely ought to be harmony in a discourse of which\n      harmony is the theme.\n    "
+        },
+        {
+          "content": "\n      There ought, replied Simmias.\n    "
+        },
+        {
+          "content": "\n      But there is no harmony, he said, in the two propositions that knowledge\n      is recollection, and that the soul is a harmony. Which of them will you\n      retain?\n    "
+        },
+        {
+          "content": "\n      I think, he replied, that I have a much stronger faith, Socrates, in the\n      first of the two, which has been fully demonstrated to me, than in the\n      latter, which has not been demonstrated at all, but rests only on probable\n      and plausible grounds; and is therefore believed by the many. I know too\n      well that these arguments from probabilities are impostors, and unless\n      great caution is observed in the use of them, they are apt to be deceptive—in\n      geometry, and in other things too. But the doctrine of knowledge and\n      recollection has been proven to me on trustworthy grounds; and the proof\n      was that the soul must have existed before she came into the body, because\n      to her belongs the essence of which the very name implies existence.\n      Having, as I am convinced, rightly accepted this conclusion, and on\n      sufficient grounds, I must, as I suppose, cease to argue or allow others\n      to argue that the soul is a harmony.\n    "
+        },
+        {
+          "content": "\n      Let me put the matter, Simmias, he said, in another point of view: Do you\n      imagine that a harmony or any other composition can be in a state other\n      than that of the elements, out of which it is compounded?\n    "
+        },
+        {
+          "content": "\n      Certainly not.\n    "
+        },
+        {
+          "content": "\n      Or do or suffer anything other than they do or suffer?\n    "
+        },
+        {
+          "content": "\n      He agreed.\n    "
+        },
+        {
+          "content": "\n      Then a harmony does not, properly speaking, lead the parts or elements\n      which make up the harmony, but only follows them.\n    "
+        },
+        {
+          "content": "\n      He assented.\n    "
+        },
+        {
+          "content": "\n      For harmony cannot possibly have any motion, or sound, or other quality\n      which is opposed to its parts.\n    "
+        },
+        {
+          "content": "\n      That would be impossible, he replied.\n    "
+        },
+        {
+          "content": "\n      And does not the nature of every harmony depend upon the manner in which\n      the elements are harmonized?\n    "
+        },
+        {
+          "content": "\n      I do not understand you, he said.\n    "
+        },
+        {
+          "content": "\n      I mean to say that a harmony admits of degrees, and is more of a harmony,\n      and more completely a harmony, when more truly and fully harmonized, to\n      any extent which is possible; and less of a harmony, and less completely a\n      harmony, when less truly and fully harmonized.\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      But does the soul admit of degrees? or is one soul in the very least\n      degree more or less, or more or less completely, a soul than another?\n    "
+        },
+        {
+          "content": "\n      Not in the least.\n    "
+        },
+        {
+          "content": "\n      Yet surely of two souls, one is said to have intelligence and virtue, and\n      to be good, and the other to have folly and vice, and to be an evil soul:\n      and this is said truly?\n    "
+        },
+        {
+          "content": "\n      Yes, truly.\n    "
+        },
+        {
+          "content": "\n      But what will those who maintain the soul to be a harmony say of this\n      presence of virtue and vice in the soul?—will they say that here is\n      another harmony, and another discord, and that the virtuous soul is\n      harmonized, and herself being a harmony has another harmony within her,\n      and that the vicious soul is inharmonical and has no harmony within her?\n    "
+        },
+        {
+          "content": "\n      I cannot tell, replied Simmias; but I suppose that something of the sort\n      would be asserted by those who say that the soul is a harmony.\n    "
+        },
+        {
+          "content": "\n      And we have already admitted that no soul is more a soul than another;\n      which is equivalent to admitting that harmony is not more or less harmony,\n      or more or less completely a harmony?\n    "
+        },
+        {
+          "content": "\n      Quite true.\n    "
+        },
+        {
+          "content": "\n      And that which is not more or less a harmony is not more or less\n      harmonized?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And that which is not more or less harmonized cannot have more or less of\n      harmony, but only an equal harmony?\n    "
+        },
+        {
+          "content": "\n      Yes, an equal harmony.\n    "
+        },
+        {
+          "content": "\n      Then one soul not being more or less absolutely a soul than another, is\n      not more or less harmonized?\n    "
+        },
+        {
+          "content": "\n      Exactly.\n    "
+        },
+        {
+          "content": "\n      And therefore has neither more nor less of discord, nor yet of harmony?\n    "
+        },
+        {
+          "content": "\n      She has not.\n    "
+        },
+        {
+          "content": "\n      And having neither more nor less of harmony or of discord, one soul has no\n      more vice or virtue than another, if vice be discord and virtue harmony?\n    "
+        },
+        {
+          "content": "\n      Not at all more.\n    "
+        },
+        {
+          "content": "\n      Or speaking more correctly, Simmias, the soul, if she is a harmony, will\n      never have any vice; because a harmony, being absolutely a harmony, has no\n      part in the inharmonical.\n    "
+        },
+        {
+          "content": "\n      No.\n    "
+        },
+        {
+          "content": "\n      And therefore a soul which is absolutely a soul has no vice?\n    "
+        },
+        {
+          "content": "\n      How can she have, if the previous argument holds?\n    "
+        },
+        {
+          "content": "\n      Then, if all souls are equally by their nature souls, all souls of all\n      living creatures will be equally good?\n    "
+        },
+        {
+          "content": "\n      I agree with you, Socrates, he said.\n    "
+        },
+        {
+          "content": "\n      And can all this be true, think you? he said; for these are the\n      consequences which seem to follow from the assumption that the soul is a\n      harmony?\n    "
+        },
+        {
+          "content": "\n      It cannot be true.\n    "
+        },
+        {
+          "content": "\n      Once more, he said, what ruler is there of the elements of human nature\n      other than the soul, and especially the wise soul? Do you know of any?\n    "
+        },
+        {
+          "content": "\n      Indeed, I do not.\n    "
+        },
+        {
+          "content": "\n      And is the soul in agreement with the affections of the body? or is she at\n      variance with them? For example, when the body is hot and thirsty, does\n      not the soul incline us against drinking? and when the body is hungry,\n      against eating? And this is only one instance out of ten thousand of the\n      opposition of the soul to the things of the body.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      But we have already acknowledged that the soul, being a harmony, can never\n      utter a note at variance with the tensions and relaxations and vibrations\n      and other affections of the strings out of which she is composed; she can\n      only follow, she cannot lead them?\n    "
+        },
+        {
+          "content": "\n      It must be so, he replied.\n    "
+        },
+        {
+          "content": "\n      And yet do we not now discover the soul to be doing the exact opposite—leading\n      the elements of which she is believed to be composed; almost always\n      opposing and coercing them in all sorts of ways throughout life, sometimes\n      more violently with the pains of medicine and gymnastic; then again more\n      gently; now threatening, now admonishing the desires, passions, fears, as\n      if talking to a thing which is not herself, as Homer in the Odyssee\n      represents Odysseus doing in the words—\n    "
+        },
+        {
+          "content": "\n      'He beat his breast, and thus reproached his heart: Endure, my heart; far\n      worse hast thou endured!'\n    "
+        },
+        {
+          "content": "\n      Do you think that Homer wrote this under the idea that the soul is a\n      harmony capable of being led by the affections of the body, and not rather\n      of a nature which should lead and master them—herself a far diviner\n      thing than any harmony?\n    "
+        },
+        {
+          "content": "\n      Yes, Socrates, I quite think so.\n    "
+        },
+        {
+          "content": "\n      Then, my friend, we can never be right in saying that the soul is a\n      harmony, for we should contradict the divine Homer, and contradict\n      ourselves.\n    "
+        },
+        {
+          "content": "\n      True, he said.\n    "
+        },
+        {
+          "content": "\n      Thus much, said Socrates, of Harmonia, your Theban goddess, who has\n      graciously yielded to us; but what shall I say, Cebes, to her husband\n      Cadmus, and how shall I make peace with him?\n    "
+        },
+        {
+          "content": "\n      I think that you will discover a way of propitiating him, said Cebes; I am\n      sure that you have put the argument with Harmonia in a manner that I could\n      never have expected. For when Simmias was mentioning his difficulty, I\n      quite imagined that no answer could be given to him, and therefore I was\n      surprised at finding that his argument could not sustain the first onset\n      of yours, and not impossibly the other, whom you call Cadmus, may share a\n      similar fate.\n    "
+        },
+        {
+          "content": "\n      Nay, my good friend, said Socrates, let us not boast, lest some evil eye\n      should put to flight the word which I am about to speak. That, however,\n      may be left in the hands of those above, while I draw near in Homeric\n      fashion, and try the mettle of your words. Here lies the point:—You\n      want to have it proven to you that the soul is imperishable and immortal,\n      and the philosopher who is confident in death appears to you to have but a\n      vain and foolish confidence, if he believes that he will fare better in\n      the world below than one who has led another sort of life, unless he can\n      prove this; and you say that the demonstration of the strength and\n      divinity of the soul, and of her existence prior to our becoming men, does\n      not necessarily imply her immortality. Admitting the soul to be longlived,\n      and to have known and done much in a former state, still she is not on\n      that account immortal; and her entrance into the human form may be a sort\n      of disease which is the beginning of dissolution, and may at last, after\n      the toils of life are over, end in that which is called death. And whether\n      the soul enters into the body once only or many times, does not, as you\n      say, make any difference in the fears of individuals. For any man, who is\n      not devoid of sense, must fear, if he has no knowledge and can give no\n      account of the soul's immortality. This, or something like this, I suspect\n      to be your notion, Cebes; and I designedly recur to it in order that\n      nothing may escape us, and that you may, if you wish, add or subtract\n      anything.\n    "
+        },
+        {
+          "content": "\n      But, said Cebes, as far as I see at present, I have nothing to add or\n      subtract: I mean what you say that I mean.\n    "
+        },
+        {
+          "content": "\n      Socrates paused awhile, and seemed to be absorbed in reflection. At length\n      he said: You are raising a tremendous question, Cebes, involving the whole\n      nature of generation and corruption, about which, if you like, I will give\n      you my own experience; and if anything which I say is likely to avail\n      towards the solution of your difficulty you may make use of it.\n    "
+        },
+        {
+          "content": "\n      I should very much like, said Cebes, to hear what you have to say.\n    "
+        },
+        {
+          "content": "\n      Then I will tell you, said Socrates. When I was young, Cebes, I had a\n      prodigious desire to know that department of philosophy which is called\n      the investigation of nature; to know the causes of things, and why a thing\n      is and is created or destroyed appeared to me to be a lofty profession;\n      and I was always agitating myself with the consideration of questions such\n      as these:—Is the growth of animals the result of some decay which\n      the hot and cold principle contracts, as some have said? Is the blood the\n      element with which we think, or the air, or the fire? or perhaps nothing\n      of the kind—but the brain may be the originating power of the\n      perceptions of hearing and sight and smell, and memory and opinion may\n      come from them, and science may be based on memory and opinion when they\n      have attained fixity. And then I went on to examine the corruption of\n      them, and then to the things of heaven and earth, and at last I concluded\n      myself to be utterly and absolutely incapable of these enquiries, as I\n      will satisfactorily prove to you. For I was fascinated by them to such a\n      degree that my eyes grew blind to things which I had seemed to myself, and\n      also to others, to know quite well; I forgot what I had before thought\n      self-evident truths; e.g. such a fact as that the growth of man is the\n      result of eating and drinking; for when by the digestion of food flesh is\n      added to flesh and bone to bone, and whenever there is an aggregation of\n      congenial elements, the lesser bulk becomes larger and the small man\n      great. Was not that a reasonable notion?\n    "
+        },
+        {
+          "content": "\n      Yes, said Cebes, I think so.\n    "
+        },
+        {
+          "content": "\n      Well; but let me tell you something more. There was a time when I thought\n      that I understood the meaning of greater and less pretty well; and when I\n      saw a great man standing by a little one, I fancied that one was taller\n      than the other by a head; or one horse would appear to be greater than\n      another horse: and still more clearly did I seem to perceive that ten is\n      two more than eight, and that two cubits are more than one, because two is\n      the double of one.\n    "
+        },
+        {
+          "content": "\n      And what is now your notion of such matters? said Cebes.\n    "
+        },
+        {
+          "content": "\n      I should be far enough from imagining, he replied, that I knew the cause\n      of any of them, by heaven I should; for I cannot satisfy myself that, when\n      one is added to one, the one to which the addition is made becomes two, or\n      that the two units added together make two by reason of the addition. I\n      cannot understand how, when separated from the other, each of them was one\n      and not two, and now, when they are brought together, the mere\n      juxtaposition or meeting of them should be the cause of their becoming\n      two: neither can I understand how the division of one is the way to make\n      two; for then a different cause would produce the same effect,—as in\n      the former instance the addition and juxtaposition of one to one was the\n      cause of two, in this the separation and subtraction of one from the other\n      would be the cause. Nor am I any longer satisfied that I understand the\n      reason why one or anything else is either generated or destroyed or is at\n      all, but I have in my mind some confused notion of a new method, and can\n      never admit the other.\n    "
+        },
+        {
+          "content": "\n      Then I heard some one reading, as he said, from a book of Anaxagoras, that\n      mind was the disposer and cause of all, and I was delighted at this\n      notion, which appeared quite admirable, and I said to myself: If mind is\n      the disposer, mind will dispose all for the best, and put each particular\n      in the best place; and I argued that if any one desired to find out the\n      cause of the generation or destruction or existence of anything, he must\n      find out what state of being or doing or suffering was best for that\n      thing, and therefore a man had only to consider the best for himself and\n      others, and then he would also know the worse, since the same science\n      comprehended both. And I rejoiced to think that I had found in Anaxagoras\n      a teacher of the causes of existence such as I desired, and I imagined\n      that he would tell me first whether the earth is flat or round; and\n      whichever was true, he would proceed to explain the cause and the\n      necessity of this being so, and then he would teach me the nature of the\n      best and show that this was best; and if he said that the earth was in the\n      centre, he would further explain that this position was the best, and I\n      should be satisfied with the explanation given, and not want any other\n      sort of cause. And I thought that I would then go on and ask him about the\n      sun and moon and stars, and that he would explain to me their comparative\n      swiftness, and their returnings and various states, active and passive,\n      and how all of them were for the best. For I could not imagine that when\n      he spoke of mind as the disposer of them, he would give any other account\n      of their being as they are, except that this was best; and I thought that\n      when he had explained to me in detail the cause of each and the cause of\n      all, he would go on to explain to me what was best for each and what was\n      good for all. These hopes I would not have sold for a large sum of money,\n      and I seized the books and read them as fast as I could in my eagerness to\n      know the better and the worse.\n    "
+        },
+        {
+          "content": "\n      What expectations I had formed, and how grievously was I disappointed! As\n      I proceeded, I found my philosopher altogether forsaking mind or any other\n      principle of order, but having recourse to air, and ether, and water, and\n      other eccentricities. I might compare him to a person who began by\n      maintaining generally that mind is the cause of the actions of Socrates,\n      but who, when he endeavoured to explain the causes of my several actions\n      in detail, went on to show that I sit here because my body is made up of\n      bones and muscles; and the bones, as he would say, are hard and have\n      joints which divide them, and the muscles are elastic, and they cover the\n      bones, which have also a covering or environment of flesh and skin which\n      contains them; and as the bones are lifted at their joints by the\n      contraction or relaxation of the muscles, I am able to bend my limbs, and\n      this is why I am sitting here in a curved posture—that is what he\n      would say, and he would have a similar explanation of my talking to you,\n      which he would attribute to sound, and air, and hearing, and he would\n      assign ten thousand other causes of the same sort, forgetting to mention\n      the true cause, which is, that the Athenians have thought fit to condemn\n      me, and accordingly I have thought it better and more right to remain here\n      and undergo my sentence; for I am inclined to think that these muscles and\n      bones of mine would have gone off long ago to Megara or Boeotia—by\n      the dog they would, if they had been moved only by their own idea of what\n      was best, and if I had not chosen the better and nobler part, instead of\n      playing truant and running away, of enduring any punishment which the\n      state inflicts. There is surely a strange confusion of causes and\n      conditions in all this. It may be said, indeed, that without bones and\n      muscles and the other parts of the body I cannot execute my purposes. But\n      to say that I do as I do because of them, and that this is the way in\n      which mind acts, and not from the choice of the best, is a very careless\n      and idle mode of speaking. I wonder that they cannot distinguish the cause\n      from the condition, which the many, feeling about in the dark, are always\n      mistaking and misnaming. And thus one man makes a vortex all round and\n      steadies the earth by the heaven; another gives the air as a support to\n      the earth, which is a sort of broad trough. Any power which in arranging\n      them as they are arranges them for the best never enters into their minds;\n      and instead of finding any superior strength in it, they rather expect to\n      discover another Atlas of the world who is stronger and more everlasting\n      and more containing than the good;—of the obligatory and containing\n      power of the good they think nothing; and yet this is the principle which\n      I would fain learn if any one would teach me. But as I have failed either\n      to discover myself, or to learn of any one else, the nature of the best, I\n      will exhibit to you, if you like, what I have found to be the second best\n      mode of enquiring into the cause.\n    "
+        },
+        {
+          "content": "\n      I should very much like to hear, he replied.\n    "
+        },
+        {
+          "content": "\n      Socrates proceeded:—I thought that as I had failed in the\n      contemplation of true existence, I ought to be careful that I did not lose\n      the eye of my soul; as people may injure their bodily eye by observing and\n      gazing on the sun during an eclipse, unless they take the precaution of\n      only looking at the image reflected in the water, or in some similar\n      medium. So in my own case, I was afraid that my soul might be blinded\n      altogether if I looked at things with my eyes or tried to apprehend them\n      by the help of the senses. And I thought that I had better have recourse\n      to the world of mind and seek there the truth of existence. I dare say\n      that the simile is not perfect—for I am very far from admitting that\n      he who contemplates existences through the medium of thought, sees them\n      only 'through a glass darkly,' any more than he who considers them in\n      action and operation. However, this was the method which I adopted: I\n      first assumed some principle which I judged to be the strongest, and then\n      I affirmed as true whatever seemed to agree with this, whether relating to\n      the cause or to anything else; and that which disagreed I regarded as\n      untrue. But I should like to explain my meaning more clearly, as I do not\n      think that you as yet understand me.\n    "
+        },
+        {
+          "content": "\n      No indeed, replied Cebes, not very well.\n    "
+        },
+        {
+          "content": "\n      There is nothing new, he said, in what I am about to tell you; but only\n      what I have been always and everywhere repeating in the previous\n      discussion and on other occasions: I want to show you the nature of that\n      cause which has occupied my thoughts. I shall have to go back to those\n      familiar words which are in the mouth of every one, and first of all\n      assume that there is an absolute beauty and goodness and greatness, and\n      the like; grant me this, and I hope to be able to show you the nature of\n      the cause, and to prove the immortality of the soul.\n    "
+        },
+        {
+          "content": "\n      Cebes said: You may proceed at once with the proof, for I grant you this.\n    "
+        },
+        {
+          "content": "\n      Well, he said, then I should like to know whether you agree with me in the\n      next step; for I cannot help thinking, if there be anything beautiful\n      other than absolute beauty should there be such, that it can be beautiful\n      only in as far as it partakes of absolute beauty—and I should say\n      the same of everything. Do you agree in this notion of the cause?\n    "
+        },
+        {
+          "content": "\n      Yes, he said, I agree.\n    "
+        },
+        {
+          "content": "\n      He proceeded: I know nothing and can understand nothing of any other of\n      those wise causes which are alleged; and if a person says to me that the\n      bloom of colour, or form, or any such thing is a source of beauty, I leave\n      all that, which is only confusing to me, and simply and singly, and\n      perhaps foolishly, hold and am assured in my own mind that nothing makes a\n      thing beautiful but the presence and participation of beauty in whatever\n      way or manner obtained; for as to the manner I am uncertain, but I stoutly\n      contend that by beauty all beautiful things become beautiful. This appears\n      to me to be the safest answer which I can give, either to myself or to\n      another, and to this I cling, in the persuasion that this principle will\n      never be overthrown, and that to myself or to any one who asks the\n      question, I may safely reply, That by beauty beautiful things become\n      beautiful. Do you not agree with me?\n    "
+        },
+        {
+          "content": "\n      I do.\n    "
+        },
+        {
+          "content": "\n      And that by greatness only great things become great and greater greater,\n      and by smallness the less become less?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      Then if a person were to remark that A is taller by a head than B, and B\n      less by a head than A, you would refuse to admit his statement, and would\n      stoutly contend that what you mean is only that the greater is greater by,\n      and by reason of, greatness, and the less is less only by, and by reason\n      of, smallness; and thus you would avoid the danger of saying that the\n      greater is greater and the less less by the measure of the head, which is\n      the same in both, and would also avoid the monstrous absurdity of\n      supposing that the greater man is greater by reason of the head, which is\n      small. You would be afraid to draw such an inference, would you not?\n    "
+        },
+        {
+          "content": "\n      Indeed, I should, said Cebes, laughing.\n    "
+        },
+        {
+          "content": "\n      In like manner you would be afraid to say that ten exceeded eight by, and\n      by reason of, two; but would say by, and by reason of, number; or you\n      would say that two cubits exceed one cubit not by a half, but by\n      magnitude?-for there is the same liability to error in all these cases.\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      Again, would you not be cautious of affirming that the addition of one to\n      one, or the division of one, is the cause of two? And you would loudly\n      asseverate that you know of no way in which anything comes into existence\n      except by participation in its own proper essence, and consequently, as\n      far as you know, the only cause of two is the participation in duality—this\n      is the way to make two, and the participation in one is the way to make\n      one. You would say: I will let alone puzzles of division and addition—wiser\n      heads than mine may answer them; inexperienced as I am, and ready to\n      start, as the proverb says, at my own shadow, I cannot afford to give up\n      the sure ground of a principle. And if any one assails you there, you\n      would not mind him, or answer him, until you had seen whether the\n      consequences which follow agree with one another or not, and when you are\n      further required to give an explanation of this principle, you would go on\n      to assume a higher principle, and a higher, until you found a\n      resting-place in the best of the higher; but you would not confuse the\n      principle and the consequences in your reasoning, like the Eristics—at\n      least if you wanted to discover real existence. Not that this confusion\n      signifies to them, who never care or think about the matter at all, for\n      they have the wit to be well pleased with themselves however great may be\n      the turmoil of their ideas. But you, if you are a philosopher, will\n      certainly do as I say.\n    "
+        },
+        {
+          "content": "\n      What you say is most true, said Simmias and Cebes, both speaking at once.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Yes, Phaedo; and I do not wonder at their assenting. Any one\n      who has the least sense will acknowledge the wonderful clearness of\n      Socrates' reasoning.\n    "
+        },
+        {
+          "content": "\n      PHAEDO: Certainly, Echecrates; and such was the feeling of the whole\n      company at the time.\n    "
+        },
+        {
+          "content": "\n      ECHECRATES: Yes, and equally of ourselves, who were not of the company,\n      and are now listening to your recital. But what followed?\n    "
+        },
+        {
+          "content": "\n      PHAEDO: After all this had been admitted, and they had that ideas exist,\n      and that other things participate in them and derive their names from\n      them, Socrates, if I remember rightly, said:—\n    "
+        },
+        {
+          "content": "\n      This is your way of speaking; and yet when you say that Simmias is greater\n      than Socrates and less than Phaedo, do you not predicate of Simmias both\n      greatness and smallness?\n    "
+        },
+        {
+          "content": "\n      Yes, I do.\n    "
+        },
+        {
+          "content": "\n      But still you allow that Simmias does not really exceed Socrates, as the\n      words may seem to imply, because he is Simmias, but by reason of the size\n      which he has; just as Simmias does not exceed Socrates because he is\n      Simmias, any more than because Socrates is Socrates, but because he has\n      smallness when compared with the greatness of Simmias?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      And if Phaedo exceeds him in size, this is not because Phaedo is Phaedo,\n      but because Phaedo has greatness relatively to Simmias, who is\n      comparatively smaller?\n    "
+        },
+        {
+          "content": "\n      That is true.\n    "
+        },
+        {
+          "content": "\n      And therefore Simmias is said to be great, and is also said to be small,\n      because he is in a mean between them, exceeding the smallness of the one\n      by his greatness, and allowing the greatness of the other to exceed his\n      smallness. He added, laughing, I am speaking like a book, but I believe\n      that what I am saying is true.\n    "
+        },
+        {
+          "content": "\n      Simmias assented.\n    "
+        },
+        {
+          "content": "\n      I speak as I do because I want you to agree with me in thinking, not only\n      that absolute greatness will never be great and also small, but that\n      greatness in us or in the concrete will never admit the small or admit of\n      being exceeded: instead of this, one of two things will happen, either the\n      greater will fly or retire before the opposite, which is the less, or at\n      the approach of the less has already ceased to exist; but will not, if\n      allowing or admitting of smallness, be changed by that; even as I, having\n      received and admitted smallness when compared with Simmias, remain just as\n      I was, and am the same small person. And as the idea of greatness cannot\n      condescend ever to be or become small, in like manner the smallness in us\n      cannot be or become great; nor can any other opposite which remains the\n      same ever be or become its own opposite, but either passes away or\n      perishes in the change.\n    "
+        },
+        {
+          "content": "\n      That, replied Cebes, is quite my notion.\n    "
+        },
+        {
+          "content": "\n      Hereupon one of the company, though I do not exactly remember which of\n      them, said: In heaven's name, is not this the direct contrary of what was\n      admitted before—that out of the greater came the less and out of the\n      less the greater, and that opposites were simply generated from opposites;\n      but now this principle seems to be utterly denied.\n    "
+        },
+        {
+          "content": "\n      Socrates inclined his head to the speaker and listened. I like your\n      courage, he said, in reminding us of this. But you do not observe that\n      there is a difference in the two cases. For then we were speaking of\n      opposites in the concrete, and now of the essential opposite which, as is\n      affirmed, neither in us nor in nature can ever be at variance with itself:\n      then, my friend, we were speaking of things in which opposites are\n      inherent and which are called after them, but now about the opposites\n      which are inherent in them and which give their name to them; and these\n      essential opposites will never, as we maintain, admit of generation into\n      or out of one another. At the same time, turning to Cebes, he said: Are\n      you at all disconcerted, Cebes, at our friend's objection?\n    "
+        },
+        {
+          "content": "\n      No, I do not feel so, said Cebes; and yet I cannot deny that I am often\n      disturbed by objections.\n    "
+        },
+        {
+          "content": "\n      Then we are agreed after all, said Socrates, that the opposite will never\n      in any case be opposed to itself?\n    "
+        },
+        {
+          "content": "\n      To that we are quite agreed, he replied.\n    "
+        },
+        {
+          "content": "\n      Yet once more let me ask you to consider the question from another point\n      of view, and see whether you agree with me:—There is a thing which\n      you term heat, and another thing which you term cold?\n    "
+        },
+        {
+          "content": "\n      Certainly.\n    "
+        },
+        {
+          "content": "\n      But are they the same as fire and snow?\n    "
+        },
+        {
+          "content": "\n      Most assuredly not.\n    "
+        },
+        {
+          "content": "\n      Heat is a thing different from fire, and cold is not the same with snow?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And yet you will surely admit, that when snow, as was before said, is\n      under the influence of heat, they will not remain snow and heat; but at\n      the advance of the heat, the snow will either retire or perish?\n    "
+        },
+        {
+          "content": "\n      Very true, he replied.\n    "
+        },
+        {
+          "content": "\n      And the fire too at the advance of the cold will either retire or perish;\n      and when the fire is under the influence of the cold, they will not remain\n      as before, fire and cold.\n    "
+        },
+        {
+          "content": "\n      That is true, he said.\n    "
+        },
+        {
+          "content": "\n      And in some cases the name of the idea is not only attached to the idea in\n      an eternal connection, but anything else which, not being the idea, exists\n      only in the form of the idea, may also lay claim to it. I will try to make\n      this clearer by an example:—The odd number is always called by the\n      name of odd?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      But is this the only thing which is called odd? Are there not other things\n      which have their own name, and yet are called odd, because, although not\n      the same as oddness, they are never without oddness?—that is what I\n      mean to ask—whether numbers such as the number three are not of the\n      class of odd. And there are many other examples: would you not say, for\n      example, that three may be called by its proper name, and also be called\n      odd, which is not the same with three? and this may be said not only of\n      three but also of five, and of every alternate number—each of them\n      without being oddness is odd, and in the same way two and four, and the\n      other series of alternate numbers, has every number even, without being\n      evenness. Do you agree?\n    "
+        },
+        {
+          "content": "\n      Of course.\n    "
+        },
+        {
+          "content": "\n      Then now mark the point at which I am aiming:—not only do essential\n      opposites exclude one another, but also concrete things, which, although\n      not in themselves opposed, contain opposites; these, I say, likewise\n      reject the idea which is opposed to that which is contained in them, and\n      when it approaches them they either perish or withdraw. For example; Will\n      not the number three endure annihilation or anything sooner than be\n      converted into an even number, while remaining three?\n    "
+        },
+        {
+          "content": "\n      Very true, said Cebes.\n    "
+        },
+        {
+          "content": "\n      And yet, he said, the number two is certainly not opposed to the number\n      three?\n    "
+        },
+        {
+          "content": "\n      It is not.\n    "
+        },
+        {
+          "content": "\n      Then not only do opposite ideas repel the advance of one another, but also\n      there are other natures which repel the approach of opposites.\n    "
+        },
+        {
+          "content": "\n      Very true, he said.\n    "
+        },
+        {
+          "content": "\n      Suppose, he said, that we endeavour, if possible, to determine what these\n      are.\n    "
+        },
+        {
+          "content": "\n      By all means.\n    "
+        },
+        {
+          "content": "\n      Are they not, Cebes, such as compel the things of which they have\n      possession, not only to take their own form, but also the form of some\n      opposite?\n    "
+        },
+        {
+          "content": "\n      What do you mean?\n    "
+        },
+        {
+          "content": "\n      I mean, as I was just now saying, and as I am sure that you know, that\n      those things which are possessed by the number three must not only be\n      three in number, but must also be odd.\n    "
+        },
+        {
+          "content": "\n      Quite true.\n    "
+        },
+        {
+          "content": "\n      And on this oddness, of which the number three has the impress, the\n      opposite idea will never intrude?\n    "
+        },
+        {
+          "content": "\n      No.\n    "
+        },
+        {
+          "content": "\n      And this impress was given by the odd principle?\n    "
+        },
+        {
+          "content": "\n      Yes.\n    "
+        },
+        {
+          "content": "\n      And to the odd is opposed the even?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      Then the idea of the even number will never arrive at three?\n    "
+        },
+        {
+          "content": "\n      No.\n    "
+        },
+        {
+          "content": "\n      Then three has no part in the even?\n    "
+        },
+        {
+          "content": "\n      None.\n    "
+        },
+        {
+          "content": "\n      Then the triad or number three is uneven?\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      To return then to my distinction of natures which are not opposed, and yet\n      do not admit opposites—as, in the instance given, three, although\n      not opposed to the even, does not any the more admit of the even, but\n      always brings the opposite into play on the other side; or as two does not\n      receive the odd, or fire the cold—from these examples (and there are\n      many more of them) perhaps you may be able to arrive at the general\n      conclusion, that not only opposites will not receive opposites, but also\n      that nothing which brings the opposite will admit the opposite of that\n      which it brings, in that to which it is brought. And here let me\n      recapitulate—for there is no harm in repetition. The number five\n      will not admit the nature of the even, any more than ten, which is the\n      double of five, will admit the nature of the odd. The double has another\n      opposite, and is not strictly opposed to the odd, but nevertheless rejects\n      the odd altogether. Nor again will parts in the ratio 3:2, nor any\n      fraction in which there is a half, nor again in which there is a third,\n      admit the notion of the whole, although they are not opposed to the whole:\n      You will agree?\n    "
+        },
+        {
+          "content": "\n      Yes, he said, I entirely agree and go along with you in that.\n    "
+        },
+        {
+          "content": "\n      And now, he said, let us begin again; and do not you answer my question in\n      the words in which I ask it: let me have not the old safe answer of which\n      I spoke at first, but another equally safe, of which the truth will be\n      inferred by you from what has been just said. I mean that if any one asks\n      you 'what that is, of which the inherence makes the body hot,' you will\n      reply not heat (this is what I call the safe and stupid answer), but fire,\n      a far superior answer, which we are now in a condition to give. Or if any\n      one asks you 'why a body is diseased,' you will not say from disease, but\n      from fever; and instead of saying that oddness is the cause of odd\n      numbers, you will say that the monad is the cause of them: and so of\n      things in general, as I dare say that you will understand sufficiently\n      without my adducing any further examples.\n    "
+        },
+        {
+          "content": "\n      Yes, he said, I quite understand you.\n    "
+        },
+        {
+          "content": "\n      Tell me, then, what is that of which the inherence will render the body\n      alive?\n    "
+        },
+        {
+          "content": "\n      The soul, he replied.\n    "
+        },
+        {
+          "content": "\n      And is this always the case?\n    "
+        },
+        {
+          "content": "\n      Yes, he said, of course.\n    "
+        },
+        {
+          "content": "\n      Then whatever the soul possesses, to that she comes bearing life?\n    "
+        },
+        {
+          "content": "\n      Yes, certainly.\n    "
+        },
+        {
+          "content": "\n      And is there any opposite to life?\n    "
+        },
+        {
+          "content": "\n      There is, he said.\n    "
+        },
+        {
+          "content": "\n      And what is that?\n    "
+        },
+        {
+          "content": "\n      Death.\n    "
+        },
+        {
+          "content": "\n      Then the soul, as has been acknowledged, will never receive the opposite\n      of what she brings.\n    "
+        },
+        {
+          "content": "\n      Impossible, replied Cebes.\n    "
+        },
+        {
+          "content": "\n      And now, he said, what did we just now call that principle which repels\n      the even?\n    "
+        },
+        {
+          "content": "\n      The odd.\n    "
+        },
+        {
+          "content": "\n      And that principle which repels the musical, or the just?\n    "
+        },
+        {
+          "content": "\n      The unmusical, he said, and the unjust.\n    "
+        },
+        {
+          "content": "\n      And what do we call the principle which does not admit of death?\n    "
+        },
+        {
+          "content": "\n      The immortal, he said.\n    "
+        },
+        {
+          "content": "\n      And does the soul admit of death?\n    "
+        },
+        {
+          "content": "\n      No.\n    "
+        },
+        {
+          "content": "\n      Then the soul is immortal?\n    "
+        },
+        {
+          "content": "\n      Yes, he said.\n    "
+        },
+        {
+          "content": "\n      And may we say that this has been proven?\n    "
+        },
+        {
+          "content": "\n      Yes, abundantly proven, Socrates, he replied.\n    "
+        },
+        {
+          "content": "\n      Supposing that the odd were imperishable, must not three be imperishable?\n    "
+        },
+        {
+          "content": "\n      Of course.\n    "
+        },
+        {
+          "content": "\n      And if that which is cold were imperishable, when the warm principle came\n      attacking the snow, must not the snow have retired whole and unmelted—for\n      it could never have perished, nor could it have remained and admitted the\n      heat?\n    "
+        },
+        {
+          "content": "\n      True, he said.\n    "
+        },
+        {
+          "content": "\n      Again, if the uncooling or warm principle were imperishable, the fire when\n      assailed by cold would not have perished or have been extinguished, but\n      would have gone away unaffected?\n    "
+        },
+        {
+          "content": "\n      Certainly, he said.\n    "
+        },
+        {
+          "content": "\n      And the same may be said of the immortal: if the immortal is also\n      imperishable, the soul when attacked by death cannot perish; for the\n      preceding argument shows that the soul will not admit of death, or ever be\n      dead, any more than three or the odd number will admit of the even, or\n      fire or the heat in the fire, of the cold. Yet a person may say: 'But\n      although the odd will not become even at the approach of the even, why may\n      not the odd perish and the even take the place of the odd?' Now to him who\n      makes this objection, we cannot answer that the odd principle is\n      imperishable; for this has not been acknowledged, but if this had been\n      acknowledged, there would have been no difficulty in contending that at\n      the approach of the even the odd principle and the number three took their\n      departure; and the same argument would have held good of fire and heat and\n      any other thing.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      And the same may be said of the immortal: if the immortal is also\n      imperishable, then the soul will be imperishable as well as immortal; but\n      if not, some other proof of her imperishableness will have to be given.\n    "
+        },
+        {
+          "content": "\n      No other proof is needed, he said; for if the immortal, being eternal, is\n      liable to perish, then nothing is imperishable.\n    "
+        },
+        {
+          "content": "\n      Yes, replied Socrates, and yet all men will agree that God, and the\n      essential form of life, and the immortal in general, will never perish.\n    "
+        },
+        {
+          "content": "\n      Yes, all men, he said—that is true; and what is more, gods, if I am\n      not mistaken, as well as men.\n    "
+        },
+        {
+          "content": "\n      Seeing then that the immortal is indestructible, must not the soul, if she\n      is immortal, be also imperishable?\n    "
+        },
+        {
+          "content": "\n      Most certainly.\n    "
+        },
+        {
+          "content": "\n      Then when death attacks a man, the mortal portion of him may be supposed\n      to die, but the immortal retires at the approach of death and is preserved\n      safe and sound?\n    "
+        },
+        {
+          "content": "\n      True.\n    "
+        },
+        {
+          "content": "\n      Then, Cebes, beyond question, the soul is immortal and imperishable, and\n      our souls will truly exist in another world!\n    "
+        },
+        {
+          "content": "\n      I am convinced, Socrates, said Cebes, and have nothing more to object; but\n      if my friend Simmias, or any one else, has any further objection to make,\n      he had better speak out, and not keep silence, since I do not know to what\n      other season he can defer the discussion, if there is anything which he\n      wants to say or to have said.\n    "
+        },
+        {
+          "content": "\n      But I have nothing more to say, replied Simmias; nor can I see any reason\n      for doubt after what has been said. But I still feel and cannot help\n      feeling uncertain in my own mind, when I think of the greatness of the\n      subject and the feebleness of man.\n    "
+        },
+        {
+          "content": "\n      Yes, Simmias, replied Socrates, that is well said: and I may add that\n      first principles, even if they appear certain, should be carefully\n      considered; and when they are satisfactorily ascertained, then, with a\n      sort of hesitating confidence in human reason, you may, I think, follow\n      the course of the argument; and if that be plain and clear, there will be\n      no need for any further enquiry.\n    "
+        },
+        {
+          "content": "\n      Very true.\n    "
+        },
+        {
+          "content": "\n      But then, O my friends, he said, if the soul is really immortal, what care\n      should be taken of her, not only in respect of the portion of time which\n      is called life, but of eternity! And the danger of neglecting her from\n      this point of view does indeed appear to be awful. If death had only been\n      the end of all, the wicked would have had a good bargain in dying, for\n      they would have been happily quit not only of their body, but of their own\n      evil together with their souls. But now, inasmuch as the soul is\n      manifestly immortal, there is no release or salvation from evil except the\n      attainment of the highest virtue and wisdom. For the soul when on her\n      progress to the world below takes nothing with her but nurture and\n      education; and these are said greatly to benefit or greatly to injure the\n      departed, at the very beginning of his journey thither.\n    "
+        },
+        {
+          "content": "\n      For after death, as they say, the genius of each individual, to whom he\n      belonged in life, leads him to a certain place in which the dead are\n      gathered together, whence after judgment has been given they pass into the\n      world below, following the guide, who is appointed to conduct them from\n      this world to the other: and when they have there received their due and\n      remained their time, another guide brings them back again after many\n      revolutions of ages. Now this way to the other world is not, as Aeschylus\n      says in the Telephus, a single and straight path—if that were so no\n      guide would be needed, for no one could miss it; but there are many\n      partings of the road, and windings, as I infer from the rites and\n      sacrifices which are offered to the gods below in places where three ways\n      meet on earth. The wise and orderly soul follows in the straight path and\n      is conscious of her surroundings; but the soul which desires the body, and\n      which, as I was relating before, has long been fluttering about the\n      lifeless frame and the world of sight, is after many struggles and many\n      sufferings hardly and with violence carried away by her attendant genius,\n      and when she arrives at the place where the other souls are gathered, if\n      she be impure and have done impure deeds, whether foul murders or other\n      crimes which are the brothers of these, and the works of brothers in crime—from\n      that soul every one flees and turns away; no one will be her companion, no\n      one her guide, but alone she wanders in extremity of evil until certain\n      times are fulfilled, and when they are fulfilled, she is borne\n      irresistibly to her own fitting habitation; as every pure and just soul\n      which has passed through life in the company and under the guidance of the\n      gods has also her own proper home.\n    "
+        },
+        {
+          "content": "\n      Now the earth has divers wonderful regions, and is indeed in nature and\n      extent very unlike the notions of geographers, as I believe on the\n      authority of one who shall be nameless.\n    "
+        },
+        {
+          "content": "\n      What do you mean, Socrates? said Simmias. I have myself heard many\n      descriptions of the earth, but I do not know, and I should very much like\n      to know, in which of these you put faith.\n    "
+        },
+        {
+          "content": "\n      And I, Simmias, replied Socrates, if I had the art of Glaucus would tell\n      you; although I know not that the art of Glaucus could prove the truth of\n      my tale, which I myself should never be able to prove, and even if I\n      could, I fear, Simmias, that my life would come to an end before the\n      argument was completed. I may describe to you, however, the form and\n      regions of the earth according to my conception of them.\n    "
+        },
+        {
+          "content": "\n      That, said Simmias, will be enough.\n    "
+        },
+        {
+          "content": "\n      Well, then, he said, my conviction is, that the earth is a round body in\n      the centre of the heavens, and therefore has no need of air or any similar\n      force to be a support, but is kept there and hindered from falling or\n      inclining any way by the equability of the surrounding heaven and by her\n      own equipoise. For that which, being in equipoise, is in the centre of\n      that which is equably diffused, will not incline any way in any degree,\n      but will always remain in the same state and not deviate. And this is my\n      first notion.\n    "
+        },
+        {
+          "content": "\n      Which is surely a correct one, said Simmias.\n    "
+        },
+        {
+          "content": "\n      Also I believe that the earth is very vast, and that we who dwell in the\n      region extending from the river Phasis to the Pillars of Heracles inhabit\n      a small portion only about the sea, like ants or frogs about a marsh, and\n      that there are other inhabitants of many other like places; for everywhere\n      on the face of the earth there are hollows of various forms and sizes,\n      into which the water and the mist and the lower air collect. But the true\n      earth is pure and situated in the pure heaven—there are the stars\n      also; and it is the heaven which is commonly spoken of by us as the ether,\n      and of which our own earth is the sediment gathering in the hollows\n      beneath. But we who live in these hollows are deceived into the notion\n      that we are dwelling above on the surface of the earth; which is just as\n      if a creature who was at the bottom of the sea were to fancy that he was\n      on the surface of the water, and that the sea was the heaven through which\n      he saw the sun and the other stars, he having never come to the surface by\n      reason of his feebleness and sluggishness, and having never lifted up his\n      head and seen, nor ever heard from one who had seen, how much purer and\n      fairer the world above is than his own. And such is exactly our case: for\n      we are dwelling in a hollow of the earth, and fancy that we are on the\n      surface; and the air we call the heaven, in which we imagine that the\n      stars move. But the fact is, that owing to our feebleness and sluggishness\n      we are prevented from reaching the surface of the air: for if any man\n      could arrive at the exterior limit, or take the wings of a bird and come\n      to the top, then like a fish who puts his head out of the water and sees\n      this world, he would see a world beyond; and, if the nature of man could\n      sustain the sight, he would acknowledge that this other world was the\n      place of the true heaven and the true light and the true earth. For our\n      earth, and the stones, and the entire region which surrounds us, are\n      spoilt and corroded, as in the sea all things are corroded by the brine,\n      neither is there any noble or perfect growth, but caverns only, and sand,\n      and an endless slough of mud: and even the shore is not to be compared to\n      the fairer sights of this world. And still less is this our world to be\n      compared with the other. Of that upper earth which is under the heaven, I\n      can tell you a charming tale, Simmias, which is well worth hearing.\n    "
+        },
+        {
+          "content": "\n      And we, Socrates, replied Simmias, shall be charmed to listen to you.\n    "
+        },
+        {
+          "content": "\n      The tale, my friend, he said, is as follows:—In the first place, the\n      earth, when looked at from above, is in appearance streaked like one of\n      those balls which have leather coverings in twelve pieces, and is decked\n      with various colours, of which the colours used by painters on earth are\n      in a manner samples. But there the whole earth is made up of them, and\n      they are brighter far and clearer than ours; there is a purple of\n      wonderful lustre, also the radiance of gold, and the white which is in the\n      earth is whiter than any chalk or snow. Of these and other colours the\n      earth is made up, and they are more in number and fairer than the eye of\n      man has ever seen; the very hollows (of which I was speaking) filled with\n      air and water have a colour of their own, and are seen like light gleaming\n      amid the diversity of the other colours, so that the whole presents a\n      single and continuous appearance of variety in unity. And in this fair\n      region everything that grows—trees, and flowers, and fruits—are\n      in a like degree fairer than any here; and there are hills, having stones\n      in them in a like degree smoother, and more transparent, and fairer in\n      colour than our highly-valued emeralds and sardonyxes and jaspers, and\n      other gems, which are but minute fragments of them: for there all the\n      stones are like our precious stones, and fairer still (compare Republic).\n      The reason is, that they are pure, and not, like our precious stones,\n      infected or corroded by the corrupt briny elements which coagulate among\n      us, and which breed foulness and disease both in earth and stones, as well\n      as in animals and plants. They are the jewels of the upper earth, which\n      also shines with gold and silver and the like, and they are set in the\n      light of day and are large and abundant and in all places, making the\n      earth a sight to gladden the beholder's eye. And there are animals and\n      men, some in a middle region, others dwelling about the air as we dwell\n      about the sea; others in islands which the air flows round, near the\n      continent: and in a word, the air is used by them as the water and the sea\n      are by us, and the ether is to them what the air is to us. Moreover, the\n      temperament of their seasons is such that they have no disease, and live\n      much longer than we do, and have sight and hearing and smell, and all the\n      other senses, in far greater perfection, in the same proportion that air\n      is purer than water or the ether than air. Also they have temples and\n      sacred places in which the gods really dwell, and they hear their voices\n      and receive their answers, and are conscious of them and hold converse\n      with them, and they see the sun, moon, and stars as they truly are, and\n      their other blessedness is of a piece with this.\n    "
+        },
+        {
+          "content": "\n      Such is the nature of the whole earth, and of the things which are around\n      the earth; and there are divers regions in the hollows on the face of the\n      globe everywhere, some of them deeper and more extended than that which we\n      inhabit, others deeper but with a narrower opening than ours, and some are\n      shallower and also wider. All have numerous perforations, and there are\n      passages broad and narrow in the interior of the earth, connecting them\n      with one another; and there flows out of and into them, as into basins, a\n      vast tide of water, and huge subterranean streams of perennial rivers, and\n      springs hot and cold, and a great fire, and great rivers of fire, and\n      streams of liquid mud, thin or thick (like the rivers of mud in Sicily,\n      and the lava streams which follow them), and the regions about which they\n      happen to flow are filled up with them. And there is a swinging or see-saw\n      in the interior of the earth which moves all this up and down, and is due\n      to the following cause:—There is a chasm which is the vastest of\n      them all, and pierces right through the whole earth; this is that chasm\n      which Homer describes in the words,—\n    "
+        },
+        {
+          "content": "\n      and which he in other places, and many other poets, have called Tartarus.\n      And the see-saw is caused by the streams flowing into and out of this\n      chasm, and they each have the nature of the soil through which they flow.\n      And the reason why the streams are always flowing in and out, is that the\n      watery element has no bed or bottom, but is swinging and surging up and\n      down, and the surrounding wind and air do the same; they follow the water\n      up and down, hither and thither, over the earth—just as in the act\n      of respiration the air is always in process of inhalation and exhalation;—and\n      the wind swinging with the water in and out produces fearful and\n      irresistible blasts: when the waters retire with a rush into the lower\n      parts of the earth, as they are called, they flow through the earth in\n      those regions, and fill them up like water raised by a pump, and then when\n      they leave those regions and rush back hither, they again fill the hollows\n      here, and when these are filled, flow through subterranean channels and\n      find their way to their several places, forming seas, and lakes, and\n      rivers, and springs. Thence they again enter the earth, some of them\n      making a long circuit into many lands, others going to a few places and\n      not so distant; and again fall into Tartarus, some at a point a good deal\n      lower than that at which they rose, and others not much lower, but all in\n      some degree lower than the point from which they came. And some burst\n      forth again on the opposite side, and some on the same side, and some wind\n      round the earth with one or many folds like the coils of a serpent, and\n      descend as far as they can, but always return and fall into the chasm. The\n      rivers flowing in either direction can descend only to the centre and no\n      further, for opposite to the rivers is a precipice.\n    "
+        },
+        {
+          "content": "\n      Now these rivers are many, and mighty, and diverse, and there are four\n      principal ones, of which the greatest and outermost is that called\n      Oceanus, which flows round the earth in a circle; and in the opposite\n      direction flows Acheron, which passes under the earth through desert\n      places into the Acherusian lake: this is the lake to the shores of which\n      the souls of the many go when they are dead, and after waiting an\n      appointed time, which is to some a longer and to some a shorter time, they\n      are sent back to be born again as animals. The third river passes out\n      between the two, and near the place of outlet pours into a vast region of\n      fire, and forms a lake larger than the Mediterranean Sea, boiling with\n      water and mud; and proceeding muddy and turbid, and winding about the\n      earth, comes, among other places, to the extremities of the Acherusian\n      Lake, but mingles not with the waters of the lake, and after making many\n      coils about the earth plunges into Tartarus at a deeper level. This is\n      that Pyriphlegethon, as the stream is called, which throws up jets of fire\n      in different parts of the earth. The fourth river goes out on the opposite\n      side, and falls first of all into a wild and savage region, which is all\n      of a dark-blue colour, like lapis lazuli; and this is that river which is\n      called the Stygian river, and falls into and forms the Lake Styx, and\n      after falling into the lake and receiving strange powers in the waters,\n      passes under the earth, winding round in the opposite direction, and comes\n      near the Acherusian lake from the opposite side to Pyriphlegethon. And the\n      water of this river too mingles with no other, but flows round in a circle\n      and falls into Tartarus over against Pyriphlegethon; and the name of the\n      river, as the poets say, is Cocytus.\n    "
+        },
+        {
+          "content": "\n      Such is the nature of the other world; and when the dead arrive at the\n      place to which the genius of each severally guides them, first of all,\n      they have sentence passed upon them, as they have lived well and piously\n      or not. And those who appear to have lived neither well nor ill, go to the\n      river Acheron, and embarking in any vessels which they may find, are\n      carried in them to the lake, and there they dwell and are purified of\n      their evil deeds, and having suffered the penalty of the wrongs which they\n      have done to others, they are absolved, and receive the rewards of their\n      good deeds, each of them according to his deserts. But those who appear to\n      be incurable by reason of the greatness of their crimes—who have\n      committed many and terrible deeds of sacrilege, murders foul and violent,\n      or the like—such are hurled into Tartarus which is their suitable\n      destiny, and they never come out. Those again who have committed crimes,\n      which, although great, are not irremediable—who in a moment of\n      anger, for example, have done violence to a father or a mother, and have\n      repented for the remainder of their lives, or, who have taken the life of\n      another under the like extenuating circumstances—these are plunged\n      into Tartarus, the pains of which they are compelled to undergo for a\n      year, but at the end of the year the wave casts them forth—mere\n      homicides by way of Cocytus, parricides and matricides by Pyriphlegethon—and\n      they are borne to the Acherusian lake, and there they lift up their voices\n      and call upon the victims whom they have slain or wronged, to have pity on\n      them, and to be kind to them, and let them come out into the lake. And if\n      they prevail, then they come forth and cease from their troubles; but if\n      not, they are carried back again into Tartarus and from thence into the\n      rivers unceasingly, until they obtain mercy from those whom they have\n      wronged: for that is the sentence inflicted upon them by their judges.\n      Those too who have been pre-eminent for holiness of life are released from\n      this earthly prison, and go to their pure home which is above, and dwell\n      in the purer earth; and of these, such as have duly purified themselves\n      with philosophy live henceforth altogether without the body, in mansions\n      fairer still which may not be described, and of which the time would fail\n      me to tell.\n    "
+        },
+        {
+          "content": "\n      Wherefore, Simmias, seeing all these things, what ought not we to do that\n      we may obtain virtue and wisdom in this life? Fair is the prize, and the\n      hope great!\n    "
+        },
+        {
+          "content": "\n      A man of sense ought not to say, nor will I be very confident, that the\n      description which I have given of the soul and her mansions is exactly\n      true. But I do say that, inasmuch as the soul is shown to be immortal, he\n      may venture to think, not improperly or unworthily, that something of the\n      kind is true. The venture is a glorious one, and he ought to comfort\n      himself with words like these, which is the reason why I lengthen out the\n      tale. Wherefore, I say, let a man be of good cheer about his soul, who\n      having cast away the pleasures and ornaments of the body as alien to him\n      and working harm rather than good, has sought after the pleasures of\n      knowledge; and has arrayed the soul, not in some foreign attire, but in\n      her own proper jewels, temperance, and justice, and courage, and nobility,\n      and truth—in these adorned she is ready to go on her journey to the\n      world below, when her hour comes. You, Simmias and Cebes, and all other\n      men, will depart at some time or other. Me already, as the tragic poet\n      would say, the voice of fate calls. Soon I must drink the poison; and I\n      think that I had better repair to the bath first, in order that the women\n      may not have the trouble of washing my body after I am dead.\n    "
+        },
+        {
+          "content": "\n      When he had done speaking, Crito said: And have you any commands for us,\n      Socrates—anything to say about your children, or any other matter in\n      which we can serve you?\n    "
+        },
+        {
+          "content": "\n      Nothing particular, Crito, he replied: only, as I have always told you,\n      take care of yourselves; that is a service which you may be ever rendering\n      to me and mine and to all of us, whether you promise to do so or not. But\n      if you have no thought for yourselves, and care not to walk according to\n      the rule which I have prescribed for you, not now for the first time,\n      however much you may profess or promise at the moment, it will be of no\n      avail.\n    "
+        },
+        {
+          "content": "\n      We will do our best, said Crito: And in what way shall we bury you?\n    "
+        },
+        {
+          "content": "\n      In any way that you like; but you must get hold of me, and take care that\n      I do not run away from you. Then he turned to us, and added with a smile:—I\n      cannot make Crito believe that I am the same Socrates who have been\n      talking and conducting the argument; he fancies that I am the other\n      Socrates whom he will soon see, a dead body—and he asks, How shall\n      he bury me? And though I have spoken many words in the endeavour to show\n      that when I have drunk the poison I shall leave you and go to the joys of\n      the blessed,—these words of mine, with which I was comforting you\n      and myself, have had, as I perceive, no effect upon Crito. And therefore I\n      want you to be surety for me to him now, as at the trial he was surety to\n      the judges for me: but let the promise be of another sort; for he was\n      surety for me to the judges that I would remain, and you must be my surety\n      to him that I shall not remain, but go away and depart; and then he will\n      suffer less at my death, and not be grieved when he sees my body being\n      burned or buried. I would not have him sorrow at my hard lot, or say at\n      the burial, Thus we lay out Socrates, or, Thus we follow him to the grave\n      or bury him; for false words are not only evil in themselves, but they\n      infect the soul with evil. Be of good cheer, then, my dear Crito, and say\n      that you are burying my body only, and do with that whatever is usual, and\n      what you think best.\n    "
+        },
+        {
+          "content": "\n      When he had spoken these words, he arose and went into a chamber to bathe;\n      Crito followed him and told us to wait. So we remained behind, talking and\n      thinking of the subject of discourse, and also of the greatness of our\n      sorrow; he was like a father of whom we were being bereaved, and we were\n      about to pass the rest of our lives as orphans. When he had taken the bath\n      his children were brought to him—(he had two young sons and an elder\n      one); and the women of his family also came, and he talked to them and\n      gave them a few directions in the presence of Crito; then he dismissed\n      them and returned to us.\n    "
+        },
+        {
+          "content": "\n      Now the hour of sunset was near, for a good deal of time had passed while\n      he was within. When he came out, he sat down with us again after his bath,\n      but not much was said. Soon the jailer, who was the servant of the Eleven,\n      entered and stood by him, saying:—To you, Socrates, whom I know to\n      be the noblest and gentlest and best of all who ever came to this place, I\n      will not impute the angry feelings of other men, who rage and swear at me,\n      when, in obedience to the authorities, I bid them drink the poison—indeed,\n      I am sure that you will not be angry with me; for others, as you are\n      aware, and not I, are to blame. And so fare you well, and try to bear\n      lightly what must needs be—you know my errand. Then bursting into\n      tears he turned away and went out.\n    "
+        },
+        {
+          "content": "\n      Socrates looked at him and said: I return your good wishes, and will do as\n      you bid. Then turning to us, he said, How charming the man is: since I\n      have been in prison he has always been coming to see me, and at times he\n      would talk to me, and was as good to me as could be, and now see how\n      generously he sorrows on my account. We must do as he says, Crito; and\n      therefore let the cup be brought, if the poison is prepared: if not, let\n      the attendant prepare some.\n    "
+        },
+        {
+          "content": "\n      Yet, said Crito, the sun is still upon the hill-tops, and I know that many\n      a one has taken the draught late, and after the announcement has been made\n      to him, he has eaten and drunk, and enjoyed the society of his beloved; do\n      not hurry—there is time enough.\n    "
+        },
+        {
+          "content": "\n      Socrates said: Yes, Crito, and they of whom you speak are right in so\n      acting, for they think that they will be gainers by the delay; but I am\n      right in not following their example, for I do not think that I should\n      gain anything by drinking the poison a little later; I should only be\n      ridiculous in my own eyes for sparing and saving a life which is already\n      forfeit. Please then to do as I say, and not to refuse me.\n    "
+        },
+        {
+          "content": "\n      Crito made a sign to the servant, who was standing by; and he went out,\n      and having been absent for some time, returned with the jailer carrying\n      the cup of poison. Socrates said: You, my good friend, who are experienced\n      in these matters, shall give me directions how I am to proceed. The man\n      answered: You have only to walk about until your legs are heavy, and then\n      to lie down, and the poison will act. At the same time he handed the cup\n      to Socrates, who in the easiest and gentlest manner, without the least\n      fear or change of colour or feature, looking at the man with all his eyes,\n      Echecrates, as his manner was, took the cup and said: What do you say\n      about making a libation out of this cup to any god? May I, or not? The man\n      answered: We only prepare, Socrates, just so much as we deem enough. I\n      understand, he said: but I may and must ask the gods to prosper my journey\n      from this to the other world—even so—and so be it according to\n      my prayer. Then raising the cup to his lips, quite readily and cheerfully\n      he drank off the poison. And hitherto most of us had been able to control\n      our sorrow; but now when we saw him drinking, and saw too that he had\n      finished the draught, we could no longer forbear, and in spite of myself\n      my own tears were flowing fast; so that I covered my face and wept, not\n      for him, but at the thought of my own calamity in having to part from such\n      a friend. Nor was I the first; for Crito, when he found himself unable to\n      restrain his tears, had got up, and I followed; and at that moment,\n      Apollodorus, who had been weeping all the time, broke out in a loud and\n      passionate cry which made cowards of us all. Socrates alone retained his\n      calmness: What is this strange outcry? he said. I sent away the women\n      mainly in order that they might not misbehave in this way, for I have been\n      told that a man should die in peace. Be quiet, then, and have patience.\n      When we heard his words we were ashamed, and refrained our tears; and he\n      walked about until, as he said, his legs began to fail, and then he lay on\n      his back, according to the directions, and the man who gave him the poison\n      now and then looked at his feet and legs; and after a while he pressed his\n      foot hard, and asked him if he could feel; and he said, No; and then his\n      leg, and so upwards and upwards, and showed us that he was cold and stiff.\n      And he felt them himself, and said: When the poison reaches the heart,\n      that will be the end. He was beginning to grow cold about the groin, when\n      he uncovered his face, for he had covered himself up, and said—they\n      were his last words—he said: Crito, I owe a cock to Asclepius; will\n      you remember to pay the debt? The debt shall be paid, said Crito; is there\n      anything else? There was no answer to this question; but in a minute or\n      two a movement was heard, and the attendants uncovered him; his eyes were\n      set, and Crito closed his eyes and mouth.\n    "
+        },
+        {
+          "content": "\n      Such was the end, Echecrates, of our friend; concerning whom I may truly\n      say, that of all the men of his time whom I have known, he was the wisest\n      and justest and best.\n    "
+        }
+      ]
+    }
+  ]
+}

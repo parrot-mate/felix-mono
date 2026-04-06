@@ -1,0 +1,12 @@
+{
+  "name": "@pmate/theme",
+  "version": "1.0.0",
+  "description": "Tailwind CSS theme shared across packages",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "tailwindcss": "catalog:"
+  },
+  "dependencies": {}
+}

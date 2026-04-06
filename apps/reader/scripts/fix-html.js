@@ -1,0 +1,6 @@
+const fs = require("fs")
+const path = require("path")
+const file = path.resolve(__dirname, "../dist/chat/chat.html")
+let html = fs.readFileSync(file, "utf-8")
+html = html.replace(/crossorigin/g, "")
+fs.writeFileSync(file, html)

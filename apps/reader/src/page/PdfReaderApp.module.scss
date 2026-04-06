@@ -1,0 +1,28 @@
+.APP {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-size-adjust: 100%;
+    font-feature-settings: normal;
+    font-size: 1.2rem;
+}
+
+.APP a {
+    user-select: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.APP svg {
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.APP input {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 1px solid #f2f2f2;
+    outline: none;
+    border-radius: 5px;
+}
+
+

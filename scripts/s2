@@ -1,0 +1,7 @@
+#!/bin/bash
+./build
+./scripts/v2ray start
+./scripts/rev start
+./scripts/tts start
+pm2 start "proxychains4 node apps/service/dist/entry/tts.js" --name ttsproxy
+pm2 start "proxychains4 node apps/service/dist/entry/openai.js" --name openaiproxy

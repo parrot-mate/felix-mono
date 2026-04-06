@@ -1,0 +1,6 @@
+githubUser: parrot-mate
+domain: ""
+apps:
+  - app: erp-homepage
+    dir: apps/erp-homepage
+    type: vite

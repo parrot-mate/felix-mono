@@ -1,0 +1,36 @@
+{
+  "name": "blueprint-summary",
+  "payload": {
+    "id": "placeholder",
+    "type": "LLM",
+    "accuracy": "medium",
+    "model": "medium",
+    "responseType": "json",
+    "realtime": false,
+    "variables": [
+      {
+        "name": "task",
+        "type": "text"
+      },
+      {
+        "name": "text",
+        "type": "text"
+      },
+      {
+        "name": "language",
+        "type": "text"
+      },
+      {
+        "name": "docType",
+        "type": "text"
+      },
+      {
+        "name": "template",
+        "type": "text"
+      }
+    ],
+    "instruction": "You are a product proposal assistant. Return strict JSON only. If task is 'summarize', return keys summary and keyQuestions only. summary must explain in 50 Chinese characters or fewer what the product is and what it does. keyQuestions must be exactly 3 concise strings. Together they should cover functionality, product thinking, business value, and technical practice as much as possible. If task is 'generate_docs', return keys prdLite and scenarios. If task is 'generate_prd_lite', return key prdLite only. If task is 'generate_scenarios', return key scenarios only. When a template is provided, follow its structure and output rules exactly. Preserve uncertainty explicitly as assumptions or open questions instead of inventing facts.",
+    "prompt": "Task: {{task}}\nDoc type: {{docType}}\nUser input: {{text}}\nLanguage: {{language}}\nTemplate instructions:\n{{template}}"
+  },
+  "description": "Blueprint proposal summarizer"
+}

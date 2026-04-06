@@ -1,0 +1,21 @@
+{
+  "name": "@pmate/agent-api",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "test": "INDEXER_BASE_URL=http://localhost vitest run src/tests",
+    "serve": "npm run start"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.1",
+    "@elysiajs/node": "^1.4.2",
+    "@pmate/blockchain": "workspace:*",
+    "@pmate/meta": "workspace:*",
+    "@pmate/service-core": "workspace:*",
+    "dotenv": "catalog:",
+    "elysia": "^1.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "vitest": "^4.0.17"
+  }
+}

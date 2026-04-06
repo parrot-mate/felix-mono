@@ -1,0 +1,3 @@
+#!/bin/bash
+turbo run build --filter=@pchip/service...
+node apps/service/dist/tool/uploadPrompts.js
