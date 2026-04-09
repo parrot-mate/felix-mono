@@ -1,4 +1,0 @@
-export const AGENT_API_ADMIN_ACCOUNT_IDS = [
-  // "0x9673ff2fbbf4403739db1c02d7941c3b2e70bfc1e0fe67df5a9f5d7502a79991",
-  "0x9a426f6a686d7a80fb2de8dfd8585f2af36eac7b4a0ba20224871cdccaed62cc"
-]

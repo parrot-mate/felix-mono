@@ -1,7 +1,0 @@
-export * from "./LearningLang"
-export * from "./MotherTong"
-export * from "./ProfileAge"
-export * from "./ProfileGender"
-export * from "./ProfileNickname"
-export * from "./IsAdult"
-export * from "./types"
