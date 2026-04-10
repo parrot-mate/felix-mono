@@ -52,7 +52,7 @@ export function buildAgentId(namespace: string, name: string): string {
   return `${namespace}:${name}`
 }
 
-function readSessionToken(): string {
+export function readSessionToken(): string {
   const sessionPath = path.join(os.homedir(), ".pmate", "session.json")
   if (!existsSync(sessionPath)) {
     throw new Error(`Missing session file at ${sessionPath}. Run \"pmate login\" first.`)
@@ -64,6 +64,28 @@ function readSessionToken(): string {
     throw new Error(`Missing token in ${sessionPath}. Run \"pmate login\" again.`)
   }
   return token
+}
+
+export function tryReadSessionToken(): string | undefined {
+  try {
+    return readSessionToken()
+  } catch {
+    return undefined
+  }
+}
+
+export function getLocalAuthStatus() {
+  try {
+    readSessionToken()
+    return {
+      authenticated: true as const,
+    }
+  } catch (error) {
+    return {
+      authenticated: false as const,
+      error: error instanceof Error ? error.message : String(error),
+    }
+  }
 }
 
 export function unwrapAgentResult<T>(value: T | AgentEnvelope<T> | null): T | null {

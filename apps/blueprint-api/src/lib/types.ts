@@ -51,11 +51,31 @@ export type ProposalScoreResult = {
   reason: string
 }
 
-export type BlueprintDocType = "prdLite" | "scenarios"
+export type BlueprintConfirmedDocType = "prdLite" | "scenarios" | "decisions" | "deliveryPlan"
+
+export type BlueprintFormalSpecDocType = "product" | "develop" | "qa" | "deploy"
+
+export type BlueprintDocType = BlueprintConfirmedDocType
+
+export type BlueprintGenerationStage = "blueprintInput" | "confirmedInputs" | "formalSpecs"
 
 export type GeneratedDocsResult = {
   prdLite: string
   scenarios: string
+  decisions: string
+  deliveryPlan: string
+}
+
+export type GeneratedFormalSpecsResult = {
+  product: string
+  develop: string
+  qa: string
+  deploy: string
+}
+
+export type FormalSpecRequest = {
+  docType: BlueprintFormalSpecDocType
+  deliveryPlanReviewed: boolean
 }
 
 export type AgentDebugInfo = {

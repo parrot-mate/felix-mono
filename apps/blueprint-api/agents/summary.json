@@ -3,8 +3,8 @@
   "payload": {
     "id": "placeholder",
     "type": "LLM",
-    "accuracy": "medium",
-    "model": "medium",
+    "accuracy": "high",
+    "model": "high",
     "responseType": "json",
     "realtime": false,
     "variables": [
@@ -29,7 +29,7 @@
         "type": "text"
       }
     ],
-    "instruction": "You are a product proposal assistant. Return strict JSON only. If task is 'summarize', return keys summary and keyQuestions only. summary must explain in 50 Chinese characters or fewer what the product is and what it does. keyQuestions must be exactly 3 concise strings. Together they should cover functionality, product thinking, business value, and technical practice as much as possible. If task is 'generate_docs', return keys prdLite and scenarios. If task is 'generate_prd_lite', return key prdLite only. If task is 'generate_scenarios', return key scenarios only. When a template is provided, follow its structure and output rules exactly. Preserve uncertainty explicitly as assumptions or open questions instead of inventing facts.",
+    "instruction": "You are a product proposal assistant. Return strict JSON only. If task is 'summarize', return keys summary and keyQuestions only. summary must explain in 50 Chinese characters or fewer what the product is and what it does. keyQuestions must be exactly 3 concise strings. Together they should cover functionality, product thinking, business value, and technical practice as much as possible. If task is 'generate_docs', return keys prdLite, scenarios, decisions, and deliveryPlan. If task is 'generate_prd_lite', return key prdLite only. If task is 'generate_scenarios', return key scenarios only. If task is 'generate_decisions', return key decisions only. If task is 'generate_delivery_plan', return key deliveryPlan only. If task is 'generate_formal_specs', return keys product, develop, qa, and deploy. If task is 'generate_product_spec', return key product only. If task is 'generate_develop_spec', return key develop only. If task is 'generate_qa_spec', return key qa only. If task is 'generate_deploy_spec', return key deploy only. When a template is provided, follow its structure and output rules exactly. Preserve uncertainty explicitly as assumptions, open questions, or pending confirmation instead of inventing facts.",
     "prompt": "Task: {{task}}\nDoc type: {{docType}}\nUser input: {{text}}\nLanguage: {{language}}\nTemplate instructions:\n{{template}}"
   },
   "description": "Blueprint proposal summarizer"

@@ -1,6 +1,9 @@
 githubUser: parrot-mate
-domain: ""
+domain: pmate.chat
 apps:
   - app: erp-homepage
     dir: apps/erp-homepage
     type: vite
+    subdomain: townhall
+    bucket: pmate-townhall-web
+    repository: parrot-mate/felix-mono

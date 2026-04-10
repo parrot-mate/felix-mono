@@ -2,7 +2,86 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, beforeEach, expect, vi } from "vitest"
 import { App } from "./App"
-import { BLUEPRINT_APP_ID } from "./auth"
+
+const promptMock = vi.fn(async (request: { payload?: Record<string, unknown> }) => {
+  const task = String(request.payload?.task ?? "")
+
+  if (task === "summarize") {
+    return {
+      summary: "这是一个帮助用户澄清需求并生成文档的产品。",
+      keyQuestions: ["问题一", "问题二", "问题三"],
+    }
+  }
+
+  if (task === "generate_prd_lite") {
+    return { prdLite: "# PRD-Lite\n\nremote prd" }
+  }
+
+  if (task === "generate_scenarios") {
+    return { scenarios: "# Scenarios\n\nremote scenarios" }
+  }
+
+  if (task === "generate_decisions") {
+    return { decisions: "# Decisions\n\nremote decisions" }
+  }
+
+  if (task === "generate_delivery_plan") {
+    return { deliveryPlan: "# Delivery Plan\n\nremote delivery plan" }
+  }
+
+  if (task === "generate_product_spec") {
+    return { product: "# Product\n\nremote product" }
+  }
+
+  if (task === "generate_develop_spec") {
+    return { develop: "# Develop\n\nremote develop" }
+  }
+
+  if (task === "generate_qa_spec") {
+    return { qa: "# QA\n\nremote qa" }
+  }
+
+  if (task === "generate_deploy_spec") {
+    return { deploy: "# Deploy\n\nremote deploy" }
+  }
+
+  throw new Error(`Unexpected task ${task}`)
+})
+
+const loginMock = vi.fn(async () => true)
+const closeMock = vi.fn()
+const authRedirectMock = vi.fn()
+let mockAuthState: { token: string | null; login: () => void; loading: boolean } = {
+  token: "web-auth-token",
+  login: authRedirectMock,
+  loading: false,
+}
+
+vi.mock("./pmateAuth", () => ({
+  BlueprintAuthProvider: ({ children }: { children: React.ReactNode }) => children,
+  useBlueprintAuth: () => mockAuthState,
+}))
+
+vi.mock("@pmate/agent-sdk", () => ({
+  AgentService: class {
+    constructor(_: unknown) {}
+  },
+  AgentClient: class {
+    constructor(_: unknown) {}
+
+    async login(from: string, options?: { token?: string }) {
+      return loginMock(from, options)
+    }
+
+    async prompt(request: { payload?: Record<string, unknown> }) {
+      return promptMock(request)
+    }
+
+    close() {
+      closeMock()
+    }
+  },
+}))
 
 function createStorage() {
   const store = new Map<string, string>()
@@ -22,6 +101,11 @@ function createStorage() {
 
 describe("App", () => {
   beforeEach(() => {
+    mockAuthState = {
+      token: "web-auth-token",
+      login: authRedirectMock,
+      loading: false,
+    }
     Object.defineProperty(window, "localStorage", {
       value: createStorage(),
       configurable: true,
@@ -31,61 +115,13 @@ describe("App", () => {
   afterEach(() => {
     vi.unstubAllGlobals()
     cleanup()
-    window.localStorage.clear()
+    promptMock.mockClear()
+    loginMock.mockClear()
+    closeMock.mockClear()
+    authRedirectMock.mockClear()
   })
 
-  it("blocks generation until required fields are filled, then generates confirmed input docs", async () => {
-    window.localStorage.setItem(`pmate-auth-token:${BLUEPRINT_APP_ID}`, JSON.stringify("web-auth-token"))
-
-    const fetchMock = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = String(input)
-      if (url.endsWith("/api/blueprint/summarize")) {
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              score: 8,
-              summary: "这是一个帮助用户澄清需求并生成文档的产品。",
-              keyQuestions: ["问题一", "问题二", "问题三"],
-            },
-          }),
-        }
-      }
-
-      if (url.endsWith("/api/blueprint/formal-spec/check")) {
-        return {
-          ok: false,
-          json: async () => ({
-            ok: false,
-            error: "Cannot generate develop. delivery-plan.md must be reviewed first.",
-          }),
-        }
-      }
-
-      const body = typeof init?.body === "string" ? init.body : ""
-      const parsedBody = body ? JSON.parse(body) : {}
-
-      return {
-        ok: true,
-        json: async () => ({
-          ok: true,
-          data: {
-            docType: parsedBody.docType,
-            markdown:
-              parsedBody.docType === "prdLite"
-                ? "# PRD-Lite\n\nremote prd"
-                : parsedBody.docType === "scenarios"
-                  ? "# Scenarios\n\nremote scenarios"
-                  : parsedBody.docType === "decisions"
-                    ? "# Decisions\n\nremote decisions"
-                    : "# Delivery Plan\n\nremote delivery plan",
-          },
-        }),
-      }
-    })
-    vi.stubGlobal("fetch", fetchMock)
-
+  it("blocks generation until required fields are filled, then generates confirmed input docs through the frontend agent", async () => {
     const user = userEvent.setup()
     render(<App />)
 
@@ -112,22 +148,19 @@ describe("App", () => {
     await user.click(submitButton)
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/summarize$/),
+      expect(loginMock).toHaveBeenCalledWith(
+        expect.stringMatching(/^blueprint-web-/),
         expect.objectContaining({
-          method: "POST",
-          headers: expect.objectContaining({
-            Authorization: "Bearer web-auth-token",
-          }),
+          token: "web-auth-token",
         }),
       )
     })
 
-    expect(screen.queryByText("评分、总结和分析问题已更新。")).not.toBeNull()
+    expect(screen.queryByText("前端已直连 agent，AI 摘要和关键问题已更新。")).not.toBeNull()
     expect(screen.queryByText(/问题一/)).not.toBeNull()
-    expect(screen.queryByText("8 / 10")).not.toBeNull()
-    expect(screen.queryByText(/这些内容由系统在阶段 2 自动推荐/)).not.toBeNull()
-    expect(screen.queryByText(/建议补充的信息/)).not.toBeNull()
+    expect(screen.queryAllByText(/Structured Input/).length).toBeGreaterThan(0)
+    expect(screen.queryByText(/AI Draft 摘要/)).not.toBeNull()
+    expect(screen.queryByText(/结构化输入建议/)).not.toBeNull()
     expect(screen.queryByLabelText("目标仓库")).not.toBeNull()
 
     await user.click(screen.getByRole("button", { name: "确认进入文档生成" }))
@@ -135,11 +168,12 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "生成 PRD-Lite" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/markdown$/),
+      expect(promptMock).toHaveBeenCalledWith(
         expect.objectContaining({
-          method: "POST",
-          body: expect.stringContaining("\"docType\":\"prdLite\""),
+          payload: expect.objectContaining({
+            task: "generate_prd_lite",
+            docType: "prdLite",
+          }),
         }),
       )
     })
@@ -150,11 +184,12 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "生成 Decisions" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/markdown$/),
+      expect(promptMock).toHaveBeenCalledWith(
         expect.objectContaining({
-          method: "POST",
-          body: expect.stringContaining("\"docType\":\"decisions\""),
+          payload: expect.objectContaining({
+            task: "generate_decisions",
+            docType: "decisions",
+          }),
         }),
       )
     })
@@ -164,11 +199,12 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "生成 Delivery Plan" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/markdown$/),
+      expect(promptMock).toHaveBeenCalledWith(
         expect.objectContaining({
-          method: "POST",
-          body: expect.stringContaining("\"docType\":\"deliveryPlan\""),
+          payload: expect.objectContaining({
+            task: "generate_delivery_plan",
+            docType: "deliveryPlan",
+          }),
         }),
       )
     })
@@ -176,46 +212,7 @@ describe("App", () => {
     expect(screen.queryByRole("button", { name: "delivery-plan.md" })).not.toBeNull()
   })
 
-  it("locks formal spec gate before confirmed input docs are ready", async () => {
-    const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
-      const url = String(input)
-      if (url.endsWith("/api/blueprint/formal-spec/check")) {
-        return {
-          ok: false,
-          json: async () => ({
-            ok: false,
-            error: "Cannot generate develop. delivery-plan.md must be reviewed first.",
-          }),
-        }
-      }
-
-      if (url.endsWith("/api/blueprint/summarize")) {
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              score: 8,
-              summary: "这是一个帮助用户澄清需求并生成文档的产品。",
-              keyQuestions: ["问题一", "问题二", "问题三"],
-            },
-          }),
-        }
-      }
-
-      return {
-        ok: true,
-        json: async () => ({
-          ok: true,
-          data: {
-            docType: "deliveryPlan",
-            markdown: "# Delivery Plan\n\nremote delivery plan",
-          },
-        }),
-      }
-    })
-    vi.stubGlobal("fetch", fetchMock)
-
+  it("locks formal spec generation until delivery plan review is confirmed", async () => {
     const user = userEvent.setup()
     render(<App />)
 
@@ -231,50 +228,31 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "提交" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/summarize$/),
+      expect(promptMock).toHaveBeenCalledWith(
         expect.objectContaining({
-          method: "POST",
+          payload: expect.objectContaining({
+            task: "summarize",
+          }),
         }),
       )
     })
 
     expect(screen.queryByRole("button", { name: "确认进入文档生成" })).not.toBeNull()
-    expect(fetchMock).not.toHaveBeenCalledWith(
-      expect.stringMatching(/\/api\/blueprint\/formal-spec\/check$/),
-      expect.anything(),
-    )
     expect(screen.getByRole("button", { name: /阶段 4 正式规格/ }).hasAttribute("disabled")).toBe(true)
   })
 
   it("returns to stage 1 and opens suggested fields when补充信息 is requested", async () => {
-    const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
-      const url = String(input)
-      if (url.endsWith("/api/blueprint/summarize")) {
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              score: 6,
-              summary: "信息还不完整，需要补充更多上下文。",
-              keyQuestions: ["目标用户是谁？", "用户输入是什么？", "成功标准如何定义？"],
-            },
-          }),
-        }
+    promptMock.mockImplementationOnce(async (request: { payload?: Record<string, unknown> }) => {
+      const task = String(request.payload?.task ?? "")
+      if (task !== "summarize") {
+        throw new Error(`Unexpected task ${task}`)
       }
 
       return {
-        ok: true,
-        json: async () => ({
-          ok: true,
-          data: {
-            allowed: false,
-          },
-        }),
+        summary: "信息还不完整，需要补充更多上下文。",
+        keyQuestions: ["目标用户是谁？", "用户输入是什么？", "成功标准如何定义？"],
       }
     })
-    vi.stubGlobal("fetch", fetchMock)
 
     const user = userEvent.setup()
     render(<App />)
@@ -291,7 +269,7 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "提交" }))
 
     await waitFor(() => {
-      expect(screen.getByText("建议补充的信息")).toBeTruthy()
+      expect(screen.getByText("结构化输入建议")).toBeTruthy()
     })
 
     await user.click(screen.getAllByRole("button", { name: "去补充" })[0]!)
@@ -302,83 +280,6 @@ describe("App", () => {
   })
 
   it("generates a formal spec after delivery plan review", async () => {
-    const fetchMock = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-      const url = String(input)
-
-      if (url.endsWith("/api/blueprint/summarize")) {
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              score: 8,
-              summary: "这是一个帮助用户澄清需求并生成文档的产品。",
-              keyQuestions: ["问题一", "问题二", "问题三"],
-            },
-          }),
-        }
-      }
-
-      if (url.endsWith("/api/blueprint/formal-spec/check")) {
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              allowed: true,
-            },
-          }),
-        }
-      }
-
-      if (url.endsWith("/api/blueprint/formal-spec/markdown")) {
-        const body = typeof init?.body === "string" ? JSON.parse(init.body) : {}
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              docType: body.docType,
-              markdown: "# Develop\n\nremote develop spec",
-            },
-          }),
-        }
-      }
-
-      if (url.endsWith("/api/blueprint/markdown")) {
-        const body = typeof init?.body === "string" ? JSON.parse(init.body) : {}
-        return {
-          ok: true,
-          json: async () => ({
-            ok: true,
-            data: {
-              docType: body.docType,
-              markdown:
-                body.docType === "prdLite"
-                  ? "# PRD-Lite\n\nremote prd"
-                  : body.docType === "scenarios"
-                    ? "# Scenarios\n\nremote scenarios"
-                    : body.docType === "decisions"
-                      ? "# Decisions\n\nremote decisions"
-                      : "# Delivery Plan\n\nremote delivery plan",
-            },
-          }),
-        }
-      }
-
-      return {
-        ok: true,
-        json: async () => ({
-          ok: true,
-          data: {
-            docType: "deliveryPlan",
-            markdown: "# Delivery Plan\n\nremote delivery plan",
-          },
-        }),
-      }
-    })
-    vi.stubGlobal("fetch", fetchMock)
-
     const user = userEvent.setup()
     render(<App />)
 
@@ -394,9 +295,12 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "提交" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/summarize$/),
-        expect.objectContaining({ method: "POST" }),
+      expect(promptMock).toHaveBeenCalledWith(
+        expect.objectContaining({
+          payload: expect.objectContaining({
+            task: "summarize",
+          }),
+        }),
       )
     })
 
@@ -416,15 +320,35 @@ describe("App", () => {
     await user.click(screen.getByRole("button", { name: "生成 develop.md" }))
 
     await waitFor(() => {
-      expect(fetchMock).toHaveBeenCalledWith(
-        expect.stringMatching(/\/api\/blueprint\/formal-spec\/markdown$/),
+      expect(promptMock).toHaveBeenCalledWith(
         expect.objectContaining({
-          method: "POST",
-          body: expect.stringContaining("\"docType\":\"develop\""),
+          payload: expect.objectContaining({
+            task: "generate_develop_spec",
+            docType: "develop",
+          }),
         }),
       )
     })
 
-    expect(screen.queryByText(/remote develop spec/)).not.toBeNull()
+    expect(screen.queryByText(/remote develop/)).not.toBeNull()
+  })
+
+  it("shows a login call to action when account token is missing", async () => {
+    mockAuthState = {
+      token: null,
+      login: authRedirectMock,
+      loading: false,
+    }
+
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getByText("当前未登录 PMate")).toBeTruthy()
+    })
+
+    await user.click(screen.getByRole("button", { name: "去登录" }))
+
+    expect(authRedirectMock).toHaveBeenCalled()
   })
 })

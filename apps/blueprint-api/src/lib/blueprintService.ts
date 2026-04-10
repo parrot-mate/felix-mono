@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url"
 import type {
   AgentDebugInfo,
   BlueprintDocType,
+  BlueprintFormalSpecDocType,
+  GeneratedFormalSpecsResult,
   GeneratedDocsResult,
   ProposalExtraField,
   ProposalInput,
@@ -92,9 +94,29 @@ function readPromptTemplate(fileName: string) {
 }
 
 function resolvePromptTemplate(docType: BlueprintDocType) {
-  return docType === "prdLite"
-    ? readPromptTemplate("generate-prd-lite.md")
-    : readPromptTemplate("generate-scenario.md")
+  switch (docType) {
+    case "prdLite":
+      return readPromptTemplate("generate-prd-lite.md")
+    case "scenarios":
+      return readPromptTemplate("generate-scenario.md")
+    case "decisions":
+      return readPromptTemplate("generate-decisions.md")
+    case "deliveryPlan":
+      return readPromptTemplate("generate-delivery-plan.md")
+  }
+}
+
+function resolveFormalSpecPromptTemplate(docType: BlueprintFormalSpecDocType) {
+  switch (docType) {
+    case "product":
+      return readPromptTemplate("generate-product-spec.md")
+    case "develop":
+      return readPromptTemplate("generate-develop-spec.md")
+    case "qa":
+      return readPromptTemplate("generate-qa-spec.md")
+    case "deploy":
+      return readPromptTemplate("generate-deploy-spec.md")
+  }
 }
 
 function resolveCombinedPromptTemplate() {
@@ -104,6 +126,28 @@ function resolveCombinedPromptTemplate() {
     "",
     "Scenarios template:",
     readPromptTemplate("generate-scenario.md"),
+    "",
+    "Decisions template:",
+    readPromptTemplate("generate-decisions.md"),
+    "",
+    "Delivery plan template:",
+    readPromptTemplate("generate-delivery-plan.md"),
+  ].join("\n")
+}
+
+function resolveCombinedFormalSpecPromptTemplate() {
+  return [
+    "Product spec template:",
+    readPromptTemplate("generate-product-spec.md"),
+    "",
+    "Develop spec template:",
+    readPromptTemplate("generate-develop-spec.md"),
+    "",
+    "QA spec template:",
+    readPromptTemplate("generate-qa-spec.md"),
+    "",
+    "Deploy spec template:",
+    readPromptTemplate("generate-deploy-spec.md"),
   ].join("\n")
 }
 
@@ -200,7 +244,52 @@ function ensureMarkdownDoc(value: string | undefined, fallbackTitle: string): st
 }
 
 function resolveDocTask(docType: BlueprintDocType) {
-  return docType === "prdLite" ? "generate_prd_lite" : "generate_scenarios"
+  switch (docType) {
+    case "prdLite":
+      return "generate_prd_lite"
+    case "scenarios":
+      return "generate_scenarios"
+    case "decisions":
+      return "generate_decisions"
+    case "deliveryPlan":
+      return "generate_delivery_plan"
+  }
+}
+
+function resolveDocResponseKey(docType: BlueprintDocType): keyof GeneratedDocsResult {
+  switch (docType) {
+    case "prdLite":
+      return "prdLite"
+    case "scenarios":
+      return "scenarios"
+    case "decisions":
+      return "decisions"
+    case "deliveryPlan":
+      return "deliveryPlan"
+  }
+}
+
+export function assertDeliveryPlanReviewed(deliveryPlanReviewed: boolean, docType: BlueprintFormalSpecDocType) {
+  if (!deliveryPlanReviewed) {
+    throw new Error(`Cannot generate ${docType}. delivery-plan.md must be reviewed first.`)
+  }
+}
+
+function resolveFormalSpecTask(docType: BlueprintFormalSpecDocType) {
+  switch (docType) {
+    case "product":
+      return "generate_product_spec"
+    case "develop":
+      return "generate_develop_spec"
+    case "qa":
+      return "generate_qa_spec"
+    case "deploy":
+      return "generate_deploy_spec"
+  }
+}
+
+function resolveFormalSpecResponseKey(docType: BlueprintFormalSpecDocType): keyof GeneratedFormalSpecsResult {
+  return docType
 }
 
 function countFilledFields(input: ProposalInput) {
@@ -229,6 +318,216 @@ function buildScoreReason(score: number, filledCount: number) {
     return `当前已录入约 ${filledCount} 项有效信息，主干可分析，但边界、商业和技术约束仍需继续补充。`
   }
   return `当前已录入约 ${filledCount} 项有效信息，需求主干较完整，可以进入更稳定的方案分析和文档生成。`
+}
+
+function buildLocalDebug(label: string, payload: Record<string, unknown>): AgentDebugInfo {
+  return {
+    agentId: `local:${label}`,
+    payload,
+    rawAgentResponse: null,
+    unwrappedAgentResponse: null,
+  }
+}
+
+function summarizeLocally(input: ProposalInput): SummaryResult {
+  const score = calculateCompletenessScore(input)
+  const questions = [
+    !filled(input.targetUsers) ? "目标用户还不够明确，谁会在什么场景下持续使用？" : "",
+    !filled(input.usageScenarios) ? "主要使用场景还缺少任务流描述，用户在什么时刻打开它？" : "",
+    !filled(input.systemOutputs) ? "系统最终交付什么结果还不清楚，用户拿到的输出物是什么？" : "",
+    !filled(input.successDefinition) ? "成功标准还未定义，怎样算这次交付有效？" : "",
+  ].filter(Boolean).slice(0, 3)
+
+  return {
+    score,
+    summary: `${input.productName} 旨在${input.productGoal}。当前基础信息已可支撑阶段化分析，后续文档将围绕 ${input.techStack} 和 ${input.uiStyle} 风格展开。`.slice(0, 50),
+    keyQuestions: questions,
+  }
+}
+
+function generatePrdLiteFallback(input: ProposalInput) {
+  return [
+    "# PRD-Lite",
+    "",
+    "## 产品概览",
+    `- 产品名称：${input.productName}`,
+    `- 产品目标：${input.productGoal}`,
+    `- 背景：${input.background}`,
+    `- 技术栈：${input.techStack}`,
+    `- UI 风格：${input.uiStyle}`,
+    "",
+    "## 用户与场景",
+    `- 目标用户：${firstNonEmpty([input.targetUsers, "待补充"])}`,
+    `- 主要场景：${firstNonEmpty([input.usageScenarios, "待补充"])}`,
+    `- 当前痛点：${firstNonEmpty([input.userPain, input.currentSolution, "待补充"])}`,
+    "",
+    "## 范围",
+    `- 核心功能：${firstNonEmpty([input.coreFeatures, input.mustHaveFeatures, "待补充"])}`,
+    `- 可选功能：${firstNonEmpty([input.optionalFeatures, "当前不纳入首版范围"])}`,
+    "",
+    "## 输入输出",
+    `- 用户输入：${firstNonEmpty([input.userInputs, "待补充"])}`,
+    `- 系统输出：${firstNonEmpty([input.systemOutputs, "待补充"])}`,
+    "",
+    "## 验收",
+    `- 成功标准：${firstNonEmpty([input.successDefinition, buildScoreReason(calculateCompletenessScore(input), countFilledFields(input))])}`,
+  ].join("\n")
+}
+
+function generateDecisionsFallback(input: ProposalInput) {
+  return [
+    "# Decisions",
+    "",
+    "## 高影响决策",
+    `- 目标仓库：${firstNonEmpty([input.currentSolution, "pmate/felix-mono"])}`,
+    `- 应用形态：${splitLines(input.techStack).some((item) => /react|vite/i.test(item)) ? "vite + node" : "待确认"}`,
+    `- 首版必须能力：${firstNonEmpty([input.mustHaveFeatures, input.coreFeatures, "阶段化输入、分析、文档生成"])}`,
+    `- 部署方向：${firstNonEmpty([input.platformLimits, "pmate deploy"])}`,
+    "",
+    "## 待确认",
+    `- 外部依赖：${firstNonEmpty([input.apiDependencies, "暂无明确外部依赖"])}`,
+    `- 风险点：${firstNonEmpty([input.uncertainties, input.failureRisks, "待补充"])}`,
+  ].join("\n")
+}
+
+function generateDeliveryPlanFallback(input: ProposalInput) {
+  return [
+    "# Delivery Plan",
+    "",
+    "## 阶段 1：需求澄清与分析",
+    "- 完成关键字段录入、评分、总结、关键问题确认。",
+    "- 产出 prd-lite.md、scenarios.md、decisions.md、delivery-plan.md。",
+    "",
+    "## 阶段 2：实现设计",
+    `- 基于 ${input.techStack} 明确前后端边界、状态流和 API contract。`,
+    `- 收敛 UI 风格为 ${input.uiStyle}，补齐必要交互约束。`,
+    "",
+    "## 阶段 3：测试与发布",
+    "- 完成 formal specs、回归测试和部署检查。",
+    `- 验收标准：${firstNonEmpty([input.successDefinition, "关键流程可走通，文档可评审"])}`,
+  ].join("\n")
+}
+
+function generateFormalSpecFallback(input: ProposalInput, docType: BlueprintFormalSpecDocType) {
+  const common = [
+    `- 产品名称：${input.productName}`,
+    `- 产品目标：${input.productGoal}`,
+    `- 背景：${input.background}`,
+    `- 技术栈：${input.techStack}`,
+  ]
+
+  switch (docType) {
+    case "product":
+      return [
+        "# product.md",
+        "",
+        "## 设计概览",
+        ...common,
+        `- 用户价值：${firstNonEmpty([input.targetUsers, "待补充"])} 在 ${firstNonEmpty([input.usageScenarios, "待补充"])} 下更快形成可执行文档。`,
+        "",
+        "## 范围与风险",
+        `- 核心范围：${firstNonEmpty([input.coreFeatures, input.mustHaveFeatures, "待补充"])}`,
+        `- 风险：${firstNonEmpty([input.uncertainties, input.failureRisks, "待补充"])}`,
+      ].join("\n")
+    case "develop":
+      return [
+        "# develop.md",
+        "",
+        "## 技术设计",
+        ...common,
+        "",
+        "```mermaid",
+        "flowchart TD",
+        '  A["阶段 1 输入"] --> B["阶段 2 分析"]',
+        '  B --> C["阶段 3 输入文档"]',
+        '  C --> D["阶段 4 Formal Specs"]',
+        "```",
+        "",
+        "## 开发计划",
+        `- 前端：实现 staged flow 与文档分页。`,
+        `- 后端：提供 summarize、markdown、formal spec 接口。`,
+        `- 部署：优先使用 ${firstNonEmpty([input.platformLimits, "pmate deploy"])}。`,
+      ].join("\n")
+    case "qa":
+      return [
+        "# qa.md",
+        "",
+        "## 测试策略",
+        "- 验证关键字段录入、分析阶段、文档生成、formal spec gate。",
+        "",
+        "#### Test Case / 测试用例: 用户可以完成分析并生成文档",
+        `- Scenario / 场景: 用户填写 ${input.productName} 的关键字段后提交分析。`,
+        "- Preconditions / 前置条件: 前后端服务可用。",
+        "- Steps / 步骤:",
+        "  1. 填写关键字段。",
+        "  2. 提交分析。",
+        "  3. 确认进入文档生成并生成 confirmed docs。",
+        "- Expected Result / 预期结果: 系统返回评分、总结、关键问题，并成功生成文档。",
+      ].join("\n")
+    case "deploy":
+      return [
+        "# deploy.md",
+        "",
+        "## 部署计划",
+        `- 应用形态：${splitLines(input.techStack).some((item) => /react|vite/i.test(item)) ? "vite + node" : "待确认"}`,
+        `- 默认部署工具：${firstNonEmpty([input.platformLimits, "pmate deploy"])}`,
+        "- 发布前检查：确认 delivery-plan 已 review，接口与前端构建通过。",
+        "- 回滚策略：保留上一个稳定版本并回退到上一版构建产物。",
+      ].join("\n")
+  }
+}
+
+export function summarizeProposalLocally(input: ProposalInput): AgentBackedResult<SummaryResult> {
+  return {
+    data: summarizeLocally(input),
+    debug: buildLocalDebug("summarize", {
+      mode: "local-fallback",
+      text: buildPromptText(input),
+      language: input.language,
+    }),
+  }
+}
+
+export function generateProposalDocLocally(
+  input: ProposalInput,
+  docType: BlueprintDocType,
+): AgentBackedResult<string> {
+  const data =
+    docType === "prdLite"
+      ? generatePrdLiteFallback(input)
+      : docType === "scenarios"
+        ? generateScenarioFallback(input)
+        : docType === "decisions"
+          ? generateDecisionsFallback(input)
+          : generateDeliveryPlanFallback(input)
+
+  return {
+    data,
+    debug: buildLocalDebug(`generate-${docType}`, {
+      mode: "local-fallback",
+      docType,
+      text: buildPromptText(input),
+      language: input.language,
+    }),
+  }
+}
+
+export function generateFormalSpecLocally(
+  input: ProposalInput,
+  docType: BlueprintFormalSpecDocType,
+  deliveryPlanReviewed: boolean,
+): AgentBackedResult<string> {
+  assertDeliveryPlanReviewed(deliveryPlanReviewed, docType)
+
+  return {
+    data: generateFormalSpecFallback(input, docType),
+    debug: buildLocalDebug(`generate-formal-${docType}`, {
+      mode: "local-fallback",
+      docType,
+      text: buildPromptText(input),
+      language: input.language,
+    }),
+  }
 }
 
 export async function summarizeProposal(
@@ -320,6 +619,8 @@ export async function generateProposalDocs(
     data: {
       prdLite: ensureMarkdownDoc(response.prdLite, "prdLite"),
       scenarios: ensureMarkdownDoc(response.scenarios, "scenarios"),
+      decisions: ensureMarkdownDoc(response.decisions, "decisions"),
+      deliveryPlan: ensureMarkdownDoc(response.deliveryPlan, "deliveryPlan"),
     },
     debug: {
       agentId: result.agentId,
@@ -394,12 +695,11 @@ export async function generateProposalDoc(
   }
 
   const response = result.unwrapped
+  const responseKey = resolveDocResponseKey(docType)
   let markdown: string
 
   try {
-    markdown = docType === "prdLite"
-      ? ensureMarkdownDoc(response.prdLite, "prdLite")
-      : ensureMarkdownDoc(response.scenarios, "scenarios")
+    markdown = ensureMarkdownDoc(response[responseKey], responseKey)
   } catch (error) {
     if (docType === "scenarios") {
       return {
@@ -421,6 +721,92 @@ export async function generateProposalDoc(
 
   return {
     data: markdown,
+    debug: {
+      agentId: result.agentId,
+      payload: result.payload,
+      rawAgentResponse: result.raw,
+      unwrappedAgentResponse: result.unwrapped,
+    },
+  }
+}
+
+export async function generateFormalSpec(
+  agentClient: BlueprintAgentClient,
+  agentName: string,
+  input: ProposalInput,
+  docType: BlueprintFormalSpecDocType,
+  deliveryPlanReviewed: boolean,
+): Promise<AgentBackedResult<string>> {
+  assertDeliveryPlanReviewed(deliveryPlanReviewed, docType)
+
+  const text = buildPromptText(input)
+  const result = await agentClient.promptJsonDetailed<Partial<GeneratedFormalSpecsResult>>(agentName, {
+    task: resolveFormalSpecTask(docType),
+    text,
+    language: input.language,
+    docType,
+    template: resolveFormalSpecPromptTemplate(docType),
+  })
+
+  if (result.unwrapped == null) {
+    throw new BlueprintAgentError("Empty response from llm-agent", {
+      agentId: result.agentId,
+      payload: result.payload,
+      rawAgentResponse: result.raw,
+      unwrappedAgentResponse: result.unwrapped,
+    })
+  }
+
+  const response = result.unwrapped
+  const responseKey = resolveFormalSpecResponseKey(docType)
+  const markdown = ensureMarkdownDoc(response[responseKey], responseKey)
+
+  return {
+    data: markdown,
+    debug: {
+      agentId: result.agentId,
+      payload: result.payload,
+      rawAgentResponse: result.raw,
+      unwrappedAgentResponse: result.unwrapped,
+    },
+  }
+}
+
+export async function generateFormalSpecs(
+  agentClient: BlueprintAgentClient,
+  agentName: string,
+  input: ProposalInput,
+  deliveryPlanReviewed: boolean,
+): Promise<AgentBackedResult<GeneratedFormalSpecsResult>> {
+  assertDeliveryPlanReviewed(deliveryPlanReviewed, "develop")
+
+  const text = buildPromptText(input)
+  const result = await agentClient.promptJsonDetailed<Partial<GeneratedFormalSpecsResult>>(agentName, {
+    task: "generate_formal_specs",
+    text,
+    language: input.language,
+    docType: "",
+    template: resolveCombinedFormalSpecPromptTemplate(),
+  })
+
+  if (result.unwrapped == null) {
+    throw new BlueprintAgentError("Empty response from llm-agent", {
+      agentId: result.agentId,
+      payload: result.payload,
+      rawAgentResponse: result.raw,
+      unwrappedAgentResponse: result.unwrapped,
+    })
+  }
+
+  const response = result.unwrapped
+
+  return {
+    data: {
+      product: ensureMarkdownDoc(response.product, "product"),
+      develop: ensureMarkdownDoc(response.develop, "develop"),
+      qa: ensureMarkdownDoc(response.qa, "qa"),
+      deploy: ensureMarkdownDoc(response.deploy, "deploy"),
+    },
     debug: {
       agentId: result.agentId,
       payload: result.payload,

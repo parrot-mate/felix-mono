@@ -1,0 +1,67 @@
+:root,
+[data-bp-theme] {
+  --bp-font-display: "Iowan Old Style", "Palatino Linotype", serif;
+  --bp-font-body: "Avenir Next", "Helvetica Neue", sans-serif;
+  --bp-radius-xs: 14px;
+  --bp-radius-sm: 20px;
+  --bp-radius-md: 28px;
+  --bp-radius-lg: 40px;
+  --bp-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --bp-shadow-card: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+[data-bp-theme="editorial-sand"] {
+  --bp-bg: #f5efe5;
+  --bp-surface: #fffaf1;
+  --bp-surface-strong: #f0e4d2;
+  --bp-border: #d6c4ab;
+  --bp-text: #2b2118;
+  --bp-text-muted: #6b5b4c;
+  --bp-primary: #9a5b2a;
+  --bp-primary-strong: #713d16;
+  --bp-accent: #d87f32;
+  --bp-success: #2d8a5f;
+  --bp-danger: #c45a4b;
+}
+
+[data-bp-theme="ocean-cyan"] {
+  --bp-bg: #eef7f6;
+  --bp-surface: #f9fffe;
+  --bp-surface-strong: #d7efea;
+  --bp-border: #8ec8bc;
+  --bp-text: #163535;
+  --bp-text-muted: #4d6768;
+  --bp-primary: #156f74;
+  --bp-primary-strong: #0f5054;
+  --bp-accent: #1ca4a7;
+  --bp-success: #207f63;
+  --bp-danger: #b7575f;
+}
+
+[data-bp-theme="forest-lime"] {
+  --bp-bg: #eef3e7;
+  --bp-surface: #fbfff7;
+  --bp-surface-strong: #d8e6c7;
+  --bp-border: #9db87d;
+  --bp-text: #23311b;
+  --bp-text-muted: #58684c;
+  --bp-primary: #527a28;
+  --bp-primary-strong: #365314;
+  --bp-accent: #87a93d;
+  --bp-success: #337547;
+  --bp-danger: #b05645;
+}
+
+[data-bp-theme="ember-coral"] {
+  --bp-bg: #fff1eb;
+  --bp-surface: #fffaf8;
+  --bp-surface-strong: #ffd6ca;
+  --bp-border: #efaa98;
+  --bp-text: #331c18;
+  --bp-text-muted: #77534d;
+  --bp-primary: #bb5d43;
+  --bp-primary-strong: #8f3e2b;
+  --bp-accent: #e27d56;
+  --bp-success: #2f8d73;
+  --bp-danger: #b84a3b;
+}
