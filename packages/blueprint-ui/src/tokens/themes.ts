@@ -1,22 +1,22 @@
 export const blueprintThemes = [
   {
-    id: "editorial-sand",
-    name: "Editorial Sand",
-    summary: "高信息密度、偏编辑气质，适合需求澄清和规格阅读。",
+    id: "together-blueprint",
+    name: "Together Blueprint",
+    summary: "默认主题，冷色高对比和蓝图网格，适合 AI infra 与 agent 控制台。",
   },
   {
-    id: "ocean-cyan",
-    name: "Ocean Cyan",
-    summary: "偏产品工具感，适合实时状态、分析卡片和协作面板。",
+    id: "control-grid",
+    name: "Control Grid",
+    summary: "更强的控制台与遥测面板气质，适合实时状态和操作面板。",
   },
   {
-    id: "forest-lime",
-    name: "Forest Lime",
-    summary: "偏稳健规划和执行管理，适合交付计划和里程碑页面。",
+    id: "signal-nocturne",
+    name: "Signal Nocturne",
+    summary: "偏深夜监控墙的信号感，适合模型输出与关键事件流。",
   },
   {
-    id: "ember-coral",
-    name: "Ember Coral",
-    summary: "偏讨论和行动驱动，适合提醒、review 和待决策区块。",
+    id: "command-amber",
+    name: "Command Amber",
+    summary: "暖色告警与命令中心风格，适合 review、决策与风险提示。",
   },
 ] as const
