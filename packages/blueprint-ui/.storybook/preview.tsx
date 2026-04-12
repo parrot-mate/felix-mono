@@ -38,14 +38,14 @@ const preview: Preview = {
     themeName: {
       name: "Theme",
       description: "Blueprint UI theme",
-      defaultValue: "editorial-sand",
+      defaultValue: "together-blueprint",
       toolbar: {
         icon: "paintbrush",
         items: [
-          { value: "editorial-sand", title: "Editorial Sand" },
-          { value: "ocean-cyan", title: "Ocean Cyan" },
-          { value: "forest-lime", title: "Forest Lime" },
-          { value: "ember-coral", title: "Ember Coral" },
+          { value: "together-blueprint", title: "Together Blueprint" },
+          { value: "control-grid", title: "Control Grid" },
+          { value: "signal-nocturne", title: "Signal Nocturne" },
+          { value: "command-amber", title: "Command Amber" },
         ],
       },
     },
@@ -124,10 +124,10 @@ const preview: Preview = {
   parameters: {
     layout: "fullscreen",
     backgrounds: {
-      default: "studio",
+      default: "night-grid",
       values: [
-        { name: "studio", value: "#f3efe7" },
-        { name: "slate", value: "#111827" },
+        { name: "night-grid", value: "#07111f" },
+        { name: "deep-slate", value: "#020617" },
       ],
     },
     controls: {

@@ -422,7 +422,7 @@ export function App() {
   )
 
   return (
-    <main className="bp-page bp-page--desktop bp-web">
+    <main className="bp-page bp-page--desktop bp-web" data-bp-theme="together-blueprint">
       <section className="bp-hero">
         <p className="bp-eyebrow">Blueprint Workspace</p>
         <h1 className="bp-title">Blueprint 四阶段澄清与规格生成</h1>

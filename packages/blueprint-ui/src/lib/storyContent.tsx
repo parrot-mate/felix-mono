@@ -95,7 +95,7 @@ export function getBlueprintCopy(locale: SupportedLocale) {
         "Keep components stateless. Business orchestration stays in the app layer.",
         "Expose device, theme, and language directly from Storybook toolbar.",
         "Separate tokens, components, modules, and pages so teams can adopt gradually.",
-        "Offer multiple visual themes instead of forcing one default aesthetic.",
+        "Center the default visual language on Together-style blueprint UI, then offer controlled theme variants.",
       ],
     }
   }
@@ -190,7 +190,7 @@ export function getBlueprintCopy(locale: SupportedLocale) {
       "组件全部保持无业务状态，agent 编排和接口调用仍放在 app 层。",
       "Storybook 顶栏直接切语言、主题和端，评审时不需要改代码。",
       "目录按 Design Principles、Tokens、Components、Modules、Pages 分层，便于渐进迁移。",
-      "至少提供多套主题，让团队在需求工具感和品牌感之间可切换。",
+      "默认使用 Together 风格的 blueprint 视觉，再提供少量可控变体给团队切换。",
     ],
   }
 }

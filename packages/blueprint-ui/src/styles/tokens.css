@@ -1,67 +1,82 @@
 :root,
 [data-bp-theme] {
-  --bp-font-display: "Iowan Old Style", "Palatino Linotype", serif;
-  --bp-font-body: "Avenir Next", "Helvetica Neue", sans-serif;
-  --bp-radius-xs: 14px;
-  --bp-radius-sm: 20px;
-  --bp-radius-md: 28px;
-  --bp-radius-lg: 40px;
-  --bp-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
-  --bp-shadow-card: 0 24px 70px rgba(15, 23, 42, 0.12);
+  --bp-font-display: "Space Grotesk", "IBM Plex Sans", "Segoe UI", sans-serif;
+  --bp-font-body: "IBM Plex Sans", "Inter", "Segoe UI", sans-serif;
+  --bp-font-mono: "IBM Plex Mono", "SFMono-Regular", "Consolas", monospace;
+  --bp-radius-xs: 12px;
+  --bp-radius-sm: 16px;
+  --bp-radius-md: 24px;
+  --bp-radius-lg: 32px;
+  --bp-shadow-soft: 0 24px 60px rgba(2, 6, 23, 0.2);
+  --bp-shadow-card: 0 32px 80px rgba(2, 6, 23, 0.34);
+  --bp-grid-line: rgba(148, 163, 184, 0.14);
 }
 
-[data-bp-theme="editorial-sand"] {
-  --bp-bg: #f5efe5;
-  --bp-surface: #fffaf1;
-  --bp-surface-strong: #f0e4d2;
-  --bp-border: #d6c4ab;
-  --bp-text: #2b2118;
-  --bp-text-muted: #6b5b4c;
-  --bp-primary: #9a5b2a;
-  --bp-primary-strong: #713d16;
-  --bp-accent: #d87f32;
-  --bp-success: #2d8a5f;
-  --bp-danger: #c45a4b;
+:root,
+[data-bp-theme="together-blueprint"] {
+  --bp-bg: #07111f;
+  --bp-bg-elevated: #0c1829;
+  --bp-surface: rgba(9, 20, 37, 0.88);
+  --bp-surface-strong: rgba(17, 34, 59, 0.98);
+  --bp-surface-bright: rgba(23, 45, 75, 0.98);
+  --bp-border: rgba(123, 164, 255, 0.24);
+  --bp-text: #ecf6ff;
+  --bp-text-muted: #92a7c5;
+  --bp-primary: #67b7ff;
+  --bp-primary-strong: #bfe3ff;
+  --bp-accent: #6ee7f2;
+  --bp-success: #4ade80;
+  --bp-danger: #fb7185;
+  --bp-glow: rgba(103, 183, 255, 0.28);
 }
 
-[data-bp-theme="ocean-cyan"] {
-  --bp-bg: #eef7f6;
-  --bp-surface: #f9fffe;
-  --bp-surface-strong: #d7efea;
-  --bp-border: #8ec8bc;
-  --bp-text: #163535;
-  --bp-text-muted: #4d6768;
-  --bp-primary: #156f74;
-  --bp-primary-strong: #0f5054;
-  --bp-accent: #1ca4a7;
-  --bp-success: #207f63;
-  --bp-danger: #b7575f;
+[data-bp-theme="control-grid"] {
+  --bp-bg: #091622;
+  --bp-bg-elevated: #102032;
+  --bp-surface: rgba(10, 24, 42, 0.9);
+  --bp-surface-strong: rgba(18, 40, 67, 0.98);
+  --bp-surface-bright: rgba(28, 60, 99, 0.98);
+  --bp-border: rgba(95, 211, 255, 0.24);
+  --bp-text: #eff9ff;
+  --bp-text-muted: #8fb8d2;
+  --bp-primary: #4fd1ff;
+  --bp-primary-strong: #bcf3ff;
+  --bp-accent: #38bdf8;
+  --bp-success: #34d399;
+  --bp-danger: #f97316;
+  --bp-glow: rgba(56, 189, 248, 0.24);
 }
 
-[data-bp-theme="forest-lime"] {
-  --bp-bg: #eef3e7;
-  --bp-surface: #fbfff7;
-  --bp-surface-strong: #d8e6c7;
-  --bp-border: #9db87d;
-  --bp-text: #23311b;
-  --bp-text-muted: #58684c;
-  --bp-primary: #527a28;
-  --bp-primary-strong: #365314;
-  --bp-accent: #87a93d;
-  --bp-success: #337547;
-  --bp-danger: #b05645;
+[data-bp-theme="signal-nocturne"] {
+  --bp-bg: #0d1020;
+  --bp-bg-elevated: #151a31;
+  --bp-surface: rgba(17, 18, 38, 0.92);
+  --bp-surface-strong: rgba(29, 31, 61, 0.98);
+  --bp-surface-bright: rgba(45, 50, 94, 0.98);
+  --bp-border: rgba(162, 134, 255, 0.28);
+  --bp-text: #f3f1ff;
+  --bp-text-muted: #b0aed7;
+  --bp-primary: #a78bfa;
+  --bp-primary-strong: #ddd6fe;
+  --bp-accent: #7dd3fc;
+  --bp-success: #4ade80;
+  --bp-danger: #fb7185;
+  --bp-glow: rgba(167, 139, 250, 0.26);
 }
 
-[data-bp-theme="ember-coral"] {
-  --bp-bg: #fff1eb;
-  --bp-surface: #fffaf8;
-  --bp-surface-strong: #ffd6ca;
-  --bp-border: #efaa98;
-  --bp-text: #331c18;
-  --bp-text-muted: #77534d;
-  --bp-primary: #bb5d43;
-  --bp-primary-strong: #8f3e2b;
-  --bp-accent: #e27d56;
-  --bp-success: #2f8d73;
-  --bp-danger: #b84a3b;
+[data-bp-theme="command-amber"] {
+  --bp-bg: #141006;
+  --bp-bg-elevated: #1c170b;
+  --bp-surface: rgba(24, 18, 8, 0.92);
+  --bp-surface-strong: rgba(42, 30, 11, 0.98);
+  --bp-surface-bright: rgba(70, 46, 12, 0.98);
+  --bp-border: rgba(255, 190, 92, 0.24);
+  --bp-text: #fff5df;
+  --bp-text-muted: #d7b98d;
+  --bp-primary: #fbbf24;
+  --bp-primary-strong: #fde68a;
+  --bp-accent: #fb923c;
+  --bp-success: #86efac;
+  --bp-danger: #f87171;
+  --bp-glow: rgba(251, 191, 36, 0.24);
 }

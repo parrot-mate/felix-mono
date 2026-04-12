@@ -1,8 +1,8 @@
 .bp-web {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
 .bp-form-grid {
@@ -16,8 +16,8 @@
 }
 
 .bp-panel--highlight {
-  outline: 2px solid color-mix(in srgb, var(--bp-accent) 40%, transparent);
-  outline-offset: 1px;
+  border-color: color-mix(in srgb, var(--bp-primary) 44%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--bp-primary) 16%, transparent), var(--bp-shadow-card);
 }
 
 .bp-inline-tag {
@@ -25,19 +25,21 @@
   margin-bottom: 10px;
   width: fit-content;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--bp-accent) 42%, white);
+  border: 1px solid color-mix(in srgb, var(--bp-primary) 36%, transparent);
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--bp-primary-strong);
-  background: color-mix(in srgb, var(--bp-accent) 16%, white);
+  background: color-mix(in srgb, var(--bp-primary) 12%, transparent);
 }
 
 .bp-category-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .bp-inline-tip {
@@ -47,35 +49,40 @@
 }
 
 .bp-request {
-  border-radius: 14px;
+  border-radius: var(--bp-radius-sm);
   border: 1px solid var(--bp-border);
-  background: color-mix(in srgb, var(--bp-surface-strong) 72%, white);
+  background: color-mix(in srgb, var(--bp-surface-bright) 56%, var(--bp-surface));
   color: var(--bp-text);
-  padding: 10px 12px;
+  padding: 12px 14px;
   font-size: 14px;
+  line-height: 1.6;
+}
+
+.bp-request--idle {
+  color: var(--bp-text-muted);
 }
 
 .bp-request--loading {
-  border-color: color-mix(in srgb, var(--bp-accent) 45%, white);
-  background: color-mix(in srgb, var(--bp-accent) 12%, white);
+  border-color: color-mix(in srgb, var(--bp-accent) 40%, transparent);
+  background: color-mix(in srgb, var(--bp-accent) 10%, var(--bp-surface));
 }
 
 .bp-request--success {
-  border-color: color-mix(in srgb, var(--bp-success) 42%, white);
-  background: color-mix(in srgb, var(--bp-success) 12%, white);
+  border-color: color-mix(in srgb, var(--bp-success) 38%, transparent);
+  background: color-mix(in srgb, var(--bp-success) 10%, var(--bp-surface));
 }
 
 .bp-request--error {
-  border-color: color-mix(in srgb, var(--bp-danger) 42%, white);
-  background: color-mix(in srgb, var(--bp-danger) 11%, white);
+  border-color: color-mix(in srgb, var(--bp-danger) 40%, transparent);
+  background: color-mix(in srgb, var(--bp-danger) 10%, var(--bp-surface));
 }
 
 .bp-login-card {
   margin-top: 12px;
   border: 1px solid var(--bp-border);
   border-radius: var(--bp-radius-sm);
-  padding: 12px;
-  background: color-mix(in srgb, var(--bp-surface) 86%, white);
+  padding: 14px;
+  background: color-mix(in srgb, var(--bp-surface-bright) 28%, var(--bp-surface));
 }
 
 .bp-doc-viewer {
@@ -83,21 +90,23 @@
   max-height: 58vh;
   overflow: auto;
   border: 1px solid var(--bp-border);
-  border-radius: 16px;
-  padding: 12px;
-  background: color-mix(in srgb, var(--bp-surface) 86%, white);
+  border-radius: 18px;
+  padding: 14px;
+  background: color-mix(in srgb, var(--bp-bg-elevated) 82%, black);
+  color: var(--bp-primary-strong);
+  font-family: var(--bp-font-mono);
   font-size: 12px;
-  line-height: 1.55;
+  line-height: 1.68;
   white-space: pre-wrap;
 }
 
 .bp-placeholder {
-  border: 1px dashed var(--bp-border);
-  border-radius: 16px;
-  padding: 12px;
+  border: 1px dashed color-mix(in srgb, var(--bp-border) 92%, transparent);
+  border-radius: 18px;
+  padding: 14px;
   font-size: 13px;
   color: var(--bp-text-muted);
-  background: color-mix(in srgb, var(--bp-surface) 76%, white);
+  background: color-mix(in srgb, var(--bp-surface) 88%, transparent);
 }
 
 .bp-checkline {
@@ -108,10 +117,14 @@
   color: var(--bp-text);
 }
 
+.bp-checkline input {
+  accent-color: var(--bp-primary);
+}
+
 @media (max-width: 980px) {
   .bp-web {
     padding-bottom: 20px;
-    gap: 12px;
+    gap: 14px;
   }
 
   .bp-form-grid {
