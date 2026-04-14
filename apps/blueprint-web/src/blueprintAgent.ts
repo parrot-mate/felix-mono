@@ -26,7 +26,7 @@ export type SummaryAgentResult = {
 const DEFAULT_HUB_ENDPOINT = "wss://hub.pmate.chat"
 const DEFAULT_AGENT_API_BASE_URL = "https://agent-api.pmate.chat"
 const DEFAULT_BLUEPRINT_AGENT_ID = "blueprint:blueprint-summary"
-const DEFAULT_PROMPT_TIMEOUT_MS = 25_000
+const DEFAULT_PROMPT_TIMEOUT_MS = 60_000
 
 const REVIEW_TASKS: Record<ReviewDocType, string> = {
   prdLite: "generate_prd_lite",
@@ -154,8 +154,38 @@ function listSection(title: string, items: string[]) {
   return [`## ${title}`, "", ...rows, ""].join("\n")
 }
 
-function fallbackNote(task: string) {
-  return `> 注：远端 agent(${task}) 在时限内未稳定返回，本次使用本地模板兜底。`
+function resolveFallbackReason(error: unknown) {
+  if (!(error instanceof Error)) {
+    return "未知错误"
+  }
+
+  const message = error.message.trim()
+  if (!message) {
+    return "未知错误"
+  }
+
+  if (message.includes("未找到可用登录态")) {
+    return "未登录（缺少可用 token）"
+  }
+
+  if (message.includes("timed out")) {
+    return message
+  }
+
+  if (message.includes("missing")) {
+    return `远端返回格式异常：${message}`
+  }
+
+  return message.replace(/\s+/g, " ")
+}
+
+function isTimeoutError(error: unknown) {
+  return error instanceof Error && error.message.includes("timed out")
+}
+
+function fallbackNote(task: string, error: unknown) {
+  const reason = resolveFallbackReason(error)
+  return `> 注：远端 agent(${task}) 调用失败（${reason}），本次使用本地模板兜底。`
 }
 
 function generateDecisionsFallback(form: FormState, targetRepo: string) {
@@ -312,25 +342,45 @@ async function promptBlueprintAgent(token: string | null | undefined, payload: R
 
   try {
     await client.login(`blueprint-web-${Date.now()}`, { token })
-    const response = await withTimeout(
-      client.prompt<unknown>({
-        agentId,
-        payload: {
-          ...payload,
-          requestId,
-          requestedAt: new Date().toISOString(),
-        },
-      }),
-      timeoutMs,
-      String(payload.task ?? "prompt"),
-    )
-    return unwrapAgentResponse(response)
+    const maxAttempts = 2
+    let lastError: unknown = null
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      try {
+        const response = await withTimeout(
+          client.prompt<unknown>({
+            agentId,
+            payload: {
+              ...payload,
+              requestId: `${requestId}-attempt-${attempt}`,
+              requestedAt: new Date().toISOString(),
+            },
+          }),
+          timeoutMs,
+          String(payload.task ?? "prompt"),
+        )
+        return unwrapAgentResponse(response)
+      } catch (error) {
+        lastError = error
+        if (!isTimeoutError(error) || attempt >= maxAttempts) {
+          throw error
+        }
+      }
+    }
+
+    throw lastError instanceof Error ? lastError : new Error("prompt failed after retry")
   } finally {
     client.close()
   }
 }
 
-function reviewFallback(form: FormState, targetRepo: string, docType: ReviewDocType, task: string) {
+function reviewFallback(
+  form: FormState,
+  targetRepo: string,
+  docType: ReviewDocType,
+  task: string,
+  error: unknown,
+) {
   const doc =
     docType === "prdLite"
       ? generatePrdLite(form, initialExtraFieldsState)
@@ -340,10 +390,16 @@ function reviewFallback(form: FormState, targetRepo: string, docType: ReviewDocT
           ? generateDecisionsFallback(form, targetRepo)
           : generateDeliveryPlanFallback(form)
 
-  return `${doc}\n\n${fallbackNote(task)}`
+  return `${doc}\n\n${fallbackNote(task, error)}`
 }
 
-function formalFallback(form: FormState, targetRepo: string, docType: FormalSpecDocType, task: string) {
+function formalFallback(
+  form: FormState,
+  targetRepo: string,
+  docType: FormalSpecDocType,
+  task: string,
+  error: unknown,
+) {
   const doc =
     docType === "product"
       ? generateProductSpecFallback(form)
@@ -353,7 +409,7 @@ function formalFallback(form: FormState, targetRepo: string, docType: FormalSpec
           ? generateQaSpecFallback(form)
           : generateDeploySpecFallback(form)
 
-  return `${doc}\n\n${fallbackNote(task)}`
+  return `${doc}\n\n${fallbackNote(task, error)}`
 }
 
 export async function summarizeBlueprint(
@@ -393,8 +449,8 @@ export async function generateBlueprintReviewDoc(
     })
 
     return readMarkdownField(response, docType)
-  } catch {
-    return reviewFallback(form, targetRepo, docType, task)
+  } catch (error) {
+    return reviewFallback(form, targetRepo, docType, task, error)
   }
 }
 
@@ -416,8 +472,8 @@ export async function generateBlueprintFormalSpec(
     })
 
     return readMarkdownField(response, docType)
-  } catch {
-    return formalFallback(form, targetRepo, docType, task)
+  } catch (error) {
+    return formalFallback(form, targetRepo, docType, task, error)
   }
 }
 
