@@ -10,6 +10,8 @@ import {
 import {
   type CategoryConfig,
   type CategoryId,
+  type ExtraField,
+  type ExtraFieldsState,
   type FieldId,
   buildClarificationReport,
   categories,
@@ -164,6 +166,7 @@ function downloadText(filename: string, value: string) {
 export function App() {
   const { login, token: authToken } = useBlueprintAuth()
   const [form, setForm] = useState(initialFormState)
+  const [extraFields, setExtraFields] = useState<ExtraFieldsState>(initialExtraFieldsState)
   const [stage, setStage] = useState<StageId>("input")
   const [expandedCategoryId, setExpandedCategoryId] = useState<CategoryId | null>(null)
   const [aiResult, setAiResult] = useState<AiResult | null>(null)
@@ -191,7 +194,7 @@ export function App() {
   const [deliveryPlanReviewed, setDeliveryPlanReviewed] = useState(false)
   const [notice, setNotice] = useState("")
 
-  const report = buildClarificationReport(form, initialExtraFieldsState)
+  const report = buildClarificationReport(form, extraFields)
   const missingInfoSuggestions = useMemo(
     () => buildMissingInfoSuggestions(form, report.requiredMissing),
     [form, report.requiredMissing],
@@ -208,6 +211,38 @@ export function App() {
     setForm((current) => ({ ...current, [fieldId]: value }))
   }
 
+  function createExtraField(): ExtraField {
+    return {
+      id:
+        typeof crypto !== "undefined" && "randomUUID" in crypto
+          ? crypto.randomUUID()
+          : `extra-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+      label: "",
+      value: "",
+    }
+  }
+
+  function addOutputCustomExtension() {
+    setExtraFields((current) => ({
+      ...current,
+      output: [...current.output, createExtraField()],
+    }))
+  }
+
+  function patchOutputCustomExtension(id: string, key: "label" | "value", value: string) {
+    setExtraFields((current) => ({
+      ...current,
+      output: current.output.map((item) => (item.id === id ? { ...item, [key]: value } : item)),
+    }))
+  }
+
+  function removeOutputCustomExtension(id: string) {
+    setExtraFields((current) => ({
+      ...current,
+      output: current.output.filter((item) => item.id !== id),
+    }))
+  }
+
   async function runAnalysis() {
     if (!report.requiredComplete) return
 
@@ -216,7 +251,7 @@ export function App() {
     setRequestStatus({ kind: "loading", message: "正在从 blueprint-web 直连 agent，生成 AI 摘要和关键问题..." })
 
     try {
-      const payload = await summarizeBlueprint(form, targetRepo, authToken)
+      const payload = await summarizeBlueprint(form, targetRepo, authToken, extraFields)
       setAiResult({
         score: estimateBlueprintScore(form),
         summary: payload.summary,
@@ -238,7 +273,7 @@ export function App() {
     setRequestStatus({ kind: "loading", message: `正在由前端直连 agent 生成 ${REVIEW_FILE_LABELS[docType]}...` })
 
     try {
-      const markdown = await generateBlueprintReviewDoc(form, targetRepo, docType, authToken)
+      const markdown = await generateBlueprintReviewDoc(form, targetRepo, docType, authToken, extraFields)
       setReviewDocs((current) => ({ ...current, [docType]: markdown }))
       setActiveFile(docType)
       setRequestStatus({ kind: "success", message: `${REVIEW_FILE_LABELS[docType]} 已由前端 agent 生成。` })
@@ -256,7 +291,7 @@ export function App() {
 
     try {
       assertFormalSpecReady(deliveryPlanReviewed)
-      const markdown = await generateBlueprintFormalSpec(form, targetRepo, docType, authToken)
+      const markdown = await generateBlueprintFormalSpec(form, targetRepo, docType, authToken, extraFields)
       setFormalDocs((current) => ({ ...current, [docType]: markdown }))
       setActiveFile(docType)
       setRequestStatus({ kind: "success", message: `${FORMAL_FILE_LABELS[docType]} 已由前端 agent 生成。` })
@@ -449,11 +484,58 @@ export function App() {
             title="关键字段录入"
             description={expandedCategoryId ? "补充更多结构化信息" : "先把必填字段补齐，再让系统判断还缺什么。"}
           >
-            <div className="bp-stack">
-              {categories.map((category) => renderCategory(category))}
-              <div className="bp-row">
-                <BlueprintButton
-                  disabled={!report.requiredComplete || isSubmitting}
+              <div className="bp-stack">
+                {categories.map((category) => renderCategory(category))}
+                <BlueprintPanel
+                  title="自定义扩展"
+                  description="和“输出形式”同级，用于补充未被固定字段覆盖的扩展信息。"
+                >
+                  <div className="bp-custom-inputs">
+                    <div className="bp-custom-inputs__head">
+                      <p className="bp-inline-tip">扩展名称 + 扩展内容</p>
+                      <BlueprintButton variant="secondary" onClick={addOutputCustomExtension}>
+                        新增自定义扩展
+                      </BlueprintButton>
+                    </div>
+                    {extraFields.output.length === 0 ? (
+                      <div className="bp-placeholder">还没有自定义扩展项，点击“新增自定义扩展”后可填写。</div>
+                    ) : (
+                      <div className="bp-custom-inputs__list">
+                        {extraFields.output.map((item, index) => (
+                          <div key={item.id} className="bp-custom-inputs__item">
+                            <BlueprintField
+                              id={`custom-extension-name-${item.id}`}
+                              name={`custom-extension-name-${item.id}`}
+                              label={`扩展名称 ${index + 1}`}
+                              placeholder="例如：渠道标签 / 导出模板 / 审核要求"
+                              value={item.label}
+                              onChange={(value) => patchOutputCustomExtension(item.id, "label", value)}
+                            />
+                            <div className="bp-form-grid__span">
+                              <BlueprintField
+                                id={`custom-extension-content-${item.id}`}
+                                name={`custom-extension-content-${item.id}`}
+                                label={`扩展内容 ${index + 1}`}
+                                kind="textarea"
+                                placeholder="填写这个扩展对应的具体内容"
+                                value={item.value}
+                                onChange={(value) => patchOutputCustomExtension(item.id, "value", value)}
+                              />
+                            </div>
+                            <div>
+                              <BlueprintButton variant="ghost" onClick={() => removeOutputCustomExtension(item.id)}>
+                                删除
+                              </BlueprintButton>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </BlueprintPanel>
+                <div className="bp-row">
+                  <BlueprintButton
+                    disabled={!report.requiredComplete || isSubmitting}
                   onClick={runAnalysis}
                 >
                   {isSubmitting ? "提交中..." : "提交"}

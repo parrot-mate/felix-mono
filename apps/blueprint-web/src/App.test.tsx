@@ -22,11 +22,11 @@ const promptMock = vi.fn(async (request: { payload?: Record<string, unknown> }) 
   }
 
   if (task === "generate_decisions") {
-    return { decisions: "# Decisions\n\nremote decisions" }
+    return { data: { decision: "# Decisions\n\nremote decisions" } }
   }
 
   if (task === "generate_delivery_plan") {
-    return { deliveryPlan: "# Delivery Plan\n\nremote delivery plan" }
+    return { data: { delivery_plan: "# Delivery Plan\n\nremote delivery plan" } }
   }
 
   if (task === "generate_product_spec") {
@@ -331,6 +331,39 @@ describe("App", () => {
     })
 
     expect(screen.queryByText(/remote develop/)).not.toBeNull()
+  })
+
+  it("sends custom extension from output section to agent payload", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+    })
+
+    await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
+    await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
+    await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
+    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
+    await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
+
+    await user.click(screen.getByRole("button", { name: "新增自定义扩展" }))
+    await user.type(screen.getByLabelText("扩展名称 1"), "客户渠道")
+    await user.type(screen.getByLabelText("扩展内容 1"), "微信社群")
+
+    await user.click(screen.getByRole("button", { name: "提交" }))
+
+    await waitFor(() => {
+      expect(promptMock).toHaveBeenCalled()
+    })
+
+    const summarizeCall = promptMock.mock.calls.find(
+      ([request]) => request?.payload?.task === "summarize",
+    )?.[0]
+    const promptText = String(summarizeCall?.payload?.text ?? "")
+
+    expect(promptText).toContain("自定义字段:")
+    expect(promptText).toContain("客户渠道: 微信社群")
   })
 
   it("shows a login call to action when account token is missing", async () => {

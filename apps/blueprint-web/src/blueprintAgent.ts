@@ -3,6 +3,7 @@ import {
   categories,
   generatePrdLite,
   generateScenarios,
+  type ExtraFieldsState,
   initialExtraFieldsState,
   type FormState,
 } from "./clarifier"
@@ -40,6 +41,13 @@ const REVIEW_TEMPLATES: Record<ReviewDocType, string> = {
   scenarios: scenarioTemplate,
   decisions: decisionsTemplate,
   deliveryPlan: deliveryPlanTemplate,
+}
+
+const REVIEW_RESPONSE_KEYS: Record<ReviewDocType, string[]> = {
+  prdLite: ["prdLite", "prd_lite", "prd-lite"],
+  scenarios: ["scenarios", "scenario"],
+  decisions: ["decisions", "decision"],
+  deliveryPlan: ["deliveryPlan", "delivery_plan", "delivery-plan"],
 }
 
 const FORMAL_SPEC_TASKS: Record<FormalSpecDocType, string> = {
@@ -126,6 +134,78 @@ function readMarkdownField(payload: unknown, key: string) {
   throw new Error(`Agent response is missing ${key}.`)
 }
 
+function extractMarkdownFromRecord(record: Record<string, unknown>, keys: string[]) {
+  for (const key of keys) {
+    const value = record[key]
+    if (typeof value === "string" && value.trim()) {
+      return value.trim()
+    }
+  }
+
+  const markdown = record.markdown
+  if (typeof markdown === "string" && markdown.trim()) {
+    return markdown.trim()
+  }
+
+  const content = record.content
+  if (typeof content === "string" && content.trim()) {
+    return content.trim()
+  }
+
+  const nonEmptyStrings = Object.values(record).filter(
+    (value): value is string => typeof value === "string" && value.trim().length > 0,
+  )
+  if (nonEmptyStrings.length === 1) {
+    return nonEmptyStrings[0].trim()
+  }
+
+  return null
+}
+
+function findMarkdownInNestedPayload(payload: unknown, keys: string[], visited = new WeakSet<object>()): string | null {
+  if (!payload || typeof payload !== "object") {
+    return null
+  }
+
+  if (visited.has(payload)) {
+    return null
+  }
+  visited.add(payload)
+
+  const record = payload as Record<string, unknown>
+  const direct = extractMarkdownFromRecord(record, keys)
+  if (direct) {
+    return direct
+  }
+
+  for (const containerKey of ["data", "result", "response", "doc", "document", "payload", "output"]) {
+    const nested = record[containerKey]
+    const resolved = findMarkdownInNestedPayload(nested, keys, visited)
+    if (resolved) {
+      return resolved
+    }
+  }
+
+  return null
+}
+
+function readMarkdownFieldWithAliases(payload: unknown, keys: string[]) {
+  if (typeof payload === "string" && payload.trim()) {
+    return payload.trim()
+  }
+
+  if (!payload || typeof payload !== "object") {
+    throw new Error(`Agent response is missing ${keys[0] ?? "markdown"}.`)
+  }
+
+  const markdown = findMarkdownInNestedPayload(payload, keys)
+  if (markdown) {
+    return markdown
+  }
+
+  throw new Error(`Agent response is missing ${keys[0] ?? "markdown"}.`)
+}
+
 function readStringListField(payload: unknown, key: string) {
   if (!payload || typeof payload !== "object") {
     throw new Error(`Agent response is missing ${key}.`)
@@ -147,6 +227,12 @@ function toList(value: string) {
     .split("\n")
     .map((item) => item.trim())
     .filter(Boolean)
+}
+
+function toExtraLines(extras: ExtraFieldsState[keyof ExtraFieldsState]) {
+  return extras
+    .filter((item) => item.label.trim() || item.value.trim())
+    .map((item) => `${item.label.trim() || "未命名字段"}: ${item.value.trim() || "<待补充>"}`)
 }
 
 function listSection(title: string, items: string[]) {
@@ -294,7 +380,11 @@ export function estimateBlueprintScore(form: FormState) {
   return Math.min(10, Math.max(1, score))
 }
 
-export function buildBlueprintPromptText(form: FormState, targetRepo: string) {
+export function buildBlueprintPromptText(
+  form: FormState,
+  targetRepo: string,
+  extras: ExtraFieldsState = initialExtraFieldsState,
+) {
   const lines: string[] = []
 
   for (const category of categories) {
@@ -303,6 +393,13 @@ export function buildBlueprintPromptText(form: FormState, targetRepo: string) {
       const value = form[field.id].trim()
       if (value) {
         lines.push(`${field.label}: ${value}`)
+      }
+    }
+    const extraLines = toExtraLines(extras[category.id])
+    if (extraLines.length > 0) {
+      lines.push("自定义字段:")
+      for (const item of extraLines) {
+        lines.push(`- ${item}`)
       }
     }
     lines.push("")
@@ -376,6 +473,7 @@ async function promptBlueprintAgent(token: string | null | undefined, payload: R
 
 function reviewFallback(
   form: FormState,
+  extras: ExtraFieldsState,
   targetRepo: string,
   docType: ReviewDocType,
   task: string,
@@ -383,9 +481,9 @@ function reviewFallback(
 ) {
   const doc =
     docType === "prdLite"
-      ? generatePrdLite(form, initialExtraFieldsState)
+      ? generatePrdLite(form, extras)
       : docType === "scenarios"
-        ? generateScenarios(form, initialExtraFieldsState)
+        ? generateScenarios(form, extras)
         : docType === "decisions"
           ? generateDecisionsFallback(form, targetRepo)
           : generateDeliveryPlanFallback(form)
@@ -416,11 +514,12 @@ export async function summarizeBlueprint(
   form: FormState,
   targetRepo: string,
   token: string | null | undefined,
+  extras: ExtraFieldsState = initialExtraFieldsState,
 ): Promise<SummaryAgentResult> {
   const response = await promptBlueprintAgent(token, {
     task: "summarize",
     docType: "proposal",
-    text: buildBlueprintPromptText(form, targetRepo),
+    text: buildBlueprintPromptText(form, targetRepo, extras),
     language: "zh",
     template: "",
   })
@@ -436,21 +535,29 @@ export async function generateBlueprintReviewDoc(
   targetRepo: string,
   docType: ReviewDocType,
   token: string | null | undefined,
+  extras: ExtraFieldsState = initialExtraFieldsState,
 ) {
   const task = REVIEW_TASKS[docType]
+  let response: unknown = null
 
   try {
-    const response = await promptBlueprintAgent(token, {
+    response = await promptBlueprintAgent(token, {
       task,
       docType,
-      text: buildBlueprintPromptText(form, targetRepo),
+      text: buildBlueprintPromptText(form, targetRepo, extras),
       language: "zh",
       template: REVIEW_TEMPLATES[docType],
     })
 
-    return readMarkdownField(response, docType)
+    return readMarkdownFieldWithAliases(response, REVIEW_RESPONSE_KEYS[docType])
   } catch (error) {
-    return reviewFallback(form, targetRepo, docType, task, error)
+    console.error("[blueprint-web] review doc generation fell back to local template", {
+      task,
+      docType,
+      error: error instanceof Error ? error.message : String(error),
+      response,
+    })
+    return reviewFallback(form, extras, targetRepo, docType, task, error)
   }
 }
 
@@ -459,6 +566,7 @@ export async function generateBlueprintFormalSpec(
   targetRepo: string,
   docType: FormalSpecDocType,
   token: string | null | undefined,
+  extras: ExtraFieldsState = initialExtraFieldsState,
 ) {
   const task = FORMAL_SPEC_TASKS[docType]
 
@@ -466,7 +574,7 @@ export async function generateBlueprintFormalSpec(
     const response = await promptBlueprintAgent(token, {
       task,
       docType,
-      text: buildBlueprintPromptText(form, targetRepo),
+      text: buildBlueprintPromptText(form, targetRepo, extras),
       language: "zh",
       template: FORMAL_SPEC_TEMPLATES[docType],
     })
