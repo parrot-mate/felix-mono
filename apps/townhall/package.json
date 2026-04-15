@@ -1,0 +1,39 @@
+{
+  "name": "@felix/townhall",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "storybook": "storybook dev -p 6012",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@pmate/account-sdk": "^0.7.6",
+    "@pmate/store": "^0.3.1",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@storybook/addon-docs": "9.0.17",
+    "@storybook/react-vite": "9.0.17",
+    "@tailwindcss/vite": "catalog:",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "jsdom": "^26.1.0",
+    "storybook": "^9.0.17",
+    "tailwindcss": "catalog:",
+    "typescript": "^5.9.2",
+    "vite": "catalog:",
+    "vitest": "^4.0.17"
+  }
+}
