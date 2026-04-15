@@ -26,7 +26,7 @@ export type SummaryAgentResult = {
 
 const DEFAULT_HUB_ENDPOINT = "wss://hub.pmate.chat"
 const DEFAULT_AGENT_API_BASE_URL = "https://agent-api.pmate.chat"
-const DEFAULT_BLUEPRINT_AGENT_ID = "blueprint:blueprint-summary"
+const DEFAULT_BLUEPRINT_AGENT_ID = "felix:blueprint-summary"
 const DEFAULT_PROMPT_TIMEOUT_MS = 60_000
 
 const REVIEW_TASKS: Record<ReviewDocType, string> = {
