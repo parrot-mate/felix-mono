@@ -1,0 +1,39 @@
+{
+  "name": "@felix/erp-homepage",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@pmate/account-sdk": "^0.8.0",
+    "@pmate/store": "^0.3.1",
+    "clsx": "^2.1.1",
+    "jotai": "catalog:",
+    "jotai-family": "catalog:",
+    "qs": "^6.14.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-router-dom": "^6.22.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@tailwindcss/vite": "catalog:",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "jsdom": "^26.1.0",
+    "tailwindcss": "catalog:",
+    "typescript": "^5.2.2",
+    "vite": "catalog:",
+    "vitest": "^4.0.17"
+  }
+}
