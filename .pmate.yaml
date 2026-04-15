@@ -1,8 +1,8 @@
 githubUser: parrot-mate
 domain: pmate.chat
 apps:
-  - app: erp-homepage
-    dir: apps/erp-homepage
+  - app: townhall
+    dir: apps/townhall
     type: vite
     subdomain: townhall
     bucket: pmate-townhall-web
