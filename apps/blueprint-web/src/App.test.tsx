@@ -29,22 +29,6 @@ const promptMock = vi.fn(async (request: { payload?: Record<string, unknown> }) 
     return { data: { delivery_plan: "# Delivery Plan\n\nremote delivery plan" } }
   }
 
-  if (task === "generate_product_spec") {
-    return { product: "# Product\n\nremote product" }
-  }
-
-  if (task === "generate_develop_spec") {
-    return { develop: "# Develop\n\nremote develop" }
-  }
-
-  if (task === "generate_qa_spec") {
-    return { qa: "# QA\n\nremote qa" }
-  }
-
-  if (task === "generate_deploy_spec") {
-    return { deploy: "# Deploy\n\nremote deploy" }
-  }
-
   throw new Error(`Unexpected task ${task}`)
 })
 
@@ -126,20 +110,26 @@ describe("App", () => {
     render(<App />)
 
     await waitFor(() => {
-      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
     })
 
     expect(screen.queryAllByText(/阶段 1/).length).toBeGreaterThan(0)
     expect(screen.queryAllByText(/阶段 2/).length).toBeGreaterThan(0)
     expect(screen.queryAllByText(/阶段 3/).length).toBeGreaterThan(0)
-    expect(screen.queryAllByText(/阶段 4/).length).toBeGreaterThan(0)
+    expect(screen.queryByText("分析与建议")).toBeNull()
+    expect(screen.queryByText("Review Docs")).toBeNull()
+    expect(screen.queryByText("用户相关")).not.toBeNull()
+    expect(screen.queryByText("使用场景")).not.toBeNull()
+    expect(screen.queryByText("功能")).not.toBeNull()
+    expect(screen.queryByText("输入输出")).toBeNull()
+    expect(screen.queryByRole("button", { name: "新增自定义扩展" })).toBeNull()
 
     expect(screen.getByRole("button", { name: "提交" }).hasAttribute("disabled")).toBe(true)
 
     await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
     await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
     await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
-    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
+    await user.type(screen.getByLabelText("技术栈"), "React{enter}TailwindCSS{enter}")
     await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
 
     const submitButton = screen.getByRole("button", { name: "提交" })
@@ -157,11 +147,11 @@ describe("App", () => {
     })
 
     expect(screen.queryByText("前端已直连 agent，AI 摘要和关键问题已更新。")).not.toBeNull()
+    expect(screen.queryByText("关键字段录入")).toBeNull()
+    expect(screen.queryByText("分析与建议")).not.toBeNull()
     expect(screen.queryByText(/问题一/)).not.toBeNull()
-    expect(screen.queryAllByText(/Structured Input/).length).toBeGreaterThan(0)
     expect(screen.queryByText(/AI Draft 摘要/)).not.toBeNull()
     expect(screen.queryByText(/结构化输入建议/)).not.toBeNull()
-    expect(screen.queryByLabelText("目标仓库")).not.toBeNull()
 
     await user.click(screen.getByRole("button", { name: "确认进入文档生成" }))
 
@@ -179,6 +169,8 @@ describe("App", () => {
     })
 
     expect(screen.queryByRole("button", { name: "prd-lite.md" })).not.toBeNull()
+    expect(screen.queryByText("分析与建议")).toBeNull()
+    expect(screen.queryAllByText("Review Docs").length).toBeGreaterThan(0)
     expect(screen.queryByText(/remote prd/)).not.toBeNull()
 
     await user.click(screen.getByRole("button", { name: "生成 Decisions" }))
@@ -212,18 +204,18 @@ describe("App", () => {
     expect(screen.queryByRole("button", { name: "delivery-plan.md" })).not.toBeNull()
   })
 
-  it("locks formal spec generation until delivery plan review is confirmed", async () => {
+  it("does not render the removed formal spec stage", async () => {
     const user = userEvent.setup()
     render(<App />)
 
     await waitFor(() => {
-      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
     })
 
     await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
     await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
     await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
-    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
+    await user.type(screen.getByLabelText("技术栈"), "React{enter}TailwindCSS{enter}")
     await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
     await user.click(screen.getByRole("button", { name: "提交" }))
 
@@ -238,7 +230,9 @@ describe("App", () => {
     })
 
     expect(screen.queryByRole("button", { name: "确认进入文档生成" })).not.toBeNull()
-    expect(screen.getByRole("button", { name: /阶段 4 正式规格/ }).hasAttribute("disabled")).toBe(true)
+    expect(screen.queryByText(/阶段 4/)).toBeNull()
+    expect(screen.queryByText("Formal Specs")).toBeNull()
+    expect(screen.queryByRole("button", { name: "进入正式规格" })).toBeNull()
   })
 
   it("returns to stage 1 and opens suggested fields when补充信息 is requested", async () => {
@@ -258,13 +252,13 @@ describe("App", () => {
     render(<App />)
 
     await waitFor(() => {
-      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
     })
 
     await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
     await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
     await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
-    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
+    await user.type(screen.getByLabelText("技术栈"), "React{enter}TailwindCSS{enter}")
     await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
     await user.click(screen.getByRole("button", { name: "提交" }))
 
@@ -274,63 +268,9 @@ describe("App", () => {
 
     await user.click(screen.getAllByRole("button", { name: "去补充" })[0]!)
 
-    expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+    expect(screen.getByText("关键字段录入")).toBeTruthy()
     expect(screen.getByText("补充更多结构化信息")).toBeTruthy()
     expect(screen.getByLabelText("目标用户是谁")).toBeTruthy()
-  })
-
-  it("generates a formal spec after delivery plan review", async () => {
-    const user = userEvent.setup()
-    render(<App />)
-
-    await waitFor(() => {
-      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
-    })
-
-    await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
-    await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
-    await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
-    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
-    await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
-    await user.click(screen.getByRole("button", { name: "提交" }))
-
-    await waitFor(() => {
-      expect(promptMock).toHaveBeenCalledWith(
-        expect.objectContaining({
-          payload: expect.objectContaining({
-            task: "summarize",
-          }),
-        }),
-      )
-    })
-
-    await user.click(screen.getByRole("button", { name: "确认进入文档生成" }))
-    await user.click(screen.getByRole("button", { name: "生成 PRD-Lite" }))
-    await user.click(screen.getByRole("button", { name: "生成 Scenario" }))
-    await user.click(screen.getByRole("button", { name: "生成 Decisions" }))
-    await user.click(screen.getByRole("button", { name: "生成 Delivery Plan" }))
-
-    await waitFor(() => {
-      expect(screen.getByRole("button", { name: "进入正式规格" }).hasAttribute("disabled")).toBe(false)
-    })
-
-    await user.click(screen.getByRole("button", { name: "进入正式规格" }))
-    await user.click(screen.getByLabelText("已 review delivery-plan.md"))
-    expect(screen.getByRole("button", { name: "生成 develop.md" }).hasAttribute("disabled")).toBe(false)
-    await user.click(screen.getByRole("button", { name: "生成 develop.md" }))
-
-    await waitFor(() => {
-      expect(promptMock).toHaveBeenCalledWith(
-        expect.objectContaining({
-          payload: expect.objectContaining({
-            task: "generate_develop_spec",
-            docType: "develop",
-          }),
-        }),
-      )
-    })
-
-    expect(screen.queryByText(/remote develop/)).not.toBeNull()
   })
 
   it("sends custom extension from output section to agent payload", async () => {
@@ -338,14 +278,18 @@ describe("App", () => {
     render(<App />)
 
     await waitFor(() => {
-      expect(screen.getAllByText("关键字段录入").length).toBeGreaterThan(0)
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
     })
 
     await user.type(screen.getByLabelText("产品名称"), "Blueprint Clarifier")
     await user.type(screen.getByLabelText("产品目标"), "把模糊需求转成可 review 文档")
     await user.type(screen.getByLabelText("背景"), "当前 proposal 输入经常只有一段模糊描述。")
-    await user.type(screen.getByLabelText("技术栈"), "React\nTailwindCSS")
+    await user.type(screen.getByLabelText("技术栈"), "React{enter}TailwindCSS{enter}")
     await user.selectOptions(screen.getByLabelText("UI 风格"), "professional")
+
+    await user.click(screen.getByRole("button", { name: "展开更多字段" }))
+    await user.click(screen.getByRole("button", { name: "展开更多字段" }))
+    await user.click(screen.getByRole("button", { name: "展开更多字段" }))
 
     await user.click(screen.getByRole("button", { name: "新增自定义扩展" }))
     await user.type(screen.getByLabelText("扩展名称 1"), "客户渠道")
@@ -364,6 +308,74 @@ describe("App", () => {
 
     expect(promptText).toContain("自定义字段:")
     expect(promptText).toContain("客户渠道: 微信社群")
+  })
+
+  it("reveals optional sections in batches of three", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
+    })
+
+    expect(screen.queryByText("用户相关")).not.toBeNull()
+    expect(screen.queryByText("使用场景")).not.toBeNull()
+    expect(screen.queryByText("功能")).not.toBeNull()
+    expect(screen.queryByText("输入输出")).toBeNull()
+
+    await user.click(screen.getByRole("button", { name: "展开更多字段" }))
+
+    expect(screen.queryByText("输入输出")).not.toBeNull()
+    expect(screen.queryByText("约束")).not.toBeNull()
+    expect(screen.queryByText("成功标准")).not.toBeNull()
+    expect(screen.queryByText("风险")).toBeNull()
+  })
+
+  it("keeps other sections open when expanding another section", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
+    })
+
+    await user.click(screen.getByRole("button", { name: "展开用户相关" }))
+    expect(screen.getByLabelText("目标用户是谁")).toBeTruthy()
+
+    await user.click(screen.getByRole("button", { name: "展开使用场景" }))
+
+    expect(screen.getByLabelText("目标用户是谁")).toBeTruthy()
+    expect(screen.getByLabelText("使用场景")).toBeTruthy()
+  })
+
+  it("adds preset tech stack tags into the tech stack field", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
+    })
+
+    await user.click(screen.getByRole("button", { name: "添加 React" }))
+    await user.click(screen.getByRole("button", { name: "添加 Vite" }))
+
+    expect((screen.getByLabelText("技术栈") as HTMLInputElement).value).toBe("")
+    expect(screen.getByRole("button", { name: "移除 React" })).toBeTruthy()
+    expect(screen.getByRole("button", { name: "移除 Vite" })).toBeTruthy()
+  })
+
+  it("adds custom tech stack on enter", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    await waitFor(() => {
+      expect(screen.getByText("关键字段录入")).toBeTruthy()
+    })
+
+    await user.type(screen.getByLabelText("技术栈"), "Eslint{enter}")
+
+    expect((screen.getByLabelText("技术栈") as HTMLInputElement).value).toBe("")
+    expect(screen.getByRole("button", { name: "移除 Eslint" })).toBeTruthy()
   })
 
   it("shows a login call to action when account token is missing", async () => {

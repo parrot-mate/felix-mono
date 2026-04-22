@@ -25,7 +25,6 @@ export function BlueprintSummaryModule({
   return (
     <div className="bp-stack">
       <div className="bp-score">
-        <p className="bp-eyebrow">Structured Input</p>
         <p className="bp-score__value">{structuredScore} / 10</p>
         <p className="bp-panel__meta">当前表单完整度评分</p>
       </div>
@@ -42,7 +41,7 @@ export function BlueprintSummaryModule({
         </ol>
       </BlueprintPanel>
 
-      <BlueprintPanel eyebrow="Structured Input" title="结构化输入建议">
+      <BlueprintPanel title="结构化输入建议">
         <div className="bp-stack bp-stack--sm">
           {suggestions.map((item) => (
             <div className="bp-section-card" key={item.key}>
