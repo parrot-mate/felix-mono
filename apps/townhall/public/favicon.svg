@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="144" fill="url(#bg)"/>
+  <circle cx="256" cy="174" r="34" fill="#FFF3CC"/>
+  <path d="M194 236C194 219.431 207.431 206 224 206H288C304.569 206 318 219.431 318 236V254C318 270.569 304.569 284 288 284H224C207.431 284 194 270.569 194 254V236Z" fill="#FFF7D8"/>
+  <path d="M177 290C177 253.549 206.549 224 243 224H269C305.451 224 335 253.549 335 290V296H177V290Z" fill="url(#speaker)"/>
+  <path d="M126 330C126 312.327 140.327 298 158 298H354C371.673 298 386 312.327 386 330C386 347.673 371.673 362 354 362H158C140.327 362 126 347.673 126 330Z" fill="url(#stage)"/>
+  <path d="M130 213V206C130 181.699 149.699 162 174 162H176V179H174C159.088 179 147 191.088 147 206V213C147 227.912 159.088 240 174 240H190V257H174C149.699 257 130 237.301 130 213Z" fill="#7AE3D3"/>
+  <path d="M382 213V206C382 181.699 362.301 162 338 162H336V179H338C352.912 179 365 191.088 365 206V213C365 227.912 352.912 240 338 240H322V257H338C362.301 257 382 237.301 382 213Z" fill="#7AE3D3"/>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="66" x2="426" y2="445" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173535"/>
+      <stop offset="0.48" stop-color="#255052"/>
+      <stop offset="1" stop-color="#0E1C22"/>
+    </linearGradient>
+    <linearGradient id="speaker" x1="193" y1="232" x2="327" y2="324" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD37A"/>
+      <stop offset="1" stop-color="#FFB84D"/>
+    </linearGradient>
+    <linearGradient id="stage" x1="142" y1="301" x2="370" y2="369" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AE3D3"/>
+      <stop offset="1" stop-color="#2BB0A7"/>
+    </linearGradient>
+  </defs>
+</svg>
