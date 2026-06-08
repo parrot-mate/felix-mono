@@ -105,6 +105,22 @@ describe("App", () => {
     authRedirectMock.mockClear()
   })
 
+  it("toggles day and night mode from the hero action", async () => {
+    const user = userEvent.setup()
+    render(<App />)
+
+    const appRoot = document.querySelector(".bp-web")
+    expect(appRoot?.getAttribute("data-bp-color-mode")).toBe("dark")
+    expect(document.body.dataset.bpColorMode).toBe("dark")
+
+    await user.click(screen.getByRole("button", { name: "切换到白天模式" }))
+
+    expect(appRoot?.getAttribute("data-bp-color-mode")).toBe("light")
+    expect(document.body.dataset.bpColorMode).toBe("light")
+    expect(window.localStorage.getItem("blueprint-web-color-mode")).toBe("light")
+    expect(screen.getByRole("button", { name: "切换到黑夜模式" })).toBeTruthy()
+  })
+
   it("blocks generation until required fields are filled, then generates confirmed input docs through the frontend agent", async () => {
     const user = userEvent.setup()
     render(<App />)

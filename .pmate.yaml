@@ -7,3 +7,9 @@ apps:
     subdomain: townhall
     bucket: pmate-townhall-web
     repository: parrot-mate/felix-mono
+  - app: blueprint-web
+    dir: apps/blueprint-web
+    type: vite
+    subdomain: blueprint
+    bucket: pmate-blueprint-web
+    repository: parrot-mate/felix-mono

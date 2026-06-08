@@ -47,6 +47,10 @@ type MissingInfoSuggestion = {
   title: string
   reason: string
 }
+
+type ColorMode = "dark" | "light"
+
+const COLOR_MODE_STORAGE_KEY = "blueprint-web-color-mode"
 const REVIEW_DOC_LABELS: Record<ReviewDocType, string> = {
   prdLite: "生成 PRD-Lite",
   scenarios: "生成 Scenario",
@@ -182,6 +186,12 @@ function downloadText(filename: string, value: string) {
   URL.revokeObjectURL(url)
 }
 
+function readInitialColorMode(): ColorMode {
+  if (typeof window === "undefined") return "dark"
+  const savedMode = window.localStorage.getItem(COLOR_MODE_STORAGE_KEY)
+  return savedMode === "light" ? "light" : "dark"
+}
+
 export function App() {
   const optionalCategories = categories.filter((category) => category.id !== "basics")
   const { login, token: authToken } = useBlueprintAuth()
@@ -208,6 +218,7 @@ export function App() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [pendingDocType, setPendingDocType] = useState<ReviewDocType | null>(null)
   const [notice, setNotice] = useState("")
+  const [colorMode, setColorMode] = useState<ColorMode>(readInitialColorMode)
 
   const report = buildClarificationReport(form, extraFields)
   const missingInfoSuggestions = useMemo(
@@ -237,6 +248,17 @@ export function App() {
 
     return () => window.cancelAnimationFrame(frame)
   }, [pendingScrollCategoryId, stage, visibleOptionalBlockCount])
+
+  useEffect(() => {
+    window.localStorage.setItem(COLOR_MODE_STORAGE_KEY, colorMode)
+    document.body.dataset.bpColorMode = colorMode
+    document.documentElement.style.colorScheme = colorMode
+
+    return () => {
+      delete document.body.dataset.bpColorMode
+      document.documentElement.style.colorScheme = "dark"
+    }
+  }, [colorMode])
 
   function patchField(fieldId: FieldId, value: string) {
     setForm((current) => ({ ...current, [fieldId]: value }))
@@ -489,6 +511,10 @@ export function App() {
     if (!activeContent || !activeFile) return
     downloadText(activeFile, activeContent)
     setNotice(`已下载 ${activeFile}`)
+  }
+
+  function toggleColorMode() {
+    setColorMode((current) => (current === "dark" ? "light" : "dark"))
   }
 
   const stageCards = [
@@ -787,10 +813,43 @@ export function App() {
   )
 
   return (
-    <main className="bp-page bp-page--desktop bp-web" data-bp-theme="together-blueprint">
+    <main
+      className="bp-page bp-page--desktop bp-web"
+      data-bp-theme="together-blueprint"
+      data-bp-color-mode={colorMode}
+    >
       <section className="bp-hero">
-        <div className="bp-hero-wordmark">Blueprint</div>
-        <p className="bp-hero-subtitle">把模糊需求整理成可 review 的 Blueprint 文档。</p>
+        <div className="bp-hero__content">
+          <div className="bp-hero-wordmark">Blueprint</div>
+          <p className="bp-hero-subtitle">把模糊需求整理成可 review 的 Blueprint 文档。</p>
+        </div>
+        <button
+          type="button"
+          className="bp-theme-toggle"
+          aria-label={colorMode === "dark" ? "切换到白天模式" : "切换到黑夜模式"}
+          aria-pressed={colorMode === "light"}
+          onClick={toggleColorMode}
+        >
+          {colorMode === "dark" ? (
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="bp-theme-toggle__icon">
+              <path
+                d="M12 3.75V2m0 20v-1.75M5.636 5.636 4.393 4.393m15.214 15.214-1.243-1.243M3.75 12H2m20 0h-1.75M5.636 18.364l-1.243 1.243m15.214-15.214-1.243 1.243M12 16.25A4.25 4.25 0 1 0 12 7.75a4.25 4.25 0 0 0 0 8.5Z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="bp-theme-toggle__icon">
+              <path
+                d="M14.906 3.2a1 1 0 0 1 .96 1.275 7.25 7.25 0 1 0 8.659 8.659 1 1 0 0 1 1.275.96A10.25 10.25 0 1 1 14.906 3.2Z"
+                fill="currentColor"
+              />
+            </svg>
+          )}
+        </button>
       </section>
 
       <section className="bp-grid bp-grid--stages">
