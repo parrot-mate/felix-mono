@@ -1,0 +1,13 @@
+<view class="device-card {{bluetooth.status}}">
+  <view class="pulse"></view>
+  <view class="device-main">
+    <view class="device-title">{{bluetooth.status === 'connected' ? bluetooth.deviceName : '提醒设备'}}</view>
+    <view class="device-sub">
+      {{bluetooth.status === 'connected' ? '提醒会同步到设备' : bluetooth.status === 'searching' ? '正在寻找附近设备' : bluetooth.status === 'connecting' ? '正在连接' : bluetooth.status === 'failed' ? bluetooth.errorMessage : '连接后同步提醒'}}
+    </view>
+  </view>
+  <button wx:if="{{bluetooth.status === 'disconnected'}}" class="device-action" bindtap="handleConnect">连接</button>
+  <button wx:elif="{{bluetooth.status === 'failed'}}" class="device-action warning" bindtap="handleRetry">重试</button>
+  <view wx:elif="{{bluetooth.status === 'connected'}}" class="status success">已连接</view>
+  <view wx:else class="status">处理中</view>
+</view>

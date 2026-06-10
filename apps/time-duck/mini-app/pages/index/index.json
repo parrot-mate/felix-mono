@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "todo-reminder-item": "../../components/todo-reminder-item/todo-reminder-item",
+    "todo-reminder-list": "../../components/todo-reminder-list/todo-reminder-list",
+    "voice-capture-button": "../../components/voice-capture-button/voice-capture-button",
+    "ai-parse-sheet": "../../components/ai-parse-sheet/ai-parse-sheet",
+    "task-detail-sheet": "../../components/task-detail-sheet/task-detail-sheet",
+    "toast-status": "../../components/toast-status/toast-status"
+  }
+}

@@ -1,0 +1,162 @@
+.overlay {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(122, 91, 0, 0.16);
+}
+
+.sheet {
+  width: 100%;
+  max-height: 78vh;
+  padding: 10px 20px calc(24px + env(safe-area-inset-bottom));
+  border: 1px solid rgba(122, 91, 0, 0.12);
+  border-radius: 28px 28px 0 0;
+  background: #FFFFFF;
+  box-shadow: 0 -18px 44px rgba(122, 91, 0, 0.12);
+}
+
+.handle {
+  width: 44px;
+  height: 5px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: rgba(122, 91, 0, 0.16);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.title {
+  color: #3A2A00;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.sub {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 8px;
+  color: #7A5B00;
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.close {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 16px;
+  background: #FFF7D3;
+  color: #7A5B00;
+  font-size: 24px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background: #FFF7D3;
+  color: #7A5B00;
+  font-size: 13px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #A57D00;
+}
+
+.step.active .dot {
+  background: #FFD801;
+  animation: blink 900ms ease-in-out infinite;
+}
+
+.step.done .dot {
+  background: #34c759;
+}
+
+.step.failed .dot {
+  background: #ff5a5f;
+}
+
+.result {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #FFF9DF;
+}
+
+.result-row {
+  display: flex;
+  gap: 12px;
+  padding: 7px 0;
+}
+
+.key {
+  width: 42px;
+  flex: 0 0 42px;
+  color: #A57D00;
+  font-size: 13px;
+}
+
+.value {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+  color: #3A2A00;
+  font-size: 13px;
+}
+
+.actions {
+  margin-top: 18px;
+}
+
+.primary,
+.loading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  border-radius: 18px;
+  background: #FFD801;
+  color: #3A2A00;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.primary.warning {
+  background: #ffb13b;
+}
+
+.loading-text {
+  background: #FFF7D3;
+  color: #7A5B00;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}

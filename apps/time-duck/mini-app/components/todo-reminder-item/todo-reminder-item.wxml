@@ -1,0 +1,14 @@
+<view class="item {{reminder.status}}" bindtap="select">
+  <view class="main">
+    <view class="title">{{reminder.title}}</view>
+    <view class="meta">
+      <text>{{reminder.displayTime}}</text>
+      <text wx:if="{{reminder.repeatRule}}" class="repeat">{{reminder.repeatRule}}</text>
+    </view>
+    <view class="spoken">{{reminder.spokenText}}</view>
+  </view>
+  <view class="side">
+    <view class="status">{{reminder.statusLabel}}</view>
+    <button wx:if="{{reminder.status === 'alarm_failed'}}" class="small warning" catchtap="retryAlarm">重试</button>
+  </view>
+</view>

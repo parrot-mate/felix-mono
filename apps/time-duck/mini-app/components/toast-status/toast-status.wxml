@@ -1,0 +1,2 @@
+<view wx:if="{{visible}}" class="toast {{tone}}">{{message}}</view>
+

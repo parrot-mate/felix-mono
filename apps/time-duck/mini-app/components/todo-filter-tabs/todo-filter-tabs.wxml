@@ -1,0 +1,5 @@
+<view class="tabs">
+  <button class="tab {{active === 'all' ? 'active' : ''}}" data-value="all" bindtap="change">全部</button>
+  <button class="tab {{active === 'future' ? 'active' : ''}}" data-value="future" bindtap="change">待提醒</button>
+  <button class="tab {{active === 'pending' ? 'active' : ''}}" data-value="pending" bindtap="change">待补时间</button>
+</view>

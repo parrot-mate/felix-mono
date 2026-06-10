@@ -1,0 +1,10 @@
+<view class="list">
+  <block wx:if="{{reminders.length}}">
+    <todo-reminder-item wx:for="{{reminders}}" wx:key="id" reminder="{{item}}" bind:select="select" bind:retryalarm="retryAlarm" />
+  </block>
+  <view wx:else class="empty">
+    <view class="empty-mark"></view>
+    <view class="empty-title">{{emptyTitle}}</view>
+    <view class="empty-sub">按住说一句，我帮你安排提醒。</view>
+  </view>
+</view>

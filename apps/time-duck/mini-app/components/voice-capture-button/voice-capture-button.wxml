@@ -1,0 +1,33 @@
+<view
+  class="voice-dock"
+>
+  <view class="cancel-hint {{cancelIntent ? 'active' : ''}}" wx:if="{{status === 'recording'}}">
+    {{cancelIntent ? '松开取消' : '上滑取消'}}
+  </view>
+  <button
+    class="voice-button {{status}} {{cancelIntent ? 'canceling' : ''}}"
+    catchtouchstart="handleTouchStart"
+    catchtouchmove="handleTouchMove"
+    catchtouchend="handleTouchEnd"
+    catchtouchcancel="handleTouchCancel"
+    catchtap="retry"
+  >
+    <block wx:if="{{status === 'recording'}}">
+      <view class="wave">
+        <view class="bar b1"></view>
+        <view class="bar b2"></view>
+        <view class="bar b3"></view>
+        <view class="bar b4"></view>
+        <view class="bar b5"></view>
+      </view>
+      <view class="recording-copy">
+        <view class="recording-title">{{cancelIntent ? '松开取消' : '正在听'}}</view>
+        <view class="recording-sub">{{cancelIntent ? '本次语音不会生成待办' : '松开结束并解析'}}</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="mic-dot"></view>
+      <text>{{status === 'idle' ? '按住说待办' : status === 'recognizing' ? '识别中' : status === 'parsing' ? 'AI 判断中' : status === 'setting_alarm' ? '设置闹钟' : status === 'failed' ? '点按重试' : '已生成'}}</text>
+    </block>
+  </button>
+</view>

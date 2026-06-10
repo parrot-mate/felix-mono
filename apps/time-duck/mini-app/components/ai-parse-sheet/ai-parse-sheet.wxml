@@ -1,0 +1,40 @@
+<view wx:if="{{visible}}" class="overlay" catchtap="close">
+  <view class="sheet" catchtap="noop">
+    <view class="handle"></view>
+    <view class="head">
+      <view>
+        <view class="title">{{status === 'success' ? '我理解的是' : '正在整理提醒'}}</view>
+        <view class="sub">{{spokenText || '正在听你刚才说的话'}}</view>
+      </view>
+      <button class="close" bindtap="close">×</button>
+    </view>
+
+    <view class="steps">
+      <view wx:for="{{steps}}" wx:key="id" class="step {{item.status}}">
+        <view class="dot"></view>
+        <text>{{item.label}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{parseResult}}" class="result">
+      <view class="result-row">
+        <text class="key">任务</text>
+        <text class="value">{{parseResult.title}}</text>
+      </view>
+      <view class="result-row">
+        <text class="key">时间</text>
+        <text class="value">{{parseResult.displayTime}}</text>
+      </view>
+      <view class="result-row">
+        <text class="key">重复</text>
+        <text class="value">{{parseResult.repeatRule || '不重复'}}</text>
+      </view>
+    </view>
+
+    <view class="actions">
+      <button wx:if="{{status === 'failed'}}" class="primary warning" bindtap="retry">再说一次</button>
+      <button wx:elif="{{status === 'success'}}" class="primary" bindtap="confirm">确认提醒</button>
+      <view wx:else class="loading-text">正在处理...</view>
+    </view>
+  </view>
+</view>

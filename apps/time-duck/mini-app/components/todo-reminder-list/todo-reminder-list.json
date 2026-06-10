@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "todo-reminder-item": "../todo-reminder-item/todo-reminder-item"
+  }
+}
+

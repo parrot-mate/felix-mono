@@ -1,0 +1,15 @@
+{
+  "name": "@felix/time-duck",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "typecheck": "tsc -p mini-app/tsconfig.json --noEmit",
+    "test": "vitest run mini-app/**/*.test.ts"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2",
+    "vitest": "^4.0.17"
+  }
+}
+

@@ -1,0 +1,57 @@
+<view class="page-shell">
+  <view class="status-space"></view>
+  <view class="hero">
+    <view>
+      <view class="title">{{activeTab === 'voice' ? '报时' : '提醒'}}</view>
+    </view>
+    <button class="device-pill {{bluetooth.status}}" bindtap="handleBluetoothTap">
+      <view class="device-dot"></view>
+      <text>{{bluetooth.status === 'connected' ? '已连' : bluetooth.status === 'searching' ? '搜索' : bluetooth.status === 'connecting' ? '连接' : bluetooth.status === 'failed' ? '重试' : '设备'}}</text>
+    </button>
+  </view>
+
+  <block wx:if="{{activeTab === 'voice'}}">
+    <view class="voice-page">
+      <view class="voice-hero-card">
+        <view class="voice-kicker">语音提醒</view>
+        <view class="voice-heading">按住说出要提醒的事</view>
+        <view class="voice-copy">我会帮你理解时间，并把提醒准备好。</view>
+      </view>
+      <view class="recent-card" wx:if="{{recentReminder}}">
+        <view class="section-title">最近创建</view>
+        <todo-reminder-item reminder="{{recentReminder}}" bind:select="handleSelectReminder" bind:retryalarm="handleRetryAlarm" />
+      </view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="list-page">
+      <view class="section-head">
+        <view>
+          <view class="section-title">提醒</view>
+          <view class="section-sub">管理已经创建的提醒</view>
+        </view>
+      </view>
+      <todo-reminder-list reminders="{{visibleReminders}}" empty-title="{{emptyTitle}}" bind:select="handleSelectReminder" bind:retryalarm="handleRetryAlarm" />
+    </view>
+  </block>
+
+  <voice-capture-button wx:if="{{activeTab === 'voice'}}" status="{{voiceStatus}}" recording-seconds="{{recordingSeconds}}" bind:start="handleVoiceStart" bind:finish="handleVoiceFinish" bind:cancel="handleVoiceCancel" />
+
+  <view class="bottom-tabs">
+    <button class="bottom-tab {{activeTab === 'voice' ? 'active' : ''}}" data-tab="voice" bindtap="handleTabChange">
+      <view class="tab-icon tab-clock"></view>
+      <text>报时</text>
+    </button>
+    <button class="bottom-tab {{activeTab === 'list' ? 'active' : ''}}" data-tab="list" bindtap="handleTabChange">
+      <view class="tab-icon tab-list"></view>
+      <text>提醒</text>
+    </button>
+  </view>
+
+  <ai-parse-sheet visible="{{parseSheetVisible}}" status="{{voiceStatus}}" steps="{{parseSteps}}" spoken-text="{{spokenText}}" parse-result="{{parseResult}}" bind:confirm="handleConfirmParsedReminder" bind:retry="handleRetryParse" bind:close="handleCloseParseSheet" />
+
+  <task-detail-sheet visible="{{detailSheetVisible}}" reminder="{{selectedReminder}}" bind:close="handleCloseDetail" bind:retryalarm="handleRetrySelectedAlarm" />
+
+  <toast-status visible="{{toast.visible}}" message="{{toast.message}}" tone="{{toast.tone}}" />
+</view>

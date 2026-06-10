@@ -1,0 +1,88 @@
+.device-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid rgba(122, 91, 0, 0.10);
+  border-radius: 22px;
+  background: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(122, 91, 0, 0.08);
+}
+
+.pulse {
+  width: 12px;
+  height: 42px;
+  flex: 0 0 12px;
+  border-radius: 999px;
+  background: #A57D00;
+}
+
+.searching .pulse,
+.connecting .pulse {
+  background: #FFD801;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.connected .pulse {
+  background: #34c759;
+}
+
+.failed .pulse {
+  background: #ff5a5f;
+}
+
+.device-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.device-title {
+  overflow: hidden;
+  color: #3A2A00;
+  font-size: 15px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.device-sub {
+  overflow: hidden;
+  margin-top: 5px;
+  color: #7A5B00;
+  font-size: 12px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.device-action,
+.status {
+  min-width: 62px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: #FFF1A8;
+  color: #3A2A00;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.device-action {
+  background: #FFD801;
+  color: #06111d;
+}
+
+.device-action.warning {
+  background: #FFD801;
+}
+
+.status.success {
+  background: rgba(52, 199, 89, 0.12);
+  color: #34c759;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}

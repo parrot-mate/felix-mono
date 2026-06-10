@@ -1,0 +1,25 @@
+<view wx:if="{{visible && reminder}}" class="overlay" catchtap="close">
+  <view class="sheet" catchtap="noop">
+    <view class="handle"></view>
+    <view class="title">{{reminder.title}}</view>
+    <view class="created">记录自语音：{{reminder.spokenText}}</view>
+    <view class="detail-grid">
+      <view class="detail-item">
+        <text class="key">提醒时间</text>
+        <text class="value">{{reminder.displayTime}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="key">重复规则</text>
+        <text class="value">{{reminder.repeatRule || '不重复'}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="key">提醒状态</text>
+        <text class="value">{{reminder.statusLabel}}</text>
+      </view>
+    </view>
+    <view class="actions">
+      <button wx:if="{{reminder.status === 'alarm_failed'}}" class="primary warning" bindtap="retryAlarm">重新设置</button>
+      <button class="secondary" bindtap="close">关闭</button>
+    </view>
+  </view>
+</view>

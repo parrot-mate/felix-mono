@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empty {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(122, 91, 0, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  text-align: center;
+}
+
+.empty-mark {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #FFD801, #ffb13b);
+  box-shadow: 0 10px 24px rgba(255, 216, 1, 0.28);
+}
+
+.empty-title {
+  color: #3A2A00;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.empty-sub {
+  max-width: 220px;
+  margin-top: 8px;
+  color: #A57D00;
+  font-size: 13px;
+  line-height: 1.45;
+}
