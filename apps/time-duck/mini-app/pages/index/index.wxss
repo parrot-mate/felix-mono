@@ -15,8 +15,14 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 18px;
+}
+
+.hero-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -37,22 +43,33 @@
 
 .device-pill {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   gap: 6px;
   box-sizing: border-box;
-  width: 56px;
   min-width: 0;
-  height: 30px;
+  height: 31px;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   border: 1px solid rgba(122, 91, 0, 0.10);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.78);
   color: #7A5B00;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1;
+}
+
+.device-pill-label {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.device-pill-label-wide {
+  font-size: 13px;
+  transform: none;
+  transform-origin: center;
 }
 
 .device-pill::after {
@@ -73,8 +90,8 @@
 }
 
 .device-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
   background: #B8B3A1;
 }

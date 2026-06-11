@@ -1,13 +1,13 @@
 <view class="page-shell">
   <view class="status-space"></view>
   <view class="hero">
-    <view>
+    <view class="hero-left">
       <view class="title">{{activeTab === 'voice' ? '报时' : '提醒'}}</view>
+      <view class="device-pill {{bluetooth.status}}" bindtap="handleBluetoothTap">
+        <view class="device-dot"></view>
+        <text class="device-pill-label {{bluetooth.status === 'disconnected' ? 'device-pill-label-wide' : ''}}">{{bluetooth.status === 'connected' ? '已连' : bluetooth.status === 'searching' ? '搜索' : bluetooth.status === 'connecting' ? '连接' : bluetooth.status === 'failed' ? '重试' : '设备'}}</text>
+      </view>
     </view>
-    <button class="device-pill {{bluetooth.status}}" bindtap="handleBluetoothTap">
-      <view class="device-dot"></view>
-      <text>{{bluetooth.status === 'connected' ? '已连' : bluetooth.status === 'searching' ? '搜索' : bluetooth.status === 'connecting' ? '连接' : bluetooth.status === 'failed' ? '重试' : '设备'}}</text>
-    </button>
   </view>
 
   <block wx:if="{{activeTab === 'voice'}}">

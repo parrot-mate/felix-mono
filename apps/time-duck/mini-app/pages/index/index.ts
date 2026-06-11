@@ -84,6 +84,9 @@ Page({
   },
 
   handleVoiceStart() {
+    if (this.data.voiceStatus !== "idle") {
+      return;
+    }
     this.setData({
       voiceStatus: "recording",
       recordingSeconds: 1,
@@ -103,6 +106,7 @@ Page({
 
   async handleVoiceFinish() {
     this.setData({
+      recordingSeconds: 0,
       voiceStatus: "recognizing",
       parseSheetVisible: true,
       parseSteps: markStep("voice", "active")

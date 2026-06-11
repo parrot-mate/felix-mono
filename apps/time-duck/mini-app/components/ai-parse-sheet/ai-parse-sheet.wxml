@@ -6,7 +6,7 @@
         <view class="title">{{status === 'success' ? '我理解的是' : '正在整理提醒'}}</view>
         <view class="sub">{{spokenText || '正在听你刚才说的话'}}</view>
       </view>
-      <button class="close" bindtap="close">×</button>
+      <view class="close" bindtap="close" aria-label="关闭">×</view>
     </view>
 
     <view class="steps">

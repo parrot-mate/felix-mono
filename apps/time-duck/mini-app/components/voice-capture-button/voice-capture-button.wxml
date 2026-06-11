@@ -4,13 +4,21 @@
   <view class="cancel-hint {{cancelIntent ? 'active' : ''}}" wx:if="{{status === 'recording'}}">
     {{cancelIntent ? '松开取消' : '上滑取消'}}
   </view>
-  <button
+  <view
+    wx:if="{{status === 'failed'}}"
+    class="voice-button failed"
+    bindtap="retry"
+  >
+    <view class="mic-dot error"></view>
+    <text>点按重试</text>
+  </view>
+  <view
+    wx:else
     class="voice-button {{status}} {{cancelIntent ? 'canceling' : ''}}"
     catchtouchstart="handleTouchStart"
     catchtouchmove="handleTouchMove"
     catchtouchend="handleTouchEnd"
     catchtouchcancel="handleTouchCancel"
-    catchtap="retry"
   >
     <block wx:if="{{status === 'recording'}}">
       <view class="wave">
@@ -27,7 +35,7 @@
     </block>
     <block wx:else>
       <view class="mic-dot"></view>
-      <text>{{status === 'idle' ? '按住说待办' : status === 'recognizing' ? '识别中' : status === 'parsing' ? 'AI 判断中' : status === 'setting_alarm' ? '设置闹钟' : status === 'failed' ? '点按重试' : '已生成'}}</text>
+      <text>{{status === 'idle' ? '按住说话' : status === 'recognizing' ? '识别中' : status === 'parsing' ? 'AI 判断中' : status === 'setting_alarm' ? '设置闹钟' : '已生成'}}</text>
     </block>
-  </button>
+  </view>
 </view>
