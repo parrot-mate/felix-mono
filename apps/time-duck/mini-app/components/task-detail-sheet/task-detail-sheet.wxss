@@ -81,13 +81,26 @@
 
 .primary,
 .secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   flex: 1;
   min-height: 52px;
+  margin: 0;
+  padding: 0 16px;
   border-radius: 18px;
   background: #FFD801;
   color: #3A2A00;
   font-size: 15px;
   font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.primary::after,
+.secondary::after {
+  border: 0;
 }
 
 .primary.warning {

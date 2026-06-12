@@ -113,7 +113,7 @@
 .list-page {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 
 .voice-hero-card,
@@ -173,7 +173,11 @@
 }
 
 .recent-card {
-  padding: 16px;
+  padding: 20px;
+}
+
+.recent-card .section-title {
+  margin-bottom: 14px;
 }
 
 .section-head {

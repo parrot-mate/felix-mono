@@ -1,13 +1,13 @@
 .item {
   display: flex;
   gap: 10px;
-  min-height: 104px;
-  padding: 16px;
+  min-height: 112px;
+  padding: 18px;
   overflow: hidden;
   border: 1px solid rgba(122, 91, 0, 0.10);
   border-radius: 22px;
   background: #FFFFFF;
-  box-shadow: 0 12px 28px rgba(122, 91, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(122, 91, 0, 0.06);
 }
 
 .item.done {
@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 7px;
+  margin-top: 9px;
   color: #7A5B00;
   font-size: 13px;
   line-height: 1.35;
@@ -47,7 +47,7 @@
 .spoken {
   display: -webkit-box;
   overflow: hidden;
-  margin-top: 8px;
+  margin-top: 10px;
   color: #A57D00;
   font-size: 12px;
   line-height: 1.4;
